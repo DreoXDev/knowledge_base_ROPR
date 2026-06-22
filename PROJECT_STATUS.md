@@ -4,20 +4,20 @@
 
 - [x] Repo creata.
 - [x] Raw assets caricati.
-- [ ] Struttura KB inizializzata.
-- [ ] Inventario fonti generato.
-- [ ] Fonti classificate per affidabilità.
-- [ ] Prima batch di asset analizzata.
-- [ ] RAG iniziale popolato.
-- [ ] Prompt finale testato su esercizi.
+- [x] Struttura KB inizializzata.
+- [x] Inventario fonti generato.
+- [x] Fonti classificate per affidabilità.
+- [x] Prima batch di asset analizzata (Programmazione Lineare completata).
+- [x] RAG iniziale popolato.
+- [/] Prompt finale testato su esercizi (PL completato).
 
 ## Fasi
 
-1. Setup repo.
-2. Inventario fonti.
-3. Ingestion asset ufficiali.
-4. Ingestion asset Mega utili.
-5. Consolidamento teoria/metodi.
-6. Creazione RAG.
-7. Test su esercizi/foto.
-8. Audit finale.
+1. [x] Setup repo.
+2. [x] Inventario fonti.
+3. [/] Ingestion asset ufficiali (Programmazione Lineare completata).
+4. [ ] Ingestion asset Mega utili.
+5. [/] Consolidamento teoria/metodi (PL completato).
+6. [/] Creazione RAG (PL completato).
+7. [ ] Test su esercizi/foto.
+8. [ ] Audit finale.
