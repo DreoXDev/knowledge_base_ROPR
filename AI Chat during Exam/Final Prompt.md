@@ -61,10 +61,16 @@ La risposta deve essere:
   - Scrivere variabili decisionali (con unità di misura), funzione obiettivo e vincoli funzionali con indicazione breve del significato fisico a fianco.
   - Limitare al massimo le spiegazioni discorsive e usare la notazione compatta da esame.
 - **Esercizi sull'Algoritmo del Simplesso**:
-  - Riportare la forma standard aumentata con le slack.
-  - Mostrare il tableau iniziale (Iterazione 0).
-  - Riportare le iterazioni essenziali indicando per ciascuna: variabile entrante, variabile uscente, elemento pivot e tableau risultante.
-  - Al passo finale, dichiarare esplicitamente se si è giunti all'ottimo (fornendo valori ottimi delle variabili e di $Z^*$) o se il problema è illimitato.
+  - Se la traccia contiene un tableau, lavorare direttamente sul tableau. Se contiene un PL, portarlo prima in forma aumentata con le slack.
+  - Mostrare sempre il tableau di ciascuna iterazione (partendo dall'Iterazione 0).
+  - Indicare esplicitamente: variabile entrante, variabile uscente (tramite test del rapporto minimo su elementi pivot $>0$), elemento pivot e tableau risultante.
+  - Per problemi di massimo: un coefficiente negativo in riga 0 indica potenziale miglioramento; l'assenza di coefficienti negativi indica ottimalità.
+  - Rilevare e dichiarare immediatamente i casi particolari:
+    - Colonna pivot senza elementi positivi ($\le 0$) $\implies$ problema illimitato ($Z^* \to +\infty$).
+    - Tableau ottimo con coefficiente nullo di una variabile non di base in riga 0 $\implies$ ottimi multipli (mostrare il pivot alternativo per l'altro vertice).
+    - Rapporto minimo multiplo o valore RHS nullo per una variabile in base $\implies$ degenerazione.
+  - Al passo finale, dichiarare esplicitamente i valori ottimi di tutte le variabili decisionali e di slack, e il valore ottimo $Z^*$.
+  - Mantenere la risposta concisa, con tabelle pulite e formule in LaTeX, pronta per essere copiata sul foglio.
 - **Esercizi sul Metodo delle Due Fasi**:
   - Standardizzare il modello introducendo slack, surplus e variabili artificiali.
   - Risolvere e documentare la Fase 1 (obiettivo $\max -W = -\sum a_i$, azzeramento costi in riga 0, tableau finale).

@@ -161,3 +161,49 @@ Fonti:
 - `10_rag/method_cards/METHOD_PL_DUALE.md`
 - `07_solved_examples/programmazione_lineare/pl_tool_spa_duale.md`
 - `07_solved_examples/programmazione_lineare/pl_duale_vincoli_misti.md`
+
+---
+
+## Pattern — Risoluzione PL con simplesso tabellare
+
+Trigger:
+- "risolvi con il simplesso"
+- "continua il tableau"
+- "scegli variabile entrante/uscente"
+- "pivot"
+- "forma tabellare"
+- "soluzione di base"
+
+Risposta attesa:
+1. Scrivere o riconoscere il tableau.
+2. Indicare variabile entrante.
+3. Indicare variabile uscente con rapporto minimo.
+4. Eseguire pivot o almeno descrivere l'operazione.
+5. Ripetere fino al criterio di ottimalità.
+6. Leggere soluzione finale e valore ottimo.
+
+Fonti:
+- `04_methods/programmazione_lineare/pl_simplesso_tabellare.md`
+- `07_solved_examples/programmazione_lineare/pl_simplesso_wyndor.md`
+
+---
+
+## Pattern — Casi particolari del simplesso
+
+Trigger:
+- "ottimi multipli"
+- "illimitato"
+- "degenerazione"
+- "tie breaking"
+- "nessuna variabile uscente"
+- "coefficiente nullo in riga 0"
+
+Risposta attesa:
+- Identificare il segnale nel tableau.
+- Dichiarare il caso.
+- Spiegare in una riga la conseguenza.
+- Se richiesto, continuare con un pivot alternativo.
+
+Fonti:
+- `04_methods/programmazione_lineare/pl_casi_particolari_simplesso.md`
+- `07_solved_examples/programmazione_lineare/pl_simplesso_casi_particolari.md`

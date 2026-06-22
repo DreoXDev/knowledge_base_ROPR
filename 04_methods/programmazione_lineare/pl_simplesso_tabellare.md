@@ -1,58 +1,61 @@
 ---
-type: method-card
-topic: programmazione-lineare
-status: draft
-sources:
-  - raw_assets/Programmazione Lineare/lezione 3 completa.pdf
-reliability: official
+materia: ROPR
+area: Programmazione Lineare
+tipo: metodo
+fonte: Ricerca Operativa - Metodo del Simplesso - 23-24.pdf
+stato: completo
+priorita: alta
+tags:
+  - ropr
+  - programmazione-lineare
+  - simplesso
+  - simplesso-tabellare
+  - method-card
 ---
 
-# Method Card — Risoluzione con il Simplesso Tabellare
+# METHOD CARD — Risoluzione con il Simplesso Tabellare
 
-## Input Richiesto
-Un modello di PL formulato in forma standard di massimizzazione (o minimizzazione).
+## Quando usarla
 
-## Procedura Passo-Passo
+Usare questa card quando l'esercizio richiede espressamente di risolvere un problema di Programmazione Lineare tramite il metodo del simplesso o quando la traccia presenta un tableau da completare o analizzare.
 
-### 1. Trasformazione in Forma Aumentata
-- Per ogni vincolo di tipo $\le$ con termine noto positivo, aggiungere una variabile di slack non negativa:
+## Procedura Operativa Passo-Passo
+
+### 1. Preparazione e Forma Aumentata
+- Convertire il modello in forma aumentata introducendo le variabili di slack ($s_i \ge 0$) per i vincoli di tipo $\le$.
+- Riscrivere la funzione obiettivo portando tutte le variabili a sinistra dell'uguaglianza, ottenendo la **riga 0**:
   $$
-  a_{i1} x_1 + a_{i2} x_2 \le b_i \implies a_{i1} x_1 + a_{i2} x_2 + s_i = b_i \quad (s_i \ge 0)
+  Z - c_1x_1 - c_2x_2 - \dots - c_nx_n = 0
   $$
-- Riscrivere la funzione obiettivo portando tutte le variabili a sinistra dell'uguale:
+- Disporre i coefficienti nel tableau iniziale. Le variabili in base sono inizialmente le variabili di slack.
+
+### 2. Test di Ottimalità (per problemi di MAX)
+- Esaminare la riga 0 (escludendo la colonna dei termini noti RHS).
+- Se tutti i coefficienti sono non negativi ($\ge 0$), il tableau corrente è **ottimo**. Arrestare l'algoritmo.
+- Se ci sono uno o più coefficienti negativi ($< 0$), procedere al punto 3.
+
+### 3. Selezione della Variabile Entrante
+- Scegliere la variabile associata al coefficiente **più negativo** nella riga 0. La colonna di questa variabile diventa la *colonna pivot*.
+
+### 4. Selezione della Variabile Uscente (Test dei Rapporti Minimi)
+- Per ciascuna riga dei vincoli (righe $\ge 1$), calcolare il rapporto:
   $$
-  Z - c_1 x_1 - c_2 x_2 = 0
+  \text{Rapporto} = \frac{\text{Termine noto (RHS)}}{\text{Coefficiente nella colonna pivot}}
   $$
+- **Importante**: Eseguire il calcolo **solo se il coefficiente nella colonna pivot è strettamente positivo ($> 0$)**. Ignorare elementi nulli o negativi.
+- La riga associata al **minimo rapporto non negativo** determina la variabile uscente (e diventa la *riga pivot*).
+- Se tutti i coefficienti nella colonna pivot sono $\le 0$, l'algoritmo si arresta: il problema è **illimitato** ($Z^* \to +\infty$).
 
-### 2. Costruzione del Tableau Iniziale
-- Le variabili di slack costituiscono la base iniziale (valori RHS positivi).
-- Disporre i coefficienti nel tableau organizzandoli per righe. La riga 0 è la riga obiettivo.
+### 5. Operazione di Pivot
+- Individuare l'elemento pivot $P$ all'incrocio tra la colonna pivot e la riga pivot.
+- Dividere l'intera riga pivot per $P$ per renderlo uguale a $1$.
+- Sotttrarre opportuni multipli della riga pivot normalizzata da tutte le altre righe (inclusa la riga 0) in modo da azzerare tutti gli altri elementi della colonna pivot.
+- Aggiornare la base sostituendo la variabile uscente con quella entrante.
+- Ritornare al punto 2.
 
-### 3. Criterio di Ottimalità (Massimizzazione)
-- Se tutti i coefficienti nella riga 0 (esclusa la colonna dei termini noti RHS) sono **non negativi** ($\ge 0$), il tableau è ottimo.
-- La soluzione ottima si legge impostando a 0 le variabili non in base (non presenti nella colonna di sinistra) e leggendo il valore di quelle in base direttamente sulla colonna RHS.
+## Lettura della Soluzione Ottima
 
-### 4. Scelta della Variabile Entrante
-- Se il tableau non è ottimo, scegliere la variabile con il coefficiente **più negativo** nella riga 0. La colonna di questa variabile diventa la *colonna pivot*.
-
-### 5. Scelta della Variabile Uscente (Test dei Rapporti Minimi)
-- Per ogni riga dei vincoli (esclusa la riga 0), calcolare il rapporto tra il termine noto (RHS) e il coefficiente corrispondente nella colonna pivot, **solamente se quest'ultimo è strettamente maggiore di zero ($> 0$)**.
-- La riga associata al **rapporto minimo** definisce la variabile uscente. La riga di questa variabile diventa la *riga pivot*.
-- Se tutti i coefficienti nella colonna pivot sono $\le 0$, il problema è **illimitato** e la procedura si arresta.
-
-### 6. Operazione di Pivot
-- Individuare l'elemento pivot $P$ all'intersezione tra colonna pivot e riga pivot.
-- Dividere la riga pivot per $P$ per rendere l'elemento pivot uguale a 1.
-- Effettuare combinazioni lineari tra la riga pivot modificata e tutte le altre righe (compresa la riga 0) per azzerare i restanti elementi della colonna pivot.
-- Ripetere dal punto 3.
-
-## Formato di Risposta da Esame
-
-Per ogni iterazione, specificare chiaramente sul foglio:
-1. Variabile entrante e variabile uscente.
-2. Elemento pivot e tableau risultante dall'operazione.
-3. Al passo finale, dichiarare esplicitamente la soluzione ottima:
-   $$
-   (x_1^*, x_2^*, \dots, s_m^*) = (\dots) \quad \text{con } Z^* = \dots
-   $$
-   o dichiarare che il problema è illimitato/non ammissibile.
+Una volta raggiunto il tableau ottimo:
+- **Variabili in base**: Assumono il valore del termine noto (colonna RHS) nella riga in cui hanno coefficiente pari a $1$.
+- **Variabili fuori base**: Assumono valore pari a $0$.
+- **Valore Ottimo ($Z^*$)**: Corrisponde al valore presente nella colonna RHS della riga 0.

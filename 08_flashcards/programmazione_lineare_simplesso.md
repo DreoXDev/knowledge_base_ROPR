@@ -1,16 +1,23 @@
-# Flashcards — Simplesso
+# Flashcards — Metodo del Simplesso
 
-Q: Quando si aggiunge una variabile di slack?
-A: Quando un vincolo di tipo $\le$ viene trasformato in uguaglianza, aggiungendo una variabile non negativa ($s_i \ge 0$).
+## Flashcard — Simplesso
 
-Q: In un tableau di massimizzazione, qual è il criterio per scegliere la variabile entrante?
-A: Entra in base la variabile non di base che presenta il coefficiente più negativo nella riga 0.
+Che cos'è il metodo del simplesso?::È una procedura algebrica per risolvere problemi di PL, interpretabile geometricamente come movimento tra vertici ammissibili adiacenti della regione ammissibile.
 
-Q: Come si effettua il test dei rapporti minimi per la variabile uscente?
-A: Si divide il termine noto (RHS) per i soli coefficienti strettamente posit ($>0$) della colonna entrante; la riga con il rapporto minimo determina la variabile uscente.
+Qual è il test di ottimalità geometrico del simplesso?::Una soluzione vertice è ottima se nessun vertice ammissibile adiacente migliora il valore della funzione obiettivo.
 
-Q: Qual è la condizione di ottimalità nel simplesso per un problema di massimizzazione?
-A: Tutti i coefficienti della riga 0 (riferiti alle colonne delle variabili) sono non negativi ($\ge 0$).
+Che cos'è una variabile slack?::È una variabile non negativa aggiunta a un vincolo di tipo $\le$ per trasformarlo in uguaglianza.
 
-Q: Come si riconosce un problema illimitato nel simplesso?
-A: Se in corrispondenza di una variabile entrante tutti i coefficienti nei vincoli (colonna pivot) sono non positivi ($\le 0$).
+Che cos'è una soluzione di base?::È una soluzione ottenuta ponendo a zero le variabili non di base e risolvendo il sistema per le variabili di base.
+
+Quando una soluzione di base è ammissibile?::Quando tutte le variabili assumono valore non negativo.
+
+Per un problema di massimo, quale variabile entra in base nel simplesso tabellare?::Una variabile non di base con coefficiente negativo in riga 0, tipicamente quella con coefficiente più negativo.
+
+Come si sceglie la variabile uscente?::Con il test del rapporto minimo tra termine noto e coefficiente positivo nella colonna pivot.
+
+Quando il tableau è ottimo in un problema di massimo?::Quando nella riga 0 non ci sono coefficienti negativi per variabili non di base.
+
+Come si riconosce un problema illimitato nel tableau?::Quando scelta una variabile entrante, nella sua colonna non ci sono coefficienti positivi, quindi nessuna variabile può uscire dalla base.
+
+Come si riconoscono ottimi multipli nel tableau?::Quando il tableau è ottimo ma una variabile non di base ha coefficiente nullo nella riga 0.

@@ -4,8 +4,10 @@ Indice semi-automatico dei file utili al retrieval.
 
 ## File indicizzabili
 
+- `04_methods/programmazione_lineare/pl_casi_particolari_simplesso.md`
 - `04_methods/programmazione_lineare/pl_formulazione_modelli.md`
 - `04_methods/programmazione_lineare/pl_metodo_due_fasi.md`
+- `04_methods/programmazione_lineare/pl_simplesso_geometrico.md`
 - `04_methods/programmazione_lineare/pl_simplesso_tabellare.md`
 - `04_methods/programmazione_lineare/pl_variabili_libere_e_segno.md`
 - `05_theory/00_index.md`
@@ -20,14 +22,21 @@ Indice semi-automatico dei file utili al retrieval.
 - `05_theory/programmazione_lineare/09_cammino_minimo_dualita.md`
 - `05_theory/programmazione_lineare/10_dualita.md`
 - `05_theory/programmazione_lineare/11_regole_costruire_duale.md`
+- `05_theory/programmazione_lineare/12_geometria_simplesso.md`
+- `05_theory/programmazione_lineare/13_forma_aumentata_soluzioni_base.md`
+- `05_theory/programmazione_lineare/14_simplesso_forma_tabellare.md`
+- `05_theory/programmazione_lineare/15_casi_particolari_simplesso.md`
 - `07_solved_examples/programmazione_lineare/distribution_network_min_cost_flow.md`
 - `07_solved_examples/programmazione_lineare/pl_cammino_minimo_formulazione.md`
 - `07_solved_examples/programmazione_lineare/pl_duale_vincoli_misti.md`
 - `07_solved_examples/programmazione_lineare/pl_due_fasi_esempio_base.md`
 - `07_solved_examples/programmazione_lineare/pl_due_fasi_problema_illimitato.md`
 - `07_solved_examples/programmazione_lineare/pl_due_fasi_problema_non_ammissibile.md`
+- `07_solved_examples/programmazione_lineare/pl_simplesso_casi_particolari.md`
 - `07_solved_examples/programmazione_lineare/pl_simplesso_esempio_40_50.md`
 - `07_solved_examples/programmazione_lineare/pl_simplesso_max_3x_5y.md`
+- `07_solved_examples/programmazione_lineare/pl_simplesso_tableau_generico.md`
+- `07_solved_examples/programmazione_lineare/pl_simplesso_wyndor.md`
 - `07_solved_examples/programmazione_lineare/pl_tool_spa_duale.md`
 - `07_solved_examples/programmazione_lineare/pl_tool_spa_simplesso.md`
 - `07_solved_examples/programmazione_lineare/pl_turni_lavoro_formulazione.md`
@@ -116,6 +125,41 @@ Concetti:
 - regole di transizione primale-duale (MAX-MIN e MIN-MAX);
 - variabili/vincoli canonici, anticanonici e liberi.
 
+## Metodo del simplesso (Dettagli)
+
+Fonti principali:
+- `raw_assets/Programmazione Lineare/Ricerca Operativa - Metodo del Simplesso - 23-24.pdf`
+- Note derivate:
+  - `05_theory/programmazione_lineare/06_simplesso.md`
+  - `05_theory/programmazione_lineare/12_geometria_simplesso.md`
+  - `05_theory/programmazione_lineare/13_forma_aumentata_soluzioni_base.md`
+  - `05_theory/programmazione_lineare/14_simplesso_forma_tabellare.md`
+  - `05_theory/programmazione_lineare/15_casi_particolari_simplesso.md`
+  - `04_methods/programmazione_lineare/pl_simplesso_tabellare.md`
+  - `04_methods/programmazione_lineare/pl_simplesso_geometrico.md`
+  - `04_methods/programmazione_lineare/pl_casi_particolari_simplesso.md`
+  - `07_solved_examples/programmazione_lineare/pl_simplesso_wyndor.md`
+  - `07_solved_examples/programmazione_lineare/pl_simplesso_tableau_generico.md`
+  - `07_solved_examples/programmazione_lineare/pl_simplesso_casi_particolari.md`
+
+Usare quando la domanda contiene:
+- simplesso;
+- simplex;
+- tableau;
+- tabellare;
+- forma aumentata;
+- variabili slack;
+- variabili di base;
+- variabili non di base;
+- pivot;
+- variabile entrante;
+- variabile uscente;
+- test del rapporto minimo;
+- soluzione di base ammissibile;
+- degenerazione;
+- problema illimitato;
+- ottimi multipli.
+
 ## Query d'esame -> file da consultare
 
 | Query / richiesta | Prima fonte | Seconda fonte | Note |
@@ -135,3 +179,8 @@ Concetti:
 | formulare cammino minimo | `10_rag/method_cards/METHOD_PL_CAMMINO_MINIMO.md` | `05_theory/programmazione_lineare/09_cammino_minimo_dualita.md` | |
 | variabili duali dal tableau | `05_theory/programmazione_lineare/10_dualita.md` | | |
 | variabili canoniche/anticanoniche | `05_theory/programmazione_lineare/11_regole_costruire_duale.md` | | |
+| risolvere con simplesso (Wyndor) | `07_solved_examples/programmazione_lineare/pl_simplesso_wyndor.md` | `04_methods/programmazione_lineare/pl_simplesso_tabellare.md` | |
+| leggere / interpretare tableau generico | `07_solved_examples/programmazione_lineare/pl_simplesso_tableau_generico.md` | | |
+| casi particolari simplesso (degenerazione, illimitatezza, ottimi multipli) | `04_methods/programmazione_lineare/pl_casi_particolari_simplesso.md` | `07_solved_examples/programmazione_lineare/pl_simplesso_casi_particolari.md` | |
+| geometria del simplesso (vertici, adiacenza) | `05_theory/programmazione_lineare/12_geometria_simplesso.md` | `04_methods/programmazione_lineare/pl_simplesso_geometrico.md` | |
+| forma aumentata e soluzioni di base | `05_theory/programmazione_lineare/13_forma_aumentata_soluzioni_base.md` | | |
