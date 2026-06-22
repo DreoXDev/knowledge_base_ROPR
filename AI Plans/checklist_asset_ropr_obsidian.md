@@ -49,12 +49,15 @@ Questa nota serve solo per tenere traccia manuale degli asset già analizzati e 
 - [x] `raw_assets/Programmazione Lineare/Ricerca Operativa - Teoria della Dualità.pdf`  
   `area:: Programmazione Lineare` `source_type:: official` `priority:: high`
   `status:: completed` `ingestion_date:: 2026-06-22` `report:: [[006_teoria_della_dualita_ingestion_report]]`
-- [ ] `raw_assets/Programmazione Lineare/esercitazione1_complete.pdf`  
+- [x] `raw_assets/Programmazione Lineare/esercitazione1_complete.pdf`  
   `area:: Programmazione Lineare` `source_type:: official` `priority:: high`
-- [ ] `raw_assets/Programmazione Lineare/Esercitazione 2 PL.pdf`  
+  `status:: completed` `ingestion_date:: 2026-06-22` `report:: [[007_esercitazioni_pl_1_2_ingestion_report]]`
+- [x] `raw_assets/Programmazione Lineare/Esercitazione 2 PL.pdf`  
   `area:: Programmazione Lineare` `source_type:: official` `priority:: high`
+  `status:: completed` `ingestion_date:: 2026-06-22` `report:: [[007_esercitazioni_pl_1_2_ingestion_report]]`
 - [ ] `raw_assets/Programmazione Lineare/Lab-Python 1.pdf`  
-  `area:: Programmazione Lineare` `source_type:: official` `priority:: medium`
+  `area:: Programmazione Lineare` `source_type:: official` `priority:: low`
+  `status:: deferred` `note:: Rinviato perché materiale implementativo Python`
 
 ---
 

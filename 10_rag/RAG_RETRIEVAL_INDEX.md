@@ -7,16 +7,21 @@ Indice semi-automatico dei file utili al retrieval.
 - `04_methods/programmazione_lineare/pl_casi_particolari_simplesso.md`
 - `04_methods/programmazione_lineare/pl_costruire_duale_sensible_odd_bizarre.md`
 - `04_methods/programmazione_lineare/pl_costruire_duale_standard.md`
+- `04_methods/programmazione_lineare/pl_formulare_modello_pl_da_testo.md`
 - `04_methods/programmazione_lineare/pl_formulazione_modelli.md`
 - `04_methods/programmazione_lineare/pl_leggere_variabili_duali_da_tableau.md`
 - `04_methods/programmazione_lineare/pl_metodo_due_fasi.md`
+- `04_methods/programmazione_lineare/pl_problemi_di_miscelazione.md`
+- `04_methods/programmazione_lineare/pl_problemi_di_trasporto.md`
 - `04_methods/programmazione_lineare/pl_riconoscere_vertici_e_frontiere.md`
 - `04_methods/programmazione_lineare/pl_simplesso_geometrico.md`
 - `04_methods/programmazione_lineare/pl_simplesso_tabellare.md`
+- `04_methods/programmazione_lineare/pl_soluzione_grafica.md`
 - `04_methods/programmazione_lineare/pl_teoria_simplesso.md`
 - `04_methods/programmazione_lineare/pl_usare_complementary_slackness.md`
 - `04_methods/programmazione_lineare/pl_variabili_libere_e_segno.md`
 - `04_methods/programmazione_lineare/pl_vertici_adiacenti_e_ottimalita.md`
+- `04_methods/programmazione_lineare_intera/pl_set_covering_e_maximum_coverage.md`
 - `05_theory/00_index.md`
 - `05_theory/programmazione_lineare/01_introduzione_programmazione_lineare.md`
 - `05_theory/programmazione_lineare/02_formulazione_generale_pl.md`
@@ -43,6 +48,7 @@ Indice semi-automatico dei file utili al retrieval.
 - `05_theory/programmazione_lineare/24_complementary_slackness.md`
 - `05_theory/programmazione_lineare/25_relazioni_primale_duale_limite.md`
 - `07_solved_examples/programmazione_lineare/distribution_network_min_cost_flow.md`
+- `07_solved_examples/programmazione_lineare/miscelazione_benzine.md`
 - `07_solved_examples/programmazione_lineare/pl_cammino_minimo_formulazione.md`
 - `07_solved_examples/programmazione_lineare/pl_duale_vincoli_misti.md`
 - `07_solved_examples/programmazione_lineare/pl_due_fasi_esempio_base.md`
@@ -56,7 +62,11 @@ Indice semi-automatico dei file utili al retrieval.
 - `07_solved_examples/programmazione_lineare/pl_tool_spa_duale.md`
 - `07_solved_examples/programmazione_lineare/pl_tool_spa_simplesso.md`
 - `07_solved_examples/programmazione_lineare/pl_turni_lavoro_formulazione.md`
+- `07_solved_examples/programmazione_lineare/problema_dieta.md`
+- `07_solved_examples/programmazione_lineare/produzione_tool_spa.md`
+- `07_solved_examples/programmazione_lineare/reti_distribuzione_bell_computers.md`
 - `07_solved_examples/programmazione_lineare/wyndor_glass.md`
+- `07_solved_examples/programmazione_lineare_intera/call_spa_ripetitori.md`
 - `06_exam_patterns/common_mistakes.md`
 - `06_exam_patterns/PATTERN_INDEX.md`
 - `06_exam_patterns/PATTERN_MAP.md`
@@ -224,11 +234,44 @@ Usare quando la domanda contiene:
 - problema illimitato;
 - ottimi multipli.
 
+## Formulazione modelli PL e PLI (Esercitazioni)
+
+Fonti:
+- `raw_assets/Programmazione Lineare/esercitazione1_complete.pdf`
+- `raw_assets/Programmazione Lineare/Esercitazione 2 PL.pdf`
+- `04_methods/programmazione_lineare/pl_formulare_modello_pl_da_testo.md`
+- `04_methods/programmazione_lineare/pl_soluzione_grafica.md`
+- `04_methods/programmazione_lineare_intera/pl_set_covering_e_maximum_coverage.md`
+- `04_methods/programmazione_lineare/pl_problemi_di_miscelazione.md`
+- `04_methods/programmazione_lineare/pl_problemi_di_trasporto.md`
+- `07_solved_examples/programmazione_lineare/produzione_tool_spa.md`
+- `07_solved_examples/programmazione_lineare/problema_dieta.md`
+- `07_solved_examples/programmazione_lineare/reti_distribuzione_bell_computers.md`
+- `07_solved_examples/programmazione_lineare/miscelazione_benzine.md`
+- `07_solved_examples/programmazione_lineare_intera/call_spa_ripetitori.md`
+
+Concetti:
+- checklist di modellazione;
+- pianificazione della produzione (TOOL.spa);
+- problema della dieta (nutrizionali minimi);
+- reti di distribuzione e problemi di trasporto;
+- miscelazione di benzine e linearizzazione di vincoli di qualità media;
+- localizzazione impianti: set covering e maximum coverage;
+- variabili di copertura $y_j$ e prevenzione del doppio conteggio;
+- risoluzione grafica di problemi a due variabili.
+
 ## Query d'esame -> file da consultare
 
 | Query / richiesta | Prima fonte | Seconda fonte | Note |
 |---|---|---|---|
-| formulare un modello di programmazione lineare | `04_methods/programmazione_lineare/pl_formulazione_modelli.md` | `05_theory/programmazione_lineare/02_formulazione_generale_pl.md` | |
+| formulare un modello di programmazione lineare | `04_methods/programmazione_lineare/pl_formulare_modello_pl_da_testo.md` | `05_theory/programmazione_lineare/08_formulazione_modelli_pl.md` | |
+| formulare pianificazione produzione (chiavi/pinze) | `04_methods/programmazione_lineare/pl_formulare_modello_pl_da_testo.md` | `07_solved_examples/programmazione_lineare/produzione_tool_spa.md` | |
+| formulare problema dieta / nutrizionale | `04_methods/programmazione_lineare/pl_formulare_modello_pl_da_testo.md` | `07_solved_examples/programmazione_lineare/problema_dieta.md` | |
+| formulare problema trasporto / distribuzione | `04_methods/programmazione_lineare/pl_problemi_di_trasporto.md` | `07_solved_examples/programmazione_lineare/reti_distribuzione_bell_computers.md` | |
+| formulare miscelazione / blending | `04_methods/programmazione_lineare/pl_problemi_di_miscelazione.md` | `07_solved_examples/programmazione_lineare/miscelazione_benzine.md` | |
+| formulare set covering | `04_methods/programmazione_lineare_intera/pl_set_covering_e_maximum_coverage.md` | `07_solved_examples/programmazione_lineare_intera/call_spa_ripetitori.md` | |
+| formulare maximum coverage | `04_methods/programmazione_lineare_intera/pl_set_covering_e_maximum_coverage.md` | `07_solved_examples/programmazione_lineare_intera/call_spa_ripetitori.md` | |
+| risoluzione grafica di PL | `04_methods/programmazione_lineare/pl_soluzione_grafica.md` | `05_theory/programmazione_lineare/03_soluzione_grafica_pl.md` | |
 | formulare problema dei turni / workforce scheduling | `04_methods/programmazione_lineare/pl_formulazione_modelli.md` | `07_solved_examples/programmazione_lineare/pl_turni_lavoro_formulazione.md` | |
 | risolvere con simplesso tabellare | `04_methods/programmazione_lineare/pl_simplesso_tabellare.md` | `07_solved_examples/programmazione_lineare/pl_simplesso_esempio_40_50.md` | |
 | metodo delle due fasi | `04_methods/programmazione_lineare/pl_metodo_due_fasi.md` | `07_solved_examples/programmazione_lineare/pl_due_fasi_esempio_base.md` | |
@@ -238,7 +281,7 @@ Usare quando la domanda contiene:
 | branch and bound | `04_methods/programmazione_lineare_intera/` | `07_solved_examples/programmazione_lineare_intera/` | Da completare dopo ingestion |
 | condizioni KKT | `04_methods/programmazione_non_lineare/` | `05_theory/programmazione_non_lineare/` | Da completare dopo ingestion |
 | flusso a costo minimo | `10_rag/method_cards/PL_minimum_cost_flow.md` | `07_solved_examples/programmazione_lineare/distribution_network_min_cost_flow.md` | |
-| soluzione grafica di PL | `10_rag/method_cards/PL_soluzione_grafica.md` | `05_theory/programmazione_lineare/03_soluzione_grafica_pl.md` | |
+| soluzione grafica di PL (RAG) | `10_rag/method_cards/PL_soluzione_grafica.md` | `05_theory/programmazione_lineare/03_soluzione_grafica_pl.md` | |
 | gestione variabili libere o negative | `04_methods/programmazione_lineare/pl_variabili_libere_e_segno.md` | `07_solved_examples/programmazione_lineare/pl_due_fasi_problema_illimitato.md` | |
 | rilevare problema illimitato | `04_methods/programmazione_lineare/pl_simplesso_tabellare.md` | `07_solved_examples/programmazione_lineare/pl_due_fasi_problema_illimitato.md` | |
 | rilevare problema non ammissibile | `04_methods/programmazione_lineare/pl_metodo_due_fasi.md` | `07_solved_examples/programmazione_lineare/pl_due_fasi_problema_non_ammissibile.md` | |
@@ -257,3 +300,4 @@ Usare quando la domanda contiene:
 | trovare / verificare adiacenza vertici | `04_methods/programmazione_lineare/pl_vertici_adiacenti_e_ottimalita.md` | `05_theory/programmazione_lineare/18_vertici_adiacenti_cammino_simplesso.md` | |
 | spiegare degenerazione (teoria) | `05_theory/programmazione_lineare/19_degenerazione_simplesso.md` | | |
 | proprietà degli ottimi nei vertici | `05_theory/programmazione_lineare/20_proprieta_vertici_ammissibili.md` | | |
+

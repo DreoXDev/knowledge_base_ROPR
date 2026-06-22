@@ -107,3 +107,18 @@ Quando arriva una foto di un esercizio che chiede il duale:
 5. Determina correttamente segno delle variabili duali e verso dei vincoli.
 6. Se ci sono vincoli $=$ o variabili libere, evidenzia variabile libera/vincolo di uguaglianza.
 7. Risposta breve, precisa, senza commenti superflui.
+
+## Esercizi di localizzazione, miscelazione e trasporto
+
+- **Esercizi di localizzazione / copertura (Set Covering & Maximum Coverage)**:
+  - Identificare se la traccia richiede di coprire tutte le zone (Set Covering) o massimizzare la copertura entro un budget $k$ (Maximum Coverage).
+  - Nel Set Covering: minimizzare $\sum x_i$ s.t. $\sum a_{ji} x_i \ge 1$, con $x_i \in \{0, 1\}$.
+  - Nel Maximum Coverage: utilizzare le variabili ausiliarie di copertura $y_j \in \{0, 1\}$ e massimizzare $\sum u_j y_j$ s.t. $\sum x_i \le k$ e $y_j \le \sum a_{ji} x_i$ per evitare il doppio conteggio.
+- **Esercizi di miscelazione (Blending)**:
+  - Formulare le variabili decisionali come quantità fisiche $x_{cm}$ (costituente $c$ nella miscela $m$).
+  - I vincoli di qualità media (viscosità, ottani, pressione) devono essere espressi come medie pesate linearizzate moltiplicando per il totale prodotto: $\sum (q_c - Q^{min}) x_{cm} \ge 0$.
+- **Esercizi di trasporto / reti di distribuzione**:
+  - Definire le variabili $x_{ij}$ (quantità spedita da origine $i$ a destinazione $j$).
+  - Inserire vincoli di capacità per ciascuna origine e vincoli di soddisfacimento della domanda per ciascuna destinazione.
+  - Verificare se il problema è bilanciato ($\sum s_i = \sum d_j$); in tal caso, usare vincoli di uguaglianza ($=$).
+
