@@ -17,3 +17,7 @@ _extracted_text_tmp/
 
 # Large local-only exports if needed
 local_exports/
+
+.obsidian/
+
+AI Plans/
