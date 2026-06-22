@@ -2,7 +2,7 @@
 materia: ROPR
 area: Programmazione Lineare
 tipo: teoria
-fonte: Ricerca Operativa - Metodo del Simplesso - 23-24.pdf
+fonte: Ricerca Operativa - Teoria del Simplesso - 23-24.pdf
 stato: completo
 priorita: alta
 tags:
@@ -11,87 +11,71 @@ tags:
   - simplesso
   - forma-aumentata
   - soluzioni-base
+  - vertici
 ---
 
 # Forma aumentata e soluzioni di base
 
-Per poter applicare i metodi algebrici di risoluzione (come il simplesso), il problema di PL deve essere formulato in **forma aumentata**, in modo da operare su sistemi di equazioni lineari anziché su disequazioni.
+Per poter risolvere un problema di Programmazione Lineare (PL) tramite metodi algebrici (come il simplesso tabellare), è necessario convertire il modello in **forma aumentata** (introducendo variabili di slack) e comprendere la relazione tra la geometria dei **vertici** e l'algebra delle **soluzioni di base**.
 
-## Forma Aumentata e Variabili di Slack
+---
 
-I vincoli di disuguaglianza $\le$ vengono trasformati in equazioni aggiungendo una **variabile di slack** non negativa, che rappresenta la quantità di risorsa non utilizzata dal vincolo corrispondente.
+## 1. Definizione di Vertice
 
-Esempio:
+### Definizione Geometrica
+> Un **vertice ammissibile** è una soluzione ammissibile che non giace su alcun segmento che connette altre due soluzioni ammissibili distinte della regione ammissibile.
+
+*Esempi in Wyndor Glass Co.*:
+- Punti come l'origine $(0,0)$, $(4,0)$ o $(2,6)$ sono vertici ammissibili poiché si trovano sugli angoli del poligono.
+- Qualsiasi punto situato lungo i lati, ad esempio $(0,3)$ o $(2,3)$, giace sul segmento che unisce i vertici di estremità, quindi **non** è un vertice.
+
+### Definizione Algebrica (Sistemi di Frontiera)
+In uno spazio multidimensionale $\mathbb{R}^n$, la definizione geometrica non è operativa. Si adotta la caratterizzazione algebrica:
+
+> In un problema di PL con $n$ variabili decisionali, ogni vertice è l'intersezione di $n$ iperpiani associati alle equazioni di frontiera del problema. Si ottiene quindi risolvendo un sistema di $n$ equazioni di frontiera linearmente indipendenti.
+
+*Limitazioni e casi*:
+- Non tutte le scelte di $n$ equazioni di frontiera producono un vertice ammissibile.
+- Se la soluzione del sistema viola uno o più dei vincoli rimanenti (non inclusi nel sistema), si ha un **vertice non ammissibile**.
+- Se le equazioni scelte sono incompatibili, il sistema non ammette soluzioni.
+
+| Oggetto / Caso | Significato algebrico |
+|---|---|
+| **Equazione di frontiera** | Vincolo originario reso attivo sostituendo la disuguaglianza con l'uguaglianza ($=$). |
+| **Vertice ammissibile** | Soluzione di un sistema di $n$ equazioni di frontiera che soddisfa tutti gli altri vincoli. |
+| **Vertice non ammissibile** | Soluzione di un sistema di $n$ equazioni di frontiera che viola almeno un altro vincolo. |
+| **Sistema senza soluzione** | Incompatibilità algebrica delle $n$ equazioni di frontiera selezionate. |
+| **Degenerazione** | Caso in cui più di $n$ equazioni di frontiera sono attive nello stesso punto (il vertice è sovradeterminato). |
+
+---
+
+## 2. Forma Aumentata e Variabili di Slack
+
+I vincoli di disuguaglianza $\le$ vengono convertiti in uguaglianze aggiungendo una **variabile di slack** ($s_i \ge 0$) che misura la differenza tra il termine noto e il membro sinistro del vincolo:
 $$
-a_{i1}x_1 + a_{i2}x_2 \le b_i \implies a_{i1}x_1 + a_{i2}x_2 + s_i = b_i \quad \text{con } s_i \ge 0
-$$
-
-## Classificazione delle Variabili
-
-1. **Variabili Decisionali**: Le variabili originarie del modello ($x_1, x_2, \dots, x_n$).
-2. **Variabili di Slack**: Le variabili introdotte per convertire le disuguaglianze in uguaglianze ($s_1, s_2, \dots, s_m$).
-3. **Variabili di Base**: Le $m$ variabili associate alle colonne che compongono una base lineare per il sistema (corrispondono a valori tipicamente non nulli risolti dal sistema).
-4. **Variabili Non di Base**: Le $n - m$ variabili libere che vengono poste pari a zero per poter risolvere il sistema di equazioni.
-
-## Gradi di Libertà e Soluzione di Base
-
-Dato un sistema di $m$ equazioni lineari indipendenti con $N$ variabili ($N > m$):
-- Il sistema ha $N - m$ gradi di libertà.
-- Poniamo $N - m$ variabili pari a zero (**variabili non di base**).
-- Risolviamo il sistema lineare quadrato risultante per le restanti $m$ variabili (**variabili di base**).
-
-La soluzione così ottenuta è detta **soluzione di base**.
-
-> [!NOTE]
-> - **Soluzione di base ammissibile**: Se tutte le $m$ variabili di base risultanti sono non negative ($\ge 0$). Ciascuna soluzione di base ammissibile corrisponde esattamente a un **vertice ammissibile** del poliedro.
-> - **Soluzione di base non ammissibile**: Se almeno una delle variabili risolte assume un valore negativo ($< 0$). Corrisponde a un vertice geometrico che giace al di fuori della regione ammissibile.
-
-## Origine come Soluzione Iniziale
-
-Se il problema originale ha solo vincoli del tipo $\le$ con termini noti non negativi ($b_i \ge 0$):
-- Ponendo le variabili decisionali originarie pari a zero ($x_j = 0$, variabili non di base), le variabili di slack diventano le variabili di base iniziale.
-- Il loro valore è pari a $s_i = b_i \ge 0$.
-- Questa è una soluzione di base ammissibile iniziale immediata e coincide con l'origine degli assi geometrici.
-
-## Esempio: Wyndor Glass in Forma Aumentata
-
-Problema originale:
-
-$$
-\max Z = 3x_1 + 5x_2
+\sum_{j=1}^n a_{ij}x_j \le b_i \implies \sum_{j=1}^n a_{ij}x_j + s_i = b_i \quad \text{con } s_i \ge 0
 $$
 
-soggetto a:
+### Classificazione delle Variabili
+1. **Variabili Decisionali**: Le variabili originarie del modello ($x_1, \dots, x_n$).
+2. **Variabili di Slack**: Le variabili introdotte per convertire le disuguaglianze ($s_1, \dots, s_m$).
+3. **Variabili di Base**: Le $m$ variabili associate alle colonne della base lineare del sistema equivalente (risolte dal sistema).
+4. **Variabili Non di Base**: Le $n - m$ variabili poste pari a zero per rimuovere i gradi di libertà del sistema.
 
-$$
-x_1 \le 4
-$$
+---
 
-$$
-2x_2 \le 12
-$$
+## 3. Gradi di Libertà e Soluzioni di Base
 
-$$
-3x_1 + 2x_2 \le 18
-$$
+Dato un sistema aumentato con $N$ variabili totali ($n$ decisionali + $m$ slack) e $m$ equazioni indipendenti:
+- Il sistema possiede $N - m = n$ gradi di libertà.
+- Poniamo $n$ variabili (variabili non di base) pari a zero.
+- Risolviamo il sistema per le restanti $m$ variabili (variabili di base).
 
-$$
-x_1, x_2 \ge 0
-$$
+La soluzione risultante è detta **soluzione di base**.
+- Se tutti i valori ottenuti per le variabili di base sono non negativi ($\ge 0$), è una **soluzione di base ammissibile** (SBA).
+- Vi è una corrispondenza biunivoca tra ciascuna SBA e un **vertice ammissibile** della regione ammissibile.
 
-Forma aumentata:
-
-$$
-\begin{aligned}
-(0) \quad Z - 3x_1 - 5x_2 &= 0 \\
-(1) \quad x_1 + s_1 &= 4 \\
-(2) \quad 2x_2 + s_2 &= 12 \\
-(3) \quad 3x_1 + 2x_2 + s_3 &= 18
-\end{aligned}
-$$
-
-con $x_1, x_2, s_1, s_2, s_3 \ge 0$.
-
-Ponendo le $N-m = 5-3 = 2$ variabili non di base $x_1 = 0, x_2 = 0$, otteniamo la soluzione di base iniziale:
-- Variabili di base: $s_1 = 4$, $s_2 = 12$, $s_3 = 18$ (ammissibile).
-- Valore di $Z = 0$.
+### Origine come Soluzione Iniziale
+Se tutti i vincoli funzionali sono di tipo $\le$ con termini noti non negativi ($b_i \ge 0$), ponendo le variabili decisionali pari a zero ($x_j = 0$, variabili non di base), otteniamo:
+- Variabili di base: $s_i = b_i \ge 0$.
+- Questa è la soluzione di base ammissibile iniziale e corrisponde geometricamente all'origine degli assi.

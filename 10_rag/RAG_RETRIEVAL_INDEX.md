@@ -7,9 +7,12 @@ Indice semi-automatico dei file utili al retrieval.
 - `04_methods/programmazione_lineare/pl_casi_particolari_simplesso.md`
 - `04_methods/programmazione_lineare/pl_formulazione_modelli.md`
 - `04_methods/programmazione_lineare/pl_metodo_due_fasi.md`
+- `04_methods/programmazione_lineare/pl_riconoscere_vertici_e_frontiere.md`
 - `04_methods/programmazione_lineare/pl_simplesso_geometrico.md`
 - `04_methods/programmazione_lineare/pl_simplesso_tabellare.md`
+- `04_methods/programmazione_lineare/pl_teoria_simplesso.md`
 - `04_methods/programmazione_lineare/pl_variabili_libere_e_segno.md`
+- `04_methods/programmazione_lineare/pl_vertici_adiacenti_e_ottimalita.md`
 - `05_theory/00_index.md`
 - `05_theory/programmazione_lineare/01_introduzione_programmazione_lineare.md`
 - `05_theory/programmazione_lineare/02_formulazione_generale_pl.md`
@@ -26,6 +29,10 @@ Indice semi-automatico dei file utili al retrieval.
 - `05_theory/programmazione_lineare/13_forma_aumentata_soluzioni_base.md`
 - `05_theory/programmazione_lineare/14_simplesso_forma_tabellare.md`
 - `05_theory/programmazione_lineare/15_casi_particolari_simplesso.md`
+- `05_theory/programmazione_lineare/17_teoria_simplesso.md`
+- `05_theory/programmazione_lineare/18_vertici_adiacenti_cammino_simplesso.md`
+- `05_theory/programmazione_lineare/19_degenerazione_simplesso.md`
+- `05_theory/programmazione_lineare/20_proprieta_vertici_ammissibili.md`
 - `07_solved_examples/programmazione_lineare/distribution_network_min_cost_flow.md`
 - `07_solved_examples/programmazione_lineare/pl_cammino_minimo_formulazione.md`
 - `07_solved_examples/programmazione_lineare/pl_duale_vincoli_misti.md`
@@ -125,6 +132,37 @@ Concetti:
 - regole di transizione primale-duale (MAX-MIN e MIN-MAX);
 - variabili/vincoli canonici, anticanonici e liberi.
 
+## Teoria del simplesso
+
+Fonti principali:
+- `raw_assets/Programmazione Lineare/Ricerca Operativa - Teoria del Simplesso - 23-24.pdf`
+- Note derivate:
+  - `05_theory/programmazione_lineare/17_teoria_simplesso.md`
+  - `05_theory/programmazione_lineare/12_geometria_simplesso.md`
+  - `05_theory/programmazione_lineare/13_forma_aumentata_soluzioni_base.md`
+  - `05_theory/programmazione_lineare/18_vertici_adiacenti_cammino_simplesso.md`
+  - `05_theory/programmazione_lineare/19_degenerazione_simplesso.md`
+  - `05_theory/programmazione_lineare/20_proprieta_vertici_ammissibili.md`
+  - `04_methods/programmazione_lineare/pl_teoria_simplesso.md`
+  - `04_methods/programmazione_lineare/pl_riconoscere_vertici_e_frontiere.md`
+  - `04_methods/programmazione_lineare/pl_vertici_adiacenti_e_ottimalita.md`
+  - `10_rag/method_cards/PL_teoria_simplesso.md`
+  - `10_rag/method_cards/PL_vertici_frontiere_iperpiani.md`
+  - `10_rag/method_cards/PL_vertici_adiacenti_ottimalita.md`
+
+Usare quando la domanda contiene:
+- teoria simplesso;
+- frontiera vincolo;
+- iperpiano;
+- vertice ammissibile;
+- vertice non ammissibile;
+- vertici adiacenti;
+- spigolo;
+- degenerazione teorica;
+- ottimo nei vertici;
+- combinazione convessa;
+- ottimi multipli teorici.
+
 ## Metodo del simplesso (Dettagli)
 
 Fonti principali:
@@ -184,3 +222,7 @@ Usare quando la domanda contiene:
 | casi particolari simplesso (degenerazione, illimitatezza, ottimi multipli) | `04_methods/programmazione_lineare/pl_casi_particolari_simplesso.md` | `07_solved_examples/programmazione_lineare/pl_simplesso_casi_particolari.md` | |
 | geometria del simplesso (vertici, adiacenza) | `05_theory/programmazione_lineare/12_geometria_simplesso.md` | `04_methods/programmazione_lineare/pl_simplesso_geometrico.md` | |
 | forma aumentata e soluzioni di base | `05_theory/programmazione_lineare/13_forma_aumentata_soluzioni_base.md` | | |
+| teoria del simplesso (risposta concettuale) | `04_methods/programmazione_lineare/pl_teoria_simplesso.md` | `05_theory/programmazione_lineare/17_teoria_simplesso.md` | |
+| trovare / verificare adiacenza vertici | `04_methods/programmazione_lineare/pl_vertici_adiacenti_e_ottimalita.md` | `05_theory/programmazione_lineare/18_vertici_adiacenti_cammino_simplesso.md` | |
+| spiegare degenerazione (teoria) | `05_theory/programmazione_lineare/19_degenerazione_simplesso.md` | | |
+| proprietà degli ottimi nei vertici | `05_theory/programmazione_lineare/20_proprieta_vertici_ammissibili.md` | | |

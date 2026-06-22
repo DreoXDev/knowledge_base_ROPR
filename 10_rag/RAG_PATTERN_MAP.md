@@ -207,3 +207,34 @@ Risposta attesa:
 Fonti:
 - `04_methods/programmazione_lineare/pl_casi_particolari_simplesso.md`
 - `07_solved_examples/programmazione_lineare/pl_simplesso_casi_particolari.md`
+
+---
+
+## Pattern — Domanda teorica sul simplesso
+
+Trigger:
+- "spiega il simplesso"
+- "teoria del simplesso"
+- "vertice ammissibile"
+- "frontiera del vincolo"
+- "iperpiano"
+- "perché il simplesso controlla i vertici"
+- "vertici adiacenti"
+- "degenerazione"
+- "soluzione di base degenere"
+
+Risposta attesa:
+- Spiegare il concetto geometrico o algebrico richiesto in modo definitorio.
+- Mostrare formule in LaTeX o tabelle esplicative.
+- Mantenere la risposta concisa e focalizzata sulla teoria d'esame.
+
+Fonti:
+- `10_rag/method_cards/PL_teoria_simplesso.md`
+- `10_rag/method_cards/PL_vertici_frontiere_iperpiani.md`
+- `10_rag/method_cards/PL_vertici_adiacenti_ottimalita.md`
+- `05_theory/programmazione_lineare/17_teoria_simplesso.md`
+- `05_theory/programmazione_lineare/12_geometria_simplesso.md`
+- `05_theory/programmazione_lineare/13_forma_aumentata_soluzioni_base.md`
+- `05_theory/programmazione_lineare/18_vertici_adiacenti_cammino_simplesso.md`
+- `05_theory/programmazione_lineare/19_degenerazione_simplesso.md`
+- `05_theory/programmazione_lineare/20_proprieta_vertici_ammissibili.md`
