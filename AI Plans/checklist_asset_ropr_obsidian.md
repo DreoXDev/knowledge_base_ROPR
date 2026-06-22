@@ -34,8 +34,9 @@ Questa nota serve solo per tenere traccia manuale degli asset già analizzati e 
 - [x] `raw_assets/Programmazione Lineare/Ricerca Operativa - Introduzione a PL - 23-24.pdf`  
   `area:: Programmazione Lineare` `source_type:: official` `priority:: high`
   `status:: completed` `ingestion_date:: 2026-06-22` `report:: [[001_introduzione_programmazione_lineare]]`
-- [ ] `raw_assets/Programmazione Lineare/lezione 3 completa.pdf`  
+- [x] `raw_assets/Programmazione Lineare/lezione 3 completa.pdf`  
   `area:: Programmazione Lineare` `source_type:: official` `priority:: high`
+  `status:: completed` `ingestion_date:: 2026-06-22` `report:: [[002_lezione_3_completa_ingestion_report]]`
 - [ ] `raw_assets/Programmazione Lineare/lec_w4_completa.pdf`  
   `area:: Programmazione Lineare` `source_type:: official` `priority:: high`
 - [ ] `raw_assets/Programmazione Lineare/Ricerca Operativa - Metodo del Simplesso - 23-24.pdf`  

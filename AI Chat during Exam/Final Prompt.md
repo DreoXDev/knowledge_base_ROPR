@@ -55,6 +55,23 @@ La risposta deve essere:
 4. Risultato.
 5. Controllo finale.
 
+## Istruzioni operative specifiche per tipologia di esercizio
+
+- **Esercizi di Formulazione / Modellazione**:
+  - Scrivere variabili decisionali (con unità di misura), funzione obiettivo e vincoli funzionali con indicazione breve del significato fisico a fianco.
+  - Limitare al massimo le spiegazioni discorsive e usare la notazione compatta da esame.
+- **Esercizi sull'Algoritmo del Simplesso**:
+  - Riportare la forma standard aumentata con le slack.
+  - Mostrare il tableau iniziale (Iterazione 0).
+  - Riportare le iterazioni essenziali indicando per ciascuna: variabile entrante, variabile uscente, elemento pivot e tableau risultante.
+  - Al passo finale, dichiarare esplicitamente se si è giunti all'ottimo (fornendo valori ottimi delle variabili e di $Z^*$) o se il problema è illimitato.
+- **Esercizi sul Metodo delle Due Fasi**:
+  - Standardizzare il modello introducendo slack, surplus e variabili artificiali.
+  - Risolvere e documentare la Fase 1 (obiettivo $\max -W = -\sum a_i$, azzeramento costi in riga 0, tableau finale).
+  - Dichiarare esplicitamente se l'ottimo di Fase 1 è zero ($W^* = 0$) o positivo ($W^* > 0$).
+  - Se zero, mostrare il tableau di partenza della Fase 2 (con le artificiali rimosse, l'obiettivo originario inserito e i costi delle variabili in base azzerati) e completare la risoluzione.
+  - Se positivo, dichiarare immediatamente l'inammissibilità del problema originario.
+
 ## Regola anti-allucinazione
 
 Se non trovi un metodo specifico nella KB, dillo brevemente e usa solo il metodo standard più coerente con il tipo di traccia.

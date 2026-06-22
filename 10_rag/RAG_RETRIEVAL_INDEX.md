@@ -4,13 +4,27 @@ Indice semi-automatico dei file utili al retrieval.
 
 ## File indicizzabili
 
+- `04_methods/programmazione_lineare/pl_formulazione_modelli.md`
+- `04_methods/programmazione_lineare/pl_metodo_due_fasi.md`
+- `04_methods/programmazione_lineare/pl_simplesso_tabellare.md`
+- `04_methods/programmazione_lineare/pl_variabili_libere_e_segno.md`
 - `05_theory/00_index.md`
 - `05_theory/programmazione_lineare/01_introduzione_programmazione_lineare.md`
 - `05_theory/programmazione_lineare/02_formulazione_generale_pl.md`
 - `05_theory/programmazione_lineare/03_soluzione_grafica_pl.md`
 - `05_theory/programmazione_lineare/04_regione_ammissibile_e_casi.md`
 - `05_theory/programmazione_lineare/05_assunzioni_programmazione_lineare.md`
+- `05_theory/programmazione_lineare/06_simplesso.md`
+- `05_theory/programmazione_lineare/07_metodo_due_fasi.md`
+- `05_theory/programmazione_lineare/08_formulazione_modelli_pl.md`
 - `07_solved_examples/programmazione_lineare/distribution_network_min_cost_flow.md`
+- `07_solved_examples/programmazione_lineare/pl_due_fasi_esempio_base.md`
+- `07_solved_examples/programmazione_lineare/pl_due_fasi_problema_illimitato.md`
+- `07_solved_examples/programmazione_lineare/pl_due_fasi_problema_non_ammissibile.md`
+- `07_solved_examples/programmazione_lineare/pl_simplesso_esempio_40_50.md`
+- `07_solved_examples/programmazione_lineare/pl_simplesso_max_3x_5y.md`
+- `07_solved_examples/programmazione_lineare/pl_tool_spa_simplesso.md`
+- `07_solved_examples/programmazione_lineare/pl_turni_lavoro_formulazione.md`
 - `07_solved_examples/programmazione_lineare/wyndor_glass.md`
 - `06_exam_patterns/common_mistakes.md`
 - `06_exam_patterns/PATTERN_INDEX.md`
@@ -45,14 +59,48 @@ Concetti:
 - assunzioni della PL;
 - flusso a costo minimo.
 
+## Programmazione Lineare — Algoritmi e Formulazione (Lezione 3)
+
+Fonti:
+- `raw_assets/Programmazione Lineare/lezione 3 completa.pdf`
+- `05_theory/programmazione_lineare/06_simplesso.md`
+- `05_theory/programmazione_lineare/07_metodo_due_fasi.md`
+- `05_theory/programmazione_lineare/08_formulazione_modelli_pl.md`
+- `07_solved_examples/programmazione_lineare/pl_turni_lavoro_formulazione.md`
+- `07_solved_examples/programmazione_lineare/pl_simplesso_esempio_40_50.md`
+- `07_solved_examples/programmazione_lineare/pl_tool_spa_simplesso.md`
+- `07_solved_examples/programmazione_lineare/pl_simplesso_max_3x_5y.md`
+- `07_solved_examples/programmazione_lineare/pl_due_fasi_esempio_base.md`
+- `07_solved_examples/programmazione_lineare/pl_due_fasi_problema_illimitato.md`
+- `07_solved_examples/programmazione_lineare/pl_due_fasi_problema_non_ammissibile.md`
+
+Concetti:
+- workforce scheduling / pianificazione turni di lavoro;
+- simplesso tabellare;
+- riga obiettivo / riga 0;
+- variabili di slack e surplus;
+- variabili artificiali;
+- pivot / variabile entrante / variabile uscente;
+- test dei rapporti minimi;
+- metodo delle due fasi (Fase 1 e Fase 2);
+- problema illimitato;
+- problema non ammissibile;
+- variabili libere e variabili non positive;
+- Tool.Spa.
+
 ## Query d'esame -> file da consultare
 
 | Query / richiesta | Prima fonte | Seconda fonte | Note |
 |---|---|---|---|
-| formulare un modello di programmazione lineare | `10_rag/method_cards/PL_formulazione_modello.md` | `05_theory/programmazione_lineare/02_formulazione_generale_pl.md` | |
-| risolvere con simplesso | `04_methods/programmazione_lineare/` | `07_solved_examples/programmazione_lineare/` | Da completare dopo ingestion |
+| formulare un modello di programmazione lineare | `04_methods/programmazione_lineare/pl_formulazione_modelli.md` | `05_theory/programmazione_lineare/02_formulazione_generale_pl.md` | |
+| formulare problema dei turni / workforce scheduling | `04_methods/programmazione_lineare/pl_formulazione_modelli.md` | `07_solved_examples/programmazione_lineare/pl_turni_lavoro_formulazione.md` | |
+| risolvere con simplesso tabellare | `04_methods/programmazione_lineare/pl_simplesso_tabellare.md` | `07_solved_examples/programmazione_lineare/pl_simplesso_esempio_40_50.md` | |
+| metodo delle due fasi | `04_methods/programmazione_lineare/pl_metodo_due_fasi.md` | `07_solved_examples/programmazione_lineare/pl_due_fasi_esempio_base.md` | |
 | scrivere il duale | `05_theory/dualita_sensitivita/` | `04_methods/programmazione_lineare/` | Da completare dopo ingestion |
 | branch and bound | `04_methods/programmazione_lineare_intera/` | `07_solved_examples/programmazione_lineare_intera/` | Da completare dopo ingestion |
 | condizioni KKT | `04_methods/programmazione_non_lineare/` | `05_theory/programmazione_non_lineare/` | Da completare dopo ingestion |
 | flusso a costo minimo | `10_rag/method_cards/PL_minimum_cost_flow.md` | `07_solved_examples/programmazione_lineare/distribution_network_min_cost_flow.md` | |
 | soluzione grafica di PL | `10_rag/method_cards/PL_soluzione_grafica.md` | `05_theory/programmazione_lineare/03_soluzione_grafica_pl.md` | |
+| gestione variabili libere o negative | `04_methods/programmazione_lineare/pl_variabili_libere_e_segno.md` | `07_solved_examples/programmazione_lineare/pl_due_fasi_problema_illimitato.md` | |
+| rilevare problema illimitato | `04_methods/programmazione_lineare/pl_simplesso_tabellare.md` | `07_solved_examples/programmazione_lineare/pl_due_fasi_problema_illimitato.md` | |
+| rilevare problema non ammissibile | `04_methods/programmazione_lineare/pl_metodo_due_fasi.md` | `07_solved_examples/programmazione_lineare/pl_due_fasi_problema_non_ammissibile.md` | |
