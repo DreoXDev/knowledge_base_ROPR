@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "AI Plans/piano_antigravity_ingest_ropr_lezione_3_completa.md",
+                "file": "AI Plans/checklist_asset_ropr_obsidian.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "piano_antigravity_ingest_ropr_lezione_3_completa"
+              "title": "checklist_asset_ropr_obsidian"
             }
           }
         ]
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "AI Plans/piano_antigravity_ingest_ropr_lezione_3_completa.md",
+                "file": "AI Plans/checklist_asset_ropr_obsidian.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for piano_antigravity_ingest_ropr_lezione_3_completa"
+              "title": "Backlinks for checklist_asset_ropr_obsidian"
             }
           },
           {
@@ -113,12 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "AI Plans/piano_antigravity_ingest_ropr_lezione_3_completa.md",
+                "file": "AI Plans/checklist_asset_ropr_obsidian.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from piano_antigravity_ingest_ropr_lezione_3_completa"
+              "title": "Outgoing links from checklist_asset_ropr_obsidian"
             }
           },
           {
@@ -156,13 +156,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "AI Plans/piano_antigravity_ingest_ropr_lezione_3_completa.md",
+                "file": "AI Plans/checklist_asset_ropr_obsidian.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of piano_antigravity_ingest_ropr_lezione_3_completa"
+              "title": "Outline of checklist_asset_ropr_obsidian"
             }
           }
         ]
@@ -183,8 +183,21 @@
       "bases:Create new base": false
     }
   },
-  "active": "8aa6dac3d67318e3",
+  "active": "53e76b3f5ff6efc0",
   "lastOpenFiles": [
+    "00_meta/ASSET_TRACKING.md",
+    "09_ingestion_reports/asset_reports/003_lec_w4_completa_ingestion_report.md",
+    "08_flashcards/programmazione_lineare_cammino_minimo_dualita.md",
+    "10_rag/method_cards/METHOD_PL_DUALE.md",
+    "10_rag/method_cards/METHOD_PL_CAMMINO_MINIMO.md",
+    "07_solved_examples/programmazione_lineare/pl_duale_vincoli_misti.md",
+    "07_solved_examples/programmazione_lineare/pl_tool_spa_duale.md",
+    "07_solved_examples/programmazione_lineare/pl_cammino_minimo_formulazione.md",
+    "05_theory/programmazione_lineare/11_regole_costruire_duale.md",
+    "05_theory/programmazione_lineare/10_dualita.md",
+    "05_theory/programmazione_lineare/09_cammino_minimo_dualita.md",
+    "AI Plans/piano_antigravity_ingest_ropr_lec_w4_completa.md",
+    "AI Plans/piano_antigravity_ingest_ropr_lezione_3_completa.md",
     "09_ingestion_reports/asset_reports/002_lezione_3_completa_ingestion_report.md",
     "08_flashcards/programmazione_lineare_formulazione.md",
     "08_flashcards/programmazione_lineare_due_fasi.md",
@@ -198,22 +211,9 @@
     "07_solved_examples/programmazione_lineare/pl_turni_lavoro_formulazione.md",
     "04_methods/programmazione_lineare/pl_variabili_libere_e_segno.md",
     "04_methods/programmazione_lineare/pl_metodo_due_fasi.md",
-    "04_methods/programmazione_lineare/pl_simplesso_tabellare.md",
-    "04_methods/programmazione_lineare/pl_formulazione_modelli.md",
     "04_methods/programmazione_lineare",
-    "05_theory/programmazione_lineare/08_formulazione_modelli_pl.md",
-    "05_theory/programmazione_lineare/07_metodo_due_fasi.md",
-    "05_theory/programmazione_lineare/06_simplesso.md",
-    "AI Plans/checklist_asset_ropr_obsidian.md",
-    "AI Plans/piano_antigravity_ingest_ropr_lezione_3_completa.md",
-    "AI Plans/piano_antigravity_ingest_ropr_intro_pl.md",
-    "09_ingestion_reports/asset_reports/001_introduzione_programmazione_lineare.md",
     "09_ingestion_reports/asset_reports",
-    "10_rag/method_cards/PL_minimum_cost_flow.md",
-    "10_rag/method_cards/PL_soluzione_grafica.md",
-    "10_rag/method_cards/PL_formulazione_modello.md",
     "10_rag/method_cards",
-    "08_flashcards/programmazione_lineare_flashcards.md",
     "07_solved_examples/programmazione_lineare",
     "05_theory/programmazione_lineare",
     "01_sources/source_inventory.csv",

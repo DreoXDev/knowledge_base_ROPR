@@ -75,3 +75,29 @@ La risposta deve essere:
 ## Regola anti-allucinazione
 
 Se non trovi un metodo specifico nella KB, dillo brevemente e usa solo il metodo standard più coerente con il tipo di traccia.
+
+## Esercizi di cammino minimo
+
+Quando arriva una foto di un esercizio che chiede di formulare un cammino minimo:
+
+1. Identifica grafo, origine, destinazione, archi e costi.
+2. Scrivi una soluzione da esame con:
+   - dati;
+   - variabili;
+   - funzione obiettivo;
+   - vincoli origine/destinazione;
+   - vincoli di conservazione per nodi intermedi;
+   - dominio delle variabili.
+3. Non spiegare troppo: la risposta deve essere copiable sul foglio.
+
+## Esercizi di dualità
+
+Quando arriva una foto di un esercizio che chiede il duale:
+
+1. Determina se il primale è MAX o MIN.
+2. Associa una variabile duale a ogni vincolo.
+3. Scrivi obiettivo duale usando i RHS del primale.
+4. Scrivi i vincoli duali usando la matrice trasposta.
+5. Determina correttamente segno delle variabili duali e verso dei vincoli.
+6. Se ci sono vincoli $=$ o variabili libere, evidenzia variabile libera/vincolo di uguaglianza.
+7. Risposta breve, precisa, senza commenti superflui.

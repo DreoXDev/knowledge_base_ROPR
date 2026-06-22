@@ -10,7 +10,7 @@ Quando arriva una traccia d'esame, identificare parole chiave, forma del problem
 |---|---|---|---|
 | Modellazione PL | variabili decisionali, vincoli, funzione obiettivo | `04_methods/programmazione_lineare/pl_formulazione_modelli.md` | `07_solved_examples/programmazione_lineare/wyndor_glass.md` |
 | Metodo del simplesso | base, tableau, variabile entrante/uscente | `04_methods/programmazione_lineare/pl_simplesso_tabellare.md` | `07_solved_examples/programmazione_lineare/pl_simplesso_esempio_40_50.md` |
-| Dualità | duale, primale, prezzi ombra | `05_theory/dualita_sensitivita/` | `07_solved_examples/programmazione_lineare/` |
+| Dualità | duale, primale, prezzi ombra | `10_rag/method_cards/METHOD_PL_DUALE.md` | `07_solved_examples/programmazione_lineare/pl_duale_vincoli_misti.md` |
 | Programmazione lineare intera | variabili binarie/intere, branch and bound, cutting planes | `04_methods/programmazione_lineare_intera/` | `07_solved_examples/programmazione_lineare_intera/` |
 | Programmazione non lineare | KKT, gradiente, Hessiana, vincoli non lineari | `04_methods/programmazione_non_lineare/` | `07_solved_examples/programmazione_non_lineare/` |
 
@@ -115,3 +115,49 @@ Risposta attesa:
 
 Fonti:
 - `07_solved_examples/programmazione_lineare/pl_due_fasi_problema_non_ammissibile.md`
+
+---
+
+## Pattern: cammino minimo su grafo
+
+Trigger:
+- "cammino minimo"
+- "grafo orientato"
+- "pesato"
+- "origine e destinazione"
+- "conservazione del flusso"
+- "bilancio nei nodi"
+
+Risposta attesa:
+1. Definire le variabili binarie sugli archi $x_{ij} \in \{0, 1\}$.
+2. Scrivere la funzione obiettivo $\min Z = \sum c_{ij} x_{ij}$.
+3. Scrivere i vincoli di conservazione del flusso (origine $=1$, destinazione $=-1$, intermedi $=0$).
+
+Fonti:
+- `10_rag/method_cards/METHOD_PL_CAMMINO_MINIMO.md`
+- `07_solved_examples/programmazione_lineare/pl_cammino_minimo_formulazione.md`
+
+---
+
+## Pattern: costruzione duale
+
+Trigger:
+- "scrivere il duale"
+- "costruire il duale"
+- "problema primale"
+- "prezzi ombra"
+- "trasposta"
+- "variabili libere"
+- "vincoli misti"
+
+Risposta attesa:
+1. Invertire l'ottimizzazione ($\max \leftrightarrow \min$).
+2. Associare variabili duali ai vincoli primali definendone il segno.
+3. Scrivere la funzione obiettivo usando i termini noti (RHS) primali.
+4. Trasporre la matrice dei coefficienti dei vincoli.
+5. Definire il verso dei vincoli duali in base al segno delle variabili primali.
+
+Fonti:
+- `10_rag/method_cards/METHOD_PL_DUALE.md`
+- `07_solved_examples/programmazione_lineare/pl_tool_spa_duale.md`
+- `07_solved_examples/programmazione_lineare/pl_duale_vincoli_misti.md`

@@ -17,12 +17,18 @@ Indice semi-automatico dei file utili al retrieval.
 - `05_theory/programmazione_lineare/06_simplesso.md`
 - `05_theory/programmazione_lineare/07_metodo_due_fasi.md`
 - `05_theory/programmazione_lineare/08_formulazione_modelli_pl.md`
+- `05_theory/programmazione_lineare/09_cammino_minimo_dualita.md`
+- `05_theory/programmazione_lineare/10_dualita.md`
+- `05_theory/programmazione_lineare/11_regole_costruire_duale.md`
 - `07_solved_examples/programmazione_lineare/distribution_network_min_cost_flow.md`
+- `07_solved_examples/programmazione_lineare/pl_cammino_minimo_formulazione.md`
+- `07_solved_examples/programmazione_lineare/pl_duale_vincoli_misti.md`
 - `07_solved_examples/programmazione_lineare/pl_due_fasi_esempio_base.md`
 - `07_solved_examples/programmazione_lineare/pl_due_fasi_problema_illimitato.md`
 - `07_solved_examples/programmazione_lineare/pl_due_fasi_problema_non_ammissibile.md`
 - `07_solved_examples/programmazione_lineare/pl_simplesso_esempio_40_50.md`
 - `07_solved_examples/programmazione_lineare/pl_simplesso_max_3x_5y.md`
+- `07_solved_examples/programmazione_lineare/pl_tool_spa_duale.md`
 - `07_solved_examples/programmazione_lineare/pl_tool_spa_simplesso.md`
 - `07_solved_examples/programmazione_lineare/pl_turni_lavoro_formulazione.md`
 - `07_solved_examples/programmazione_lineare/wyndor_glass.md`
@@ -82,11 +88,33 @@ Concetti:
 - variabili artificiali;
 - pivot / variabile entrante / variabile uscente;
 - test dei rapporti minimi;
-- metodo delle due fasi (Fase 1 e Fase 2);
+- metodo delle due fases (Fase 1 e Fase 2);
 - problema illimitato;
 - problema non ammissibile;
 - variabili libere e variabili non positive;
 - Tool.Spa.
+
+## Programmazione Lineare — Cammino Minimo e Dualità (Week 4)
+
+Fonti:
+- `raw_assets/Programmazione Lineare/lec_w4_completa.pdf`
+- `05_theory/programmazione_lineare/09_cammino_minimo_dualita.md`
+- `05_theory/programmazione_lineare/10_dualita.md`
+- `05_theory/programmazione_lineare/11_regole_costruire_duale.md`
+- `07_solved_examples/programmazione_lineare/pl_cammino_minimo_formulazione.md`
+- `07_solved_examples/programmazione_lineare/pl_tool_spa_duale.md`
+- `07_solved_examples/programmazione_lineare/pl_duale_vincoli_misti.md`
+
+Concetti:
+- cammino minimo su grafo orientato pesato;
+- variabili binarie sugli archi;
+- vincoli di conservazione del flusso (bilancio nei nodi);
+- intuizione economica della dualità;
+- problema primale e problema duale;
+- teorema della dualità forte ($Z^* = Z'^*$);
+- lettura delle variabili duali (prezzi ombra) dal tableau ottimo;
+- regole di transizione primale-duale (MAX-MIN e MIN-MAX);
+- variabili/vincoli canonici, anticanonici e liberi.
 
 ## Query d'esame -> file da consultare
 
@@ -96,7 +124,7 @@ Concetti:
 | formulare problema dei turni / workforce scheduling | `04_methods/programmazione_lineare/pl_formulazione_modelli.md` | `07_solved_examples/programmazione_lineare/pl_turni_lavoro_formulazione.md` | |
 | risolvere con simplesso tabellare | `04_methods/programmazione_lineare/pl_simplesso_tabellare.md` | `07_solved_examples/programmazione_lineare/pl_simplesso_esempio_40_50.md` | |
 | metodo delle due fasi | `04_methods/programmazione_lineare/pl_metodo_due_fasi.md` | `07_solved_examples/programmazione_lineare/pl_due_fasi_esempio_base.md` | |
-| scrivere il duale | `05_theory/dualita_sensitivita/` | `04_methods/programmazione_lineare/` | Da completare dopo ingestion |
+| scrivere il duale | `10_rag/method_cards/METHOD_PL_DUALE.md` | `05_theory/programmazione_lineare/11_regole_costruire_duale.md` | |
 | branch and bound | `04_methods/programmazione_lineare_intera/` | `07_solved_examples/programmazione_lineare_intera/` | Da completare dopo ingestion |
 | condizioni KKT | `04_methods/programmazione_non_lineare/` | `05_theory/programmazione_non_lineare/` | Da completare dopo ingestion |
 | flusso a costo minimo | `10_rag/method_cards/PL_minimum_cost_flow.md` | `07_solved_examples/programmazione_lineare/distribution_network_min_cost_flow.md` | |
@@ -104,3 +132,6 @@ Concetti:
 | gestione variabili libere o negative | `04_methods/programmazione_lineare/pl_variabili_libere_e_segno.md` | `07_solved_examples/programmazione_lineare/pl_due_fasi_problema_illimitato.md` | |
 | rilevare problema illimitato | `04_methods/programmazione_lineare/pl_simplesso_tabellare.md` | `07_solved_examples/programmazione_lineare/pl_due_fasi_problema_illimitato.md` | |
 | rilevare problema non ammissibile | `04_methods/programmazione_lineare/pl_metodo_due_fasi.md` | `07_solved_examples/programmazione_lineare/pl_due_fasi_problema_non_ammissibile.md` | |
+| formulare cammino minimo | `10_rag/method_cards/METHOD_PL_CAMMINO_MINIMO.md` | `05_theory/programmazione_lineare/09_cammino_minimo_dualita.md` | |
+| variabili duali dal tableau | `05_theory/programmazione_lineare/10_dualita.md` | | |
+| variabili canoniche/anticanoniche | `05_theory/programmazione_lineare/11_regole_costruire_duale.md` | | |
