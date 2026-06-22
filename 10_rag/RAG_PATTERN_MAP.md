@@ -10,7 +10,9 @@ Quando arriva una traccia d'esame, identificare parole chiave, forma del problem
 |---|---|---|---|
 | Modellazione PL | variabili decisionali, vincoli, funzione obiettivo | `04_methods/programmazione_lineare/pl_formulazione_modelli.md` | `07_solved_examples/programmazione_lineare/wyndor_glass.md` |
 | Metodo del simplesso | base, tableau, variabile entrante/uscente | `04_methods/programmazione_lineare/pl_simplesso_tabellare.md` | `07_solved_examples/programmazione_lineare/pl_simplesso_esempio_40_50.md` |
-| Dualità | duale, primale, prezzi ombra | `10_rag/method_cards/METHOD_PL_DUALE.md` | `07_solved_examples/programmazione_lineare/pl_duale_vincoli_misti.md` |
+| Dualità (Costruzione) | duale, primale, metodo SOB, sensible odd bizarre | `04_methods/programmazione_lineare/pl_costruire_duale_standard.md` | `07_solved_examples/programmazione_lineare/pl_duale_vincoli_misti.md` |
+| Dualità (Ottimalità & Slackness) | complementary slackness, verificare ottimalità, scarti complementari | `04_methods/programmazione_lineare/pl_usare_complementary_slackness.md` | `10_rag/method_cards/PL_complementary_slackness.md` |
+| Prezzi Ombra | prezzi ombra, valore marginale, leggere tableau | `04_methods/programmazione_lineare/pl_leggere_variabili_duali_da_tableau.md` | `10_rag/method_cards/PL_prezzi_ombra.md` |
 | Programmazione lineare intera | variabili binarie/intere, branch and bound, cutting planes | `04_methods/programmazione_lineare_intera/` | `07_solved_examples/programmazione_lineare_intera/` |
 | Programmazione non lineare | KKT, gradiente, Hessiana, vincoli non lineari | `04_methods/programmazione_non_lineare/` | `07_solved_examples/programmazione_non_lineare/` |
 
@@ -149,17 +151,22 @@ Trigger:
 - "trasposta"
 - "variabili libere"
 - "vincoli misti"
+- "metodo sensible odd bizarre"
+- "metodo SOB"
 
 Risposta attesa:
 1. Invertire l'ottimizzazione ($\max \leftrightarrow \min$).
-2. Associare variabili duali ai vincoli primali definendone il segno.
+2. Associare variabili duali ai vincoli primali definendone il segno (standard o SOB).
 3. Scrivere la funzione obiettivo usando i termini noti (RHS) primali.
 4. Trasporre la matrice dei coefficienti dei vincoli.
-5. Definire il verso dei vincoli duali in base al segno delle variabili primali.
+5. Definire il verso dei vincoli duali in base al segno delle variabili primali (standard o SOB).
 
 Fonti:
-- `10_rag/method_cards/METHOD_PL_DUALE.md`
-- `07_solved_examples/programmazione_lineare/pl_tool_spa_duale.md`
+- `04_methods/programmazione_lineare/pl_costruire_duale_standard.md`
+- `04_methods/programmazione_lineare/pl_costruire_duale_sensible_odd_bizarre.md`
+- `10_rag/method_cards/PL_costruzione_duale.md`
+- `10_rag/method_cards/PL_sensible_odd_bizarre.md`
+- `05_theory/programmazione_lineare/11_regole_costruire_duale.md`
 - `07_solved_examples/programmazione_lineare/pl_duale_vincoli_misti.md`
 
 ---
@@ -238,3 +245,56 @@ Fonti:
 - `05_theory/programmazione_lineare/18_vertici_adiacenti_cammino_simplesso.md`
 - `05_theory/programmazione_lineare/19_degenerazione_simplesso.md`
 - `05_theory/programmazione_lineare/20_proprieta_vertici_ammissibili.md`
+
+---
+
+## Pattern: verificare ottimalità con dualità e complementary slackness
+
+Trigger:
+- "dimostrare che è ottima"
+- "usare dualità"
+- "dualità debole"
+- "dualità forte"
+- "valori primale duale coincidono"
+- "complementary slackness"
+- "scarti complementari"
+- "verificare ottimalità"
+
+Risposta attesa:
+1. Verificare l'ammissibilità della soluzione primale $\mathbf{x}$ nei vincoli primali.
+2. Calcolare gli scarti primali $s_i$.
+3. Impostare il sistema duale usando le condizioni di complementarità ($s_i > 0 \implies y_i = 0$ e $x_j > 0 \implies A_j^T y = c_j$).
+4. Risolere il sistema per trovare le variabili duali candidate $\mathbf{y}$.
+5. Verificare l'ammissibilità delle variabili duali candidate (segni coerenti e vincoli rispettati).
+6. Se ammissibile, confermare l'ottimalità per dualità forte/debole.
+
+Fonti:
+- `04_methods/programmazione_lineare/pl_usare_complementary_slackness.md`
+- `10_rag/method_cards/PL_complementary_slackness.md`
+- `10_rag/method_cards/PL_dualita_teoria.md`
+- `05_theory/programmazione_lineare/24_complementary_slackness.md`
+- `05_theory/programmazione_lineare/22_dualita_debole_forte.md`
+
+---
+
+## Pattern: prezzi ombra e lettura variabili duali dal tableau
+
+Trigger:
+- "prezzi ombra"
+- "valore marginale"
+- "interpretazione economica"
+- "variabili duali dal tableau"
+- "leggere duale dal tableau"
+- "coefficiente slack riga 0"
+
+Risposta attesa:
+1. Individuare la riga 0 del tableau ottimo del simplesso primale.
+2. Identificare i coefficienti sotto le colonne delle variabili di slack $s_i$ nella riga 0.
+3. Assegnare a ciascuna variabile duale $y_i^*$ il coefficiente di $s_i$.
+4. Spiegare il prezzo ombra come valore marginale della risorsa: variazione di $Z^*$ per unità aggiuntiva di risorsa $b_i$.
+
+Fonti:
+- `04_methods/programmazione_lineare/pl_leggere_variabili_duali_da_tableau.md`
+- `10_rag/method_cards/PL_prezzi_ombra.md`
+- `05_theory/programmazione_lineare/23_prezzi_ombra_interpretazione.md`
+- `05_theory/programmazione_lineare/10_dualita.md`

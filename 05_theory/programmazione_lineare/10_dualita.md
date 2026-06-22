@@ -1,86 +1,127 @@
 ---
-type: theory-note
-topic: programmazione-lineare
-status: draft
-sources:
-  - raw_assets/Programmazione Lineare/lec_w4_completa.pdf
-reliability: official
+materia: ROPR
+area: Programmazione Lineare
+tipo: teoria
+fonte: Ricerca Operativa - Teoria della Dualità.pdf
+stato: completo
+priorita: alta
+tags:
+  - ropr
+  - programmazione-lineare
+  - simplesso
+  - dualita
+  - teoria
 ---
 
-# La Teoria della Dualità nella Programmazione Lineare
+# Teoria della dualità
 
-Ad ogni problema di Programmazione Lineare (chiamato **Primale**) è associato un secondo problema di ottimizzazione ad esso strettamente connesso, denominato **Duale**. L'analisi del duale fornisce importanti interpretazioni economiche e geometriche dell'ottimo.
+A ogni problema di Programmazione Lineare, chiamato **problema primale**, è associato un secondo problema di Programmazione Lineare, strettamente connesso, denominato **problema duale**.
 
-## Intuizione Economica (Prezzi Ombra)
+## 1. Utilità della Dualità
 
-Si consideri un problema primale di massimizzazione del profitto soggetto a vincoli di risorsa.
-- Le variabili primali $x_j$ rappresentano i livelli delle attività produttive.
-- I vincoli rappresentano la disponibilità delle risorse limitate $b_i$.
+L'analisi del problema duale fornisce contributi di fondamentale importanza:
+- Consente di risolvere problemi alternativi potenzialmente più semplici (es. con meno vincoli).
+- Permette di interpretare economicamente i vincoli, le risorse e il consumo.
+- Consente di ricavare i **prezzi ombra** delle risorse.
+- Costituisce il fondamento per l'**analisi di sensitività** post-ottimo.
+- Spiega il significato algebrico dei coefficienti della riga 0 nel tableau finale del simplesso.
 
-Il problema duale associato risponde alla domanda: *"Se volessi vendere o affittare le mie risorse sul mercato invece di usarle per produrre, quale prezzo unitario $p_i$ dovrei chiedere per ciascuna risorsa per rendere l'operazione conveniente?"*
-- Le variabili duali $p_i$ assumono quindi il significato di **valore marginale unitario** (o **prezzo ombra**) delle risorse: indicano di quanto aumenterebbe il profitto ottimo $Z^*$ se si avesse a disposizione una unità aggiuntiva della risorsa $i$.
+---
 
-## Esempio Primale-Duale
+## 2. Forma Standard Primale-Duale
 
-### Problema Primale (MAX)
-
-$$
-\max Z = 40x_1 + 50x_2
-$$
-
-soggetto a:
+### Problema Primale (MAX in forma standard)
+Massimizzare la funzione obiettivo soggetta a vincoli di minore o uguale e non negatività:
 
 $$
-x_1 + 2x_2 \le 40 \qquad (\text{Risorsa 1})
-$$
-
-$$
-4x_1 + 3x_2 \le 120 \qquad (\text{Risorsa 2})
-$$
-
-$$
-x_1, x_2 \ge 0
-$$
-
-### Problema Duale Associato (MIN)
-Associamo la variabile duale $p_1$ al primo vincolo e $p_2$ al secondo:
-
-$$
-\min Z' = 40p_1 + 120p_2
+\max Z = \sum_{j=1}^{n} c_j x_j
 $$
 
 soggetto a:
 
 $$
-p_1 + 4p_2 \ge 40
+\sum_{j=1}^{n} a_{ij}x_j \le b_i \qquad \forall i=1,\dots,m
 $$
 
 $$
-2p_1 + 3p_2 \ge 50
+x_j \ge 0 \qquad \forall j=1,\dots,n
+$$
+
+### Problema Duale Associato (MIN in forma standard)
+Minimizzare la funzione obiettivo duale soggetta a vincoli di maggiore o uguale e non negatività:
+
+$$
+\min W = \sum_{i=1}^{m} b_i y_i
+$$
+
+soggetto a:
+
+$$
+\sum_{i=1}^{m} a_{ij}y_i \ge c_j \qquad \forall j=1,\dots,n
 $$
 
 $$
-p_1, p_2 \ge 0
+y_i \ge 0 \qquad \forall i=1,\dots,m
 $$
 
-## Relazioni tra le Soluzioni Ottime
+---
 
-Risolvendo entrambi i problemi, si ottengono le seguenti soluzioni ottime:
-- **Primale**: $x_1^* = 24, x_2^* = 8 \implies Z^* = 1360$
-- **Duale**: $p_1^* = 16, p_2^* = 6 \implies Z'^* = 1360$
+## 3. Formizzazione Matriciale
 
-### Teorema della Dualità Forte
-Se il problema primale (o il duale) possiede una soluzione ottima finita, allora anche l'altro problema possiede una soluzione ottima finita e i due valori delle funzioni obiettivo all'ottimo coincidono esattamente:
+### Problema Primale
 
 $$
-Z^* = Z'^*
+\max Z = \mathbf{c}\mathbf{x}
 $$
 
-## Lettura delle Variabili Duali dal Tableau Ottimo
+soggetto a:
 
-Non è necessario risolvere da capo il problema duale. Quando si risolve il primale con l'algoritmo del simplesso:
-- I valori ottimi delle variabili duali $p_i^*$ (prezzi ombra) si leggono direttamente nella **riga 0 del tableau ottimo** in corrispondenza delle colonne associate alle **variabili di slack ($s_i$)** del primale.
+$$
+\mathbf{A}\mathbf{x} \le \mathbf{b}
+$$
 
-Nell'esempio precedente, nel tableau ottimo finale, sotto la colonna di $s_1$ leggeremo il valore 16 ($p_1^* = 16$) e sotto la colonna di $s_2$ leggeremo il valore 6 ($p_2^* = 6$).
+$$
+\mathbf{x} \ge 0
+$$
 
-#ropr #programmazione-lineare #teoria #dualita #prezzi-ombra
+### Problema Duale
+
+$$
+\min W = \mathbf{y}\mathbf{b}
+$$
+
+soggetto a:
+
+$$
+\mathbf{y}\mathbf{A} \ge \mathbf{c}
+$$
+
+$$
+\mathbf{y} \ge 0
+$$
+
+Dove:
+- $\mathbf{x}$ è un vettore colonna $n \times 1$.
+- $\mathbf{y}$ è un vettore riga $1 \times m$.
+- $\mathbf{c}$ è un vettore riga $1 \times n$.
+- $\mathbf{b}$ è un vettore colonna $m \times 1$.
+- $\mathbf{A}$ è la matrice dei coefficienti $m \times n$.
+
+---
+
+## 4. Corrispondenze Primale-Duale
+
+| Problema Primale | Problema Duale |
+|---|---|
+| Ottimizzazione di **Massimo (MAX)** | Ottimizzazione di **Minimo (MIN)** |
+| Vincolo $i$-esimo | Variabile duale $y_i$ |
+| Variabile primale $x_j$ | Vincolo duale $j$-esimo |
+| Coefficienti F.O. $\mathbf{c}$ | Termini noti dei vincoli duali (RHS) |
+| Termini noti vincoli $\mathbf{b}$ (RHS) | Coefficienti F.O. duale |
+| Matrice dei coefficienti $\mathbf{A}$ | Matrice trasposta $\mathbf{A}^T$ |
+
+---
+
+## Risposta da Esame
+
+Il problema duale è il problema di Programmazione Lineare associato al primale, ottenuto scambiando il ruolo di vincoli e variabili: i termini noti del primale diventano i coefficienti della funzione obiettivo duale, i coefficienti della funzione obiettivo primale diventano i termini noti dei vincoli duali, e la matrice dei coefficienti viene trasposta. Se il primale è un problema di massimo in forma standard ($\le$ e $\ge 0$), il duale è un problema di minimo con vincoli $\ge$ e variabili non negative.

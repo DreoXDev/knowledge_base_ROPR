@@ -5,12 +5,16 @@ Indice semi-automatico dei file utili al retrieval.
 ## File indicizzabili
 
 - `04_methods/programmazione_lineare/pl_casi_particolari_simplesso.md`
+- `04_methods/programmazione_lineare/pl_costruire_duale_sensible_odd_bizarre.md`
+- `04_methods/programmazione_lineare/pl_costruire_duale_standard.md`
 - `04_methods/programmazione_lineare/pl_formulazione_modelli.md`
+- `04_methods/programmazione_lineare/pl_leggere_variabili_duali_da_tableau.md`
 - `04_methods/programmazione_lineare/pl_metodo_due_fasi.md`
 - `04_methods/programmazione_lineare/pl_riconoscere_vertici_e_frontiere.md`
 - `04_methods/programmazione_lineare/pl_simplesso_geometrico.md`
 - `04_methods/programmazione_lineare/pl_simplesso_tabellare.md`
 - `04_methods/programmazione_lineare/pl_teoria_simplesso.md`
+- `04_methods/programmazione_lineare/pl_usare_complementary_slackness.md`
 - `04_methods/programmazione_lineare/pl_variabili_libere_e_segno.md`
 - `04_methods/programmazione_lineare/pl_vertici_adiacenti_e_ottimalita.md`
 - `05_theory/00_index.md`
@@ -33,6 +37,11 @@ Indice semi-automatico dei file utili al retrieval.
 - `05_theory/programmazione_lineare/18_vertici_adiacenti_cammino_simplesso.md`
 - `05_theory/programmazione_lineare/19_degenerazione_simplesso.md`
 - `05_theory/programmazione_lineare/20_proprieta_vertici_ammissibili.md`
+- `05_theory/programmazione_lineare/21_costruzione_duale.md`
+- `05_theory/programmazione_lineare/22_dualita_debole_forte.md`
+- `05_theory/programmazione_lineare/23_prezzi_ombra_interpretazione.md`
+- `05_theory/programmazione_lineare/24_complementary_slackness.md`
+- `05_theory/programmazione_lineare/25_relazioni_primale_duale_limite.md`
 - `07_solved_examples/programmazione_lineare/distribution_network_min_cost_flow.md`
 - `07_solved_examples/programmazione_lineare/pl_cammino_minimo_formulazione.md`
 - `07_solved_examples/programmazione_lineare/pl_duale_vincoli_misti.md`
@@ -114,23 +123,40 @@ Concetti:
 
 Fonti:
 - `raw_assets/Programmazione Lineare/lec_w4_completa.pdf`
+- `raw_assets/Programmazione Lineare/Ricerca Operativa - Teoria della Dualità.pdf`
 - `05_theory/programmazione_lineare/09_cammino_minimo_dualita.md`
 - `05_theory/programmazione_lineare/10_dualita.md`
 - `05_theory/programmazione_lineare/11_regole_costruire_duale.md`
+- `05_theory/programmazione_lineare/21_costruzione_duale.md`
+- `05_theory/programmazione_lineare/22_dualita_debole_forte.md`
+- `05_theory/programmazione_lineare/23_prezzi_ombra_interpretazione.md`
+- `05_theory/programmazione_lineare/24_complementary_slackness.md`
+- `05_theory/programmazione_lineare/25_relazioni_primale_duale_limite.md`
+- `04_methods/programmazione_lineare/pl_costruire_duale_standard.md`
+- `04_methods/programmazione_lineare/pl_costruire_duale_sensible_odd_bizarre.md`
+- `04_methods/programmazione_lineare/pl_leggere_variabili_duali_da_tableau.md`
+- `04_methods/programmazione_lineare/pl_usare_complementary_slackness.md`
+- `10_rag/method_cards/PL_dualita_teoria.md`
+- `10_rag/method_cards/PL_costruzione_duale.md`
+- `10_rag/method_cards/PL_prezzi_ombra.md`
+- `10_rag/method_cards/PL_complementary_slackness.md`
+- `10_rag/method_cards/PL_sensible_odd_bizarre.md`
 - `07_solved_examples/programmazione_lineare/pl_cammino_minimo_formulazione.md`
 - `07_solved_examples/programmazione_lineare/pl_tool_spa_duale.md`
 - `07_solved_examples/programmazione_lineare/pl_duale_vincoli_misti.md`
 
 Concetti:
-- cammino minimo su grafo orientato pesato;
-- variabili binarie sugli archi;
-- vincoli di conservazione del flusso (bilancio nei nodi);
-- intuizione economica della dualità;
-- problema primale e problema duale;
-- teorema della dualità forte ($Z^* = Z'^*$);
-- lettura delle variabili duali (prezzi ombra) dal tableau ottimo;
-- regole di transizione primale-duale (MAX-MIN e MIN-MAX);
-- variabili/vincoli canonici, anticanonici e liberi.
+- cammino minimo su grafo orientato pesato e vincoli di conservazione del flusso;
+- duale in forma standard e matriciale;
+- regole di transizione e corrispondenze primale-duale;
+- metodo sensible / odd / bizarre (SOB);
+- teorema di dualità debole ($cx \le yb$);
+- teorema di dualità forte ($Z^* = W^*$);
+- relazioni primale-duale e casi limite (ottimo, illimitato, inammissibile);
+- prezzi ombra e valore marginale delle risorse;
+- interpretazione economica del problema duale;
+- lettura delle variabili duali dal tableau ottimo (slack riga 0);
+- condizioni di complementary slackness (scarti complementari).
 
 ## Teoria del simplesso
 
@@ -206,7 +232,9 @@ Usare quando la domanda contiene:
 | formulare problema dei turni / workforce scheduling | `04_methods/programmazione_lineare/pl_formulazione_modelli.md` | `07_solved_examples/programmazione_lineare/pl_turni_lavoro_formulazione.md` | |
 | risolvere con simplesso tabellare | `04_methods/programmazione_lineare/pl_simplesso_tabellare.md` | `07_solved_examples/programmazione_lineare/pl_simplesso_esempio_40_50.md` | |
 | metodo delle due fasi | `04_methods/programmazione_lineare/pl_metodo_due_fasi.md` | `07_solved_examples/programmazione_lineare/pl_due_fasi_esempio_base.md` | |
-| scrivere il duale | `10_rag/method_cards/METHOD_PL_DUALE.md` | `05_theory/programmazione_lineare/11_regole_costruire_duale.md` | |
+| scrivere il duale (casi misti / generale) | `10_rag/method_cards/METHOD_PL_DUALE.md` | `05_theory/programmazione_lineare/11_regole_costruire_duale.md` | |
+| scrivere il duale (standard) | `04_methods/programmazione_lineare/pl_costruire_duale_standard.md` | `10_rag/method_cards/PL_costruzione_duale.md` | |
+| scrivere il duale (non standard / SOB) | `04_methods/programmazione_lineare/pl_costruire_duale_sensible_odd_bizarre.md` | `10_rag/method_cards/PL_sensible_odd_bizarre.md` | |
 | branch and bound | `04_methods/programmazione_lineare_intera/` | `07_solved_examples/programmazione_lineare_intera/` | Da completare dopo ingestion |
 | condizioni KKT | `04_methods/programmazione_non_lineare/` | `05_theory/programmazione_non_lineare/` | Da completare dopo ingestion |
 | flusso a costo minimo | `10_rag/method_cards/PL_minimum_cost_flow.md` | `07_solved_examples/programmazione_lineare/distribution_network_min_cost_flow.md` | |
@@ -215,8 +243,11 @@ Usare quando la domanda contiene:
 | rilevare problema illimitato | `04_methods/programmazione_lineare/pl_simplesso_tabellare.md` | `07_solved_examples/programmazione_lineare/pl_due_fasi_problema_illimitato.md` | |
 | rilevare problema non ammissibile | `04_methods/programmazione_lineare/pl_metodo_due_fasi.md` | `07_solved_examples/programmazione_lineare/pl_due_fasi_problema_non_ammissibile.md` | |
 | formulare cammino minimo | `10_rag/method_cards/METHOD_PL_CAMMINO_MINIMO.md` | `05_theory/programmazione_lineare/09_cammino_minimo_dualita.md` | |
-| variabili duali dal tableau | `05_theory/programmazione_lineare/10_dualita.md` | | |
-| variabili canoniche/anticanoniche | `05_theory/programmazione_lineare/11_regole_costruire_duale.md` | | |
+| leggere variabili duali dal tableau | `04_methods/programmazione_lineare/pl_leggere_variabili_duali_da_tableau.md` | `05_theory/programmazione_lineare/10_dualita.md` | |
+| variabili canoniche/anticanoniche (regole) | `05_theory/programmazione_lineare/11_regole_costruire_duale.md` | | |
+| prezzi ombra e valore marginale | `10_rag/method_cards/PL_prezzi_ombra.md` | `05_theory/programmazione_lineare/23_prezzi_ombra_interpretazione.md` | |
+| condizioni di complementary slackness | `04_methods/programmazione_lineare/pl_usare_complementary_slackness.md` | `10_rag/method_cards/PL_complementary_slackness.md` | |
+| relazioni primale-duale (casi limite) | `05_theory/programmazione_lineare/25_relazioni_primale_duale_limite.md` | `10_rag/method_cards/PL_dualita_teoria.md` | |
 | risolvere con simplesso (Wyndor) | `07_solved_examples/programmazione_lineare/pl_simplesso_wyndor.md` | `04_methods/programmazione_lineare/pl_simplesso_tabellare.md` | |
 | leggere / interpretare tableau generico | `07_solved_examples/programmazione_lineare/pl_simplesso_tableau_generico.md` | | |
 | casi particolari simplesso (degenerazione, illimitatezza, ottimi multipli) | `04_methods/programmazione_lineare/pl_casi_particolari_simplesso.md` | `07_solved_examples/programmazione_lineare/pl_simplesso_casi_particolari.md` | |

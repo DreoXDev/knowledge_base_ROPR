@@ -9,3 +9,5 @@ Questo file tiene traccia degli asset inglobati all'interno della Knowledge Base
 | `lec_w4_completa.pdf` | Ufficiale docente | Cammino minimo su grafo, introduzione dualità, regole primale-duale | Analizzato | Alta | Contiene formulazione cammino minimo, interpretazione economica, dualità forte e tableau |
 | `Ricerca Operativa - Metodo del Simplesso - 23-24.pdf` | Ufficiale docente | Teoria e geometria del simplesso, forma aumentata, basi, casi particolari | Analizzato | Alta | Contiene adiacenza vertici, soluzioni di base, degenerazione, illimitatezza e ottimi multipli |
 | `Ricerca Operativa - Teoria del Simplesso - 23-24.pdf` | Ufficiale docente | Fondamenti geometrici e algebrici, iperpiani, frontiere, adiacenza vertici | Analizzato | Alta | Contiene definizioni teoriche di frontiere, iperpiani, vertici, adiacenza, degenerazione e ottimi |
+| `Ricerca Operativa - Teoria della Dualità.pdf` | Ufficiale docente | Teoria della dualità, dualità debole/forte, prezzi ombra, complementary slackness, metodo SOB | Analizzato | Alta | Contiene la costruzione del duale standard e non standard (SOB), scarti complementari e casi limite |
+

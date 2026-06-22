@@ -46,8 +46,9 @@ Questa nota serve solo per tenere traccia manuale degli asset già analizzati e 
 - [x] `raw_assets/Programmazione Lineare/Ricerca Operativa - Teoria del Simplesso - 23-24.pdf`  
   `area:: Programmazione Lineare` `source_type:: official` `priority:: high`
   `status:: completed` `ingestion_date:: 2026-06-22` `report:: [[005_teoria_del_simplesso_ingestion_report]]`
-- [ ] `raw_assets/Programmazione Lineare/Ricerca Operativa - Teoria della Dualità.pdf`  
+- [x] `raw_assets/Programmazione Lineare/Ricerca Operativa - Teoria della Dualità.pdf`  
   `area:: Programmazione Lineare` `source_type:: official` `priority:: high`
+  `status:: completed` `ingestion_date:: 2026-06-22` `report:: [[006_teoria_della_dualita_ingestion_report]]`
 - [ ] `raw_assets/Programmazione Lineare/esercitazione1_complete.pdf`  
   `area:: Programmazione Lineare` `source_type:: official` `priority:: high`
 - [ ] `raw_assets/Programmazione Lineare/Esercitazione 2 PL.pdf`  
