@@ -1,0 +1,7 @@
+question,answer,topic,difficulty
+"Primo controllo su un candidato primale?","Dimensione (n componenti), non negatività (x>=0), vincoli primali (Ax<=b).","PL primale/duale",1
+"Quando un candidato primale e uno duale sono entrambi ottimi?","Se entrambi ammissibili e stessi valori obiettivo: c^Tx = b^Ty (dualità forte).","PL dualità forte",1
+"Cosa afferma la dualità debole?","Per x primale ammissibile e y duale ammissibile (max): c^Tx <= b^Ty. Il duale fornisce un upper bound.","PL dualità debole",2
+"Quante componenti ha il vettore duale y?","m componenti, una per ogni vincolo del primale.","PL duale",1
+"Errore più frequente nei quiz primale/duale?","Dichiarare ottimo un punto non ancora verificato come ammissibile.","PL quiz",1
+"Vincoli del duale per MAX c^Tx s.t. Ax<=b, x>=0?","min b^Ty s.t. A^Ty >= c, y >= 0.","PL duale",2

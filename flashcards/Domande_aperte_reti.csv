@@ -1,0 +1,8 @@
+question,answer,topic,difficulty
+"Come si bilancia trasporto con offerta > domanda?","Aggiungere destinazione fittizia con domanda = surplus e costi = 0.","Reti trasporto",1
+"Variabile del problema di trasporto?","x_{ij} = quantità spedita da sorgente i a destinazione j, x_{ij} >= 0.","Reti trasporto",1
+"Vincolo principale nei problemi di flusso?","Bilanciamento: sum_{(v,j)} x_{vj} - sum_{(i,v)} x_{iv} = b_v per ogni nodo v.","Reti flusso",1
+"Il trasporto è caso speciale di quale problema?","Flusso a costo minimo (grafo bipartito, senza capacità superiori).","Reti flusso",2
+"Funzione obiettivo del massimo flusso?","max f, dove f è il flusso netto in uscita dalla sorgente s.","Reti max flusso",1
+"Variabili nel cammino di costo minimo?","x_{ij} in {0,1}: 1 se l'arco (i,j) appartiene al cammino.","Reti cammino",1
+"Condizione su nodo di transito nel transhipment?","b_v = 0: flusso in entrata = flusso in uscita.","Reti transhipment",1

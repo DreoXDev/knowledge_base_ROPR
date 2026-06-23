@@ -1,0 +1,9 @@
+question,answer,topic,difficulty
+"Che cosa afferma la dualità forte?","Se il primale (max) ha ottimo finito x*, anche il duale ha ottimo finito y* e c^Tx* = b^Ty*.","PL dualità",1
+"Che cosa afferma la dualità debole?","Per ogni x primale ammissibile e y duale ammissibile: c^Tx <= b^Ty. Il duale è un upper bound al primale.","PL dualità",1
+"Quando una soluzione di base è ammissibile (BFS)?","Quando x_B = B^{-1}b >= 0 (non negatività delle variabili di base).","PL basi",1
+"Numero massimo di soluzioni di base (n variabili, m vincoli)?","In forma aumentata (n+m variabili): C(n+m, m).","PL basi",2
+"Come si sceglie la variabile uscente nel simplesso?","Test del minimo rapporto: theta* = min{x_{Bi}/d_i : d_i > 0}. La variabile con rapporto minimo esce.","PL simplesso",2
+"Cosa implica uno slack primale positivo per la variabile duale corrispondente?","Per complementarità: y_i* = 0 (variabile duale nulla se vincolo primale inattivo).","PL complementarità",2
+"A cosa corrisponde ogni vertice del poliedro ammissibile?","A una soluzione di base ammissibile (BFS). Il simplesso si muove tra BFS adiacenti.","PL basi",1
+"I casi primale illimitato - duale?","Se il primale è illimitato, il duale è inammissibile.","PL dualità",2

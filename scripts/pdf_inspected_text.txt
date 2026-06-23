@@ -1,0 +1,621 @@
+
+==================== branch_and_bound.pdf ====================
+Number of pages: 47
+
+--- Page 1 ---
+Metodo Branch and Bound
+Mauro Passacantando
+Dipartimento di Scienze Economico-Aziendali e Diritto per l’Economia
+Universit` a degli Studi di Milano-Bicocca
+mauro.passacantando@unimib.it
+Corso di Ricerca Operativa e Pianiﬁcazione delle Risorse
+Laurea in Informatica
+Universit` a degli Studi di Milano-Bicocca
+Mauro Passacantando Ricerca Operativa e Pianiﬁcazione del le Risorse 1 / 21 –
+
+--- Page 2 ---
+Metodo Branch and Bound
+Componenti principali
+◮ Branch (ramiﬁcazione) : partizionare la regione ammissibile in sotto-regioni
+◮ Bound (valutazione) : stimare il valore ottimo di ogni sotto-problema
+◮ Potatura: scartare le sotto-regioni che non contengono soluzioni mi gliori di
+quella corrente (o chiudere i corrispondenti nodi nell’albe ro decisionale)
+◮ Visita: in quale ordine visitare i nodi nell’albero decisionale
+Mauro Passacantando Ricerca Operativa e Pianiﬁcazione del le Risorse 2 / 21 –
+
+--- Page 3 ---
+Regole di Branch
+Come partizionare la regione ammissibile?
+◮ Le sotto-regioni si generano aggiungendo vincoli
+Mauro Passacantando Ricerca Operativa e Pianiﬁcazione del le Risorse 3 / 21 –
+
+--- Page 4 ---
+Regole di Branch
+Come partizionare la regione ammissibile?
+◮ Le sotto-regioni si generano aggiungendo vincoli
+◮ Il risultato deve essere una partizione della regione ammiss ibile Ω, per non
+perdere nessuna soluzione ammissibile (che potrebbe esser e ottima)
+Mauro Passacantando Ricerca Operativa e Pianiﬁcazione del le Risorse 3 / 21 –
+
+--- Page 5 ---
+Branch binario
+Branch binario
+Ogni regione viene partizionata in
+due sotto-regioni, aggiungendo
+due vincoli
+Esempio: x1 ≤ 3 e x1 ≥ 4
+0 1 2 3 4 5
+1
+2
+3
+4
+x1
+x2
+Mauro Passacantando Ricerca Operativa e Pianiﬁcazione del le Risorse 4 / 21 –
+
+==================== BB PLI.pdf ====================
+Number of pages: 54
+
+--- Page 1 ---
+PROGRAMMAZIONE LINEARE INTERAL’ALGORITMO DEL BRANCH AND BOUND
+
+
+--- Page 2 ---
+2
+Considerazioni sul Branch and BoundNel caso generale il branch-and-bound fornisce una grande flessibilità di progettazione di uno specifico algoritmo per qualsiasi tipo di problema. 
+Ci sono molte opzioni disponibili, e la costruzione di un algoritmo efficiente richiede la valutazione di diverse opzioni per trovare quella più idonea alla struttura del problema.
+Ogni algoritmo di Branch and Bound si compone dei tre passi principali che abbiamo già visto:ØBranchingØBounding ØFathomingMa ogni passo implica delle scelte
+
+
+--- Page 3 ---
+3
+Il Branching  implica la selezione di un sotto-problema da analizzare ed la divisione di questo in sotto-problemi più piccoli. Vi sono diverse regole di selezione e divisione possibili. Posso scegliere:
+ØIl sotto-problema creato più di recente: tale regola di selezione ha il vantaggio che è efficiente per ripartire con l’ottimizzazione del rilassamento LP dal precedente problema (devo solo aggiungere un vincolo)
+ØIl sotto-problema con il miglior bound: è un regola molto utilizzata perché in genere conduce a soluzioni incombenti più velocemente e quindi permette di effettuare un fathoming più efficiente.
+ØSi può anche usare una combinazione delle due regole.
+Considerazioni sul Branch and Bound
+
+
+--- Page 4 ---
+4
+La regola del sotto-problema creato più di recente è anche nota come Depth First, perché equivale a scegliere il nodo di livello maggiore (più profondo) 
+Considerazioni sul Branch and Bound
+Questo metodo è semplice da implementare, permette di ottenere presto delle soluzioni ammissibili (ci si avvicina più rapidamente alle foglie) e limita la memoria necessaria per memorizzare l'albero delle soluzioni, visto che si tendono a chiudere molti nodi per ammissibilità e rimangono pochi nodi contemporaneamente aperti. Per contro, presenta il rischio di esplorare completamente sotto-alberi con soluzioni scadenti;
+
+
+--- Page 5 ---
+5
+La regola del sotto-problema con il miglior bound è anche nota come Best Bound FirstConsiderazioni sul Branch and BoundSi sceglie il nodo più promettente ossia il nodo con il bound migliore (lower bound più basso, per problemi di minimo, o upper bound più alto, per problemi di massimo). Tipicamente, tale strategia permette di limitare il numero di nodi visitati esplicitamente e tende pertanto a essere più efficiente. Per contro, l'esplorazione tende a rimanere a livelli poco profondi, dove i problemi sonomeno vincolati e, di conseguenza, i bound sono più promettenti ma  difficilmente si ottengono presto soluzioni ammissibili che migliorino la soluzione incombente corrente. Questo impedisce di applicare efficacemente le regole di fathoming, e, pertanto è maggiore la richiesta di memoria per i nodi aperti contemporaneamente.
+
+
+==================== 16_esercizi_BB.pdf ====================
+Number of pages: 19
+
+--- Page 1 ---
+Esercizi sul metodo Branch and Bound
+per la Programmazione Lineare Intera
+Risolvere i problemi di Programmazione Lineare Intera che seguono con il seguente metodo
+Branch and Bound:
+• la soluzione ammissibile di partenza ` e ottenuta arrotondando la soluzione ottima del
+rilassamento continuo del nodo radice;
+• in ogni nodo dell’albero risolvere il rilassamento continuo;
+• in ogni nodo che rimane aperto fare un branch binario istanziando la prima variabile che
+non ha un valore intero nella soluzione ottima del rilassamento continuo;
+• visitare in ampiezza l’albero di enumerazione.
+Esercizio 1. 
+
+
+max 5 x1 + 8x2
+x1 + x2 ≤ 6
+5x1 + 9x2 ≤ 45
+x1 ≥ 0
+x2 ≥ 0
+x1, x2 ∈ Z
+Esercizio 2. 
+
+
+max x1 + 3x2
+x1 + 5x2 ≤ 21
+8x1 + 2x2 ≤ 35
+x1 ≥ 0
+x2 ≥ 0
+x1, x2 ∈ Z
+Esercizio 3. 
+
+
+max 5 x1 + 4x2
+3x1 + 2x2 ≤ 16
+2x1 + 3x2 ≤ 16
+x1 ≥ 0
+x2 ≥ 0
+x1, x2 ∈ Z
+Esercizio 4. 
+
+
+max 7 x1 + 8x2
+x1 + 2x2 ≤ 10
+3x1 + 2x2 ≤ 16
+x1 ≥ 0
+x2 ≥ 0
+x1, x2 ∈ Z
+1
+
+--- Page 2 ---
+Esercizio 5. 
+
+
+max 7 x1 + 6x2
+2x1 + x2 ≤ 10
+2x1 + 3x2 ≤ 16
+x1 ≥ 0
+x2 ≥ 0
+x1, x2 ∈ Z
+Esercizio 6. 
+
+
+max 5 x1 + 6x2
+2x1 + 3x2 ≤ 12
+3x1 + 2x2 ≤ 12
+x1 ≥ 0
+x2 ≥ 0
+x1, x2 ∈ Z
+Esercizio 7. 
+
+
+max x1 + 2x2
+−3x1 + 5x2 ≤ 10
+7x1 + 5x2 ≤ 35
+x1 ≥ 0
+x2 ≥ 0
+x1, x2 ∈ Z
+Esercizio 8. 
+
+
+max 20 x1 + 17x2
+x1 + x2 ≤ 5
+10x1 + 6x2 ≤ 45
+x1 ≥ 0
+x2 ≥ 0
+x1, x2 ∈ Z
+Esercizio 9. 
+
+
+max x1 − 3x2
+−2x1 + 5x2 ≤ 10
+6x1 + 5x2 ≤ 30
+x1 ≥ 0
+x2 ≥ 0
+x1, x2 ∈ Z
+Esercizio 10. 
+
+
+max x1 + 2x2
+−3x1 + 5x2 ≤ 12
+7x1 + 5x2 ≤ 35
+x1 ≥ 0
+x2 ≥ 0
+x1, x2 ∈ Z
+2
+
+--- Page 3 ---
+Esercizio 11. 
+
+
+max 32 x1 + 20x2
+9x1 + 5x2 ≤ 45
+x1 + x2 ≤ 6
+x1 ≥ 0
+x2 ≥ 0
+x1, x2 ∈ Z
+Per ciascuno dei problemi dello zaino riportati sotto, rispondere alle seguenti domande:
+a) Calcolare una valutazione inferiore del valore ottimo applicando l’algoritmo greedy basato sui
+rendimenti.
+b) Calcolare una valutazione superiore del valore ottimo risolvendo il rilassamento continuo.
+c) Trovare una soluzione ottima del problema applicando il metodo Branch and Bound . In
+ogni nodo dell’albero risolvere il rilassamento continuo ed istanziare l’eventuale variabi-
+le frazionaria della soluzione ottima del rilassamento. Effettuare la visita dell’albero in
+ampiezza.
+Esercizio 12.
+Oggetti 1 2 3 4
+Valori 15 11 20 10
+Pesi 5 2 3 4
+Capacit` a = 8
+Esercizio 13.
+Oggetti 1 2 3 4
+Valori 16 12 11 7
+Pesi 6 5 3 2
+Capacit` a = 8
+Esercizio 14.
+Oggetti 1 2 3 4
+Valori 11 23 18 6
+Pesi 7 6 3 2
+Capacit` a = 8
+Esercizio 15.
+Oggetti 1 2 3 4
+Valori 13 5 18 11
+Pesi 5 4 3 2
+Capacit` a = 8
+Esercizio 16.
+Oggetti 1 2 3 4
+Valori 16 17 21 23
+Pesi 5 3 6 2
+Capacit` a = 8
+3
+
+--- Page 4 ---
+Soluzioni
+Esercizio 1.
+P
+34,41
+P1
+34,41
+P2
+39,39
+P3
+39,34
+P4
+39,41
+P5
+39,40
+P6
+∅
+P7
+39,37
+P8
+40,40
+x1 ≤ 2 x1 ≥ 3
+x2 ≤ 3 x2 ≥ 4
+x1 ≤ 1 x1 ≥ 2
+x2 ≤ 4 x2 ≥ 5
+P: la soluzione ottima del rilassamento continuo ` e (2.25, 3.75), quindi vS(P ) = 41. Arrotondando
+la soluzione ottima del rilassamento si ottiene la soluzione ammissibile (2, 3), quindi vI(P ) = 34.
+P1: la soluzione ottima del rilassamento continuo ` e (2 , 3.88) che non ` e a componenti intere e
+vS(P1) = 41 > v I(P ), quindi il nodo rimane aperto.
+P2: la soluzione ottima del rilassamento continuo ` e (3, 3) e vS(P2) = 39. Poich´ e (3, 3) ` e a com-
+ponenti intere, aggiorniamo vI(P ) = 39 e chiudiamo il nodo.
+P3: la soluzione ottima del rilassamento continuo ` e (2, 3) e vS(P3) = 34 < v I(P ), quindi chiu-
+diamo il nodo.
+P4: la soluzione ottima del rilassamento continuo ` e (1 .8, 4) che non ` e a componenti intere e
+vS(P4) = 41 > v I(P ), quindi il nodo rimane aperto.
+P5: la soluzione ottima del rilassamento continuo ` e (1 , 4.44) e vS(P5) = 40 > v I(P ), il nodo
+rimane aperto.
+P6: non esistono soluzioni ammissibili, , quindi chiudiamo il nodo.
+P7: la soluzione ottima del rilassamento continuo ` e (1, 4) e vS(P7) = 37 < v I(P ), quindi chiu-
+diamo il nodo.
+P8: la soluzione ottima del rilassamento continuo ` e (0 , 5) e vS(P8) = 40. Poich´ e (0 , 5) ` e a
+componenti intere, aggiorniamo vI(P ) = 40 e chiudiamo il nodo.
+La soluzione ottima del problema ` e (0, 5) di valore 40.
+4
+
+--- Page 5 ---
+Esercizio 2.
+P
+12,14
+P1
+12,13
+P2
+12,8
+P3
+12,12
+P4
+13,13
+x1 ≤ 3 x1 ≥ 4
+x2 ≤ 3 x2 ≥ 4
+P: la soluzione ottima del rilassamento continuo ` e (3.5, 3.5), quindi vS(P ) = 14. Arrotondando
+la soluzione ottima del rilassamento si ottiene la soluzione ammissibile (3, 3), quindi vI(P ) = 12.
+P1: la soluzione ottima del rilassamento continuo ` e (3 , 3.6) che non ` e a componenti intere e
+vS(P1) = 13 > v I(P ), quindi il nodo rimane aperto.
+P2: la soluzione ottima del rilassamento continuo ` e (4, 1.5) e vS(P2) = 8 < v I(P ), quindi chiu-
+diamo il nodo.
+P3: la soluzione ottima del rilassamento continuo ` e (3, 3) e vS(P3) = 12 = vI(P ), quindi chiu-
+diamo il nodo.
+P4: la soluzione ottima del rilassamento continuo ` e (1 , 4) e vS(P4) = 13. Poich´ e (1 , 4) ` e a
+componenti intere, aggiorniamo vI(P ) = 13 e chiudiamo il nodo.
+La soluzione ottima del problema ` e (1, 4) di valore 13.
+5
+
+==================== Programmazione Lineare Intera_Branch and Bound binario.pdf ====================
+Number of pages: 18
+
+--- Page 1 ---
+PRO GRA MMA ZIO NE 
+LINEA RE INTER A
+L’ A L G O R I T M O  D E L  B R A N C H  A N D  B O U N D
+
+
+--- Page 2 ---
+2
+Metodo del Branch and Bound (B &B)
+➢ È una tecnica generale per la risoluzione di problemi di
+ottimizzazione intera
+➢ Proposto da A.H. Land e A.G. Doig nel 1960 (*) per risolvere
+problemi di PLI
+(*) Land, A. H., & Doig, A. G. (2010). An automatic method for solving discrete programming problems. In50 Years of Integer Programming 
+1958-2008 (pp. 105-132). Springer, Berlin, Heidelberg.
+➢ La tecnica del Branch and Bound è una tecnica di enumerazione implicita, 
+ovvero 
+▪ «valuta» le soluzioni possibili fino a trovare quella ottima.
+▪ scarta alcune di queste soluzioni a priori, dimostrando la loro non ottimalità.
+▪ si basa sul concetto di dividi et impera
+➢ Inizialmente venne sviluppato per risolvere modelli di programmazione lineare
+intera per il trasporto e lo stoccaggio di petrolio
+➢ Ancora oggi il metodo del Branch and Bound rappresenta una delle tecniche
+più usate per risolvere i problemi di PL intera, binaria e mista
+
+
+--- Page 3 ---
+3
+Come funziona il B & B
+➢ Supponiamo di avere un problema PLI:
+max 𝑧 = 𝒄𝑇𝒙 (funzione obiettivo lineare)
+𝑋 = 𝒙 ∈ ℤ𝑛 ∶ 𝑔𝑖 𝒙
+≥
+=
+≤
+0, 𝑖 = 1, … , 𝑚 , con 𝑔𝑖 𝒙 = 𝒂𝑖
+𝑇𝒙 − 𝑏𝑖 (vincoli lineari)
+dove 𝒂 ∈ ℝ𝑛, 𝒃 ∈ ℝ𝑚 e 𝐜 ∈ ℝ𝑛.
+➢ Indichiamo tale problema come problema completo
+➢ Un problema PLI rappresenta un sotto-problema del problema completo se:
+▪ presenta la medesima funzione obiettivo ma ha un sottoinsieme proprio di 𝑋 come regione ammissibile
+➢ Sia 𝑧∗ = 𝑓 𝑥∗ la soluzione ottima del problema completo e ǁ𝑧 = 𝑓 ෤𝑥 la soluzione ottima di un sotto-problema, 
+allora si ha che f ෤x ≤ f x∗
+➢ Basta solo notare che tra le soluzioni ammissibili del problema completo vi è anche ෤𝑥 e che per definizione di 
+ottimo 𝑓 ෤𝑥 ≤ 𝑓 𝑥∗
+➢ ATTENZIONE: per un problema di min vale il contrario!
+
+
+--- Page 4 ---
+4
+▪ la partizione rispetto al valorre delle variabili, o branching
+▪ la determinazione di un limite superiore (bounding)
+▪ l’eliminazione di sottoproblemi (fathoming)
+➢ Il B & B fa uso delle tre seguenti tecniche per risolvere un generico problema PLI:
+Come funziona il B & B
+
+
+--- Page 5 ---
+5
+Il branching per problemi PB
+➢ Nel caso di problemi a variabili binarie (PB), il modo più semplice per dividere l’insieme delle soluzioni
+ammissibili in sottoinsiemi è fissare il valore di una delle variabili, per esempio 𝑥1 = 0, per un sottoinsieme e a
+𝑥1 = 1 per l’altro sottoinsieme
+➢ La variabile che viene utilizzata per eseguire questa suddivisione ad ogni iterazione è chiamata variabile di 
+branching
+➢ Per selezionare ad ogni iterazione la variabile di branching si può utilizzare l’ordinamento naturale delle variabili 
+𝑥1, 𝑥2, …
+Esempio
+▪ 1/3𝑥1 + 3𝑥2 + 5𝑥3 ≤ 8
+▪ 𝑥1, 𝑥2, 𝑥3 ∈ {0,1}
+max z = 𝑥1 + 2𝑥2 + 4x3𝑃0 𝑥1 = 0
+𝑥2 = 1𝑥2 = 0
+𝑥1 = 1
+➢ Notiamo che, nel caso binario, ad ogni branching generiamo due nuovi sotto-problemi
+𝐶𝑜𝑚𝑝𝑙𝑒𝑡𝑜
+𝑥2 = 1𝑥2 = 0
+…
+
+
+==================== 9_esercizi_modelli.pdf ====================
+Number of pages: 14
+
+--- Page 1 ---
+Esercizi su problemi e modelli
+di Programmazione Lineare Intera
+Esercizio 1.In un ufficio devono essere pianificati il rimpiazzo e la manutenzione della foto-
+copiatrice per i prossimi quattro anni. All’inizio del primo anno viene sostituita la precedente
+fotocopiatrice con una nuova. I costi di manutenzione aumentano al passare degli anni di uti-
+lizzo della stessa fotocopiatrice, in quanto la fotocopiatrice diventa sempre meno affidabile. I
+costi di manutenzione sono indicati in tabella:
+Manutenzione Costo
+1°anno 500e
+2°anno 1000e
+3°anno 1500e
+4°anno 2100e
+Ogni anno esiste la possibilit` a di sostituire l’attuale fotocopiatrice con una completamente
+nuova pagando sempre 1600e. Ad esempio, se si rimpiazza la fotocopiatrice ogni anno il
+costo ` e di (1600+500)eper 4 anni; invece se viene rimpiazzata solo all’inizio il costo ` e
+(1600+500+1000+1500+2100)e.
+Il capo dell’ufficio deve decidere quante volte sostituire la fotocopiatrice e in quale anno, in
+modo da minimizzare il costo totale.
+Formulare tale problema come un problema di cammino minimo su un opportuno grafo e
+trovare la soluzione ottima.
+Esercizio 2.Un’azienda produttrice di automobili deve pianificare lo smistamento delle vetture
+in un paese straniero. Le vetture raggiungono il paese via mare e le navi possono attraccare
+in 3 diversi porti,P 1,P 2 eP 3. Per ciascun porto l’azienda deve pagare una tassa per ciascuna
+automobile del carico: nel portoP 1 la tassa ` e di 250 euro a vettura, nel portoP2 ` e di 150 euro
+a vettura, mentre nel portoP 3 ` e di 200 euro a vettura. Le automobili devono essere inviate dai
+porti ai 4 centri di smistamento presenti nel paese,S 1,S 2,S 3 eS 4. Il costo (in euro) per inviare
+una vettura da ogni porto ad ogni centro di smistamento ` e indicato nella tabella seguente:
+Centri di smistamento
+PortoS 1 S2 S3 S4
+P1 15 25 10 20
+P2 40 30 30 50
+P3 25 35 20 30
+La richiesta del centro di smistamentoS 1 ` e di almeno 170 vetture, quella diS 2 ` e di almeno
+130 vetture, quella diS 3 ` e di almeno 100 vetture, mentre quella diS4 ` e di almeno 200 vetture.
+Per motivi strategici, il centroS 3 deve essere rifornito da un solo porto. Inoltre, se il portoP 2
+serve il centro di smistamentoS 2, allora deve servire anche il centroS 4. `E noto che il portoP 1
+pu` o gestire al massimo 350 vetture, il portoP 2 al massimo 200 vetture, mentre il portoP 3 al
+massimo 300 vetture.
+1
+
+--- Page 2 ---
+L’azienda deve decidere come distribuire le vetture dai porti verso i centri di smistamento,
+rispettando le richieste dei centri e le capacit` a dei porti, in modo da minimizzare il costo totale
+dato dai costi di trasporto pi` u le tasse pagate nei porti.
+Formulare un modello di Programmazione Lineare Intera per aiutare l’azienda a risolvere il
+problema.
+Esercizio 3.Una compagnia di assicurazioni ha deciso di aprirepfiliali per servirenclienti. Il
+volume di lavoro portato da ogni clienteirichieded i ore di lavoro ogni mese. Ogni dipendente
+della compagnia lavoraLore al mese e ogni filialejdeve avere un numero di dipendenti compreso
+tram j eM j. La compagnia deve decidere quanti dipendenti assumere in ogni filiale e come
+assegnare i clienti alle filiali (ogni cliente deve essere assegnato ad una sola filiale), in modo da
+soddisfare le richieste dei clienti e la numerosit` a dei dipendenti nelle filiali, con l’obiettivo di
+assumere il numero minimo possibile di dipendenti.
+Formulare un modello di Programmazione Lineare Intera per aiutare il responsabile della
+compagnia a risolvere il problema.
+Esercizio 4.L’amministrazione di una regione deve pianificare l’apertura di asili nido in
+un’area montana. Nell’area sono presenti alcuni paesi, descritti dall’insiemeI, dove abitano le
+famiglie dei bambini a cui deve essere garantito il servizio di asilo nido. Gli asili nido possono
+essere costruiti in qualsiasi paesei∈I, ma il budget che lo Stato mette a disposizione permette
+di costruire al massimopasili. In ogni paesei∈Ici sonob i bambini a cui deve essere garantito
+il servizio. Tutti i bambini di un paese devono essere assegnati allo stesso asilo nido e, se l’asilo
+nido di riferimento non si trova nello stesso paese, viene attivato un servizio di scuolabus tra il
+paese dove vivono i bambini e l’asilo nido. Il servizio di scuolabus per portare tutti i bambini del
+paeseial nido aperto nel paesejcostac ij euro all’anno. Oltre ai costi del servizio di scuolabus,
+l’amministrazione deve considerare anche i costi del personale: assumere un educatore costag
+euro all’anno. Inoltre, la normativa vigente richiede che ci sia un educatore ogniqbambini.
+L’amministrazione deve decidere in quali paesi aprire gli asili nido, quanti educatori assumere
+in ogni nuovo asilo nido e come assegnare i bambini di ogni paese ad un nuovo asilo nido, con
+l’obiettivo di minimizzare i costi annuali di gestione (costi di trasporto pi` u costi del personale).
+Formulare un modello di Programmazione Lineare Intera per aiutare il responsabile dell’am-
+ministrazione a risolvere il problema.
+Esercizio 5.Un’azienda ha acquistato tre nuove macchineM 1, M2, M3 che andranno posizio-
+nate in uno dei 4 spazi liberi dell’officinaS 1, S2, S3, S4. Alcune di questi spazi sono pi` u adatti
+di altri per l’installazione di una particolare macchina a causa della loro vicinanza ai centri di
+lavoro. `E noto inoltre che la posizioneS 2 non ` e adatta per la macchinaM2 e che nella posizione
+S4 potrebbero essere posizionate anche due macchine. La tabella seguente riporta il costo orario
+della movimentazione dei materiali nel caso in cui una macchinaM i venga posizionata in uno
+spazioS j:
+Spazi liberi
+MacchineS 1 S2 S3 S4
+M1 13 16 12 11
+M2 15 – 13 20
+M3 5 7 10 6
+Formulare un modello di Programmazione Lineare Intera che assegni ogni macchina ad una
+posizione in modo da ridurre al minimo il costo totale orario della movimentazione dei materiali.
+2
+
+--- Page 3 ---
+Esercizio 6.In vista dell’inizio del nuovo anno scolastico, due cartolerieC 1, C2, facenti parte
+della stessa catena, vogliono rifornire il proprio magazzino di agende per far fronte alle imminenti
+richieste degli studenti. I possibili fornitori tra cui le cartolerie possono scegliere sono quattro
+(F1, F2, F3, F4) ed i costi unitari di spedizione (in euro) sono riassunti nella tabella seguente:
+Cartolerie
+FornitoriC 1 C2
+F1 2 6
+F2 13 11
+F3 9 5
+F4 8 4
+Formulare un modello di Programmazione Lineare Intera che minimizzi i costi che le cartolerie
+devono sostenere tenendo in considerazione che:
+•la capacit` a produttiva dei 4 fornitori ` e rispettivamente di 120, 165, 178 e 199 agende;
+•la cartoleriaC 1 vuole acquistare almeno 120 agende e stima che la capacit` a di stoccaggio
+del proprio magazzino sia di 150 agende, la cartoleriaC 2 vuole acquistare almeno 105
+agende e stima che la capacit` a di stoccaggio del proprio magazzino sia di 160 agende;
+•il costo fisso di spedizione per ciascun fornitore ` e di 100, 90, 80 e 70 euro, rispettivamente.
+Esercizio 7.Modificare il modello formulato nell’esercizio 6 per tenere conto anche delle
+seguenti condizioni:
+•la cartoleriaC 1 decide di rifornirsi al massimo da 3 diversi fornitori;
+•in caso una cartoleria decidesse di scegliere il fornitoreF 4, l’acquisto minimo da effettuare
+da questo fornitore dovr` a essere di almeno 40 agende;
+•il fornitoreF 1 vende la merce solo in pacchi da 20 agende;
+•il fornitoreF 2 ` e disponibile a dimezzare il costo fisso di spedizione a ciascuna cartoleria
+se l’ordine complessivo ` e di almeno 60 agende.
+Esercizio 8. `E giorno di bucato e il nostro amico Remo si appresta a stendere i panni appena
+usciti dalla lavatrice. Da buon appassionato di Ricerca Operativa, vuole cercare di ottimizzare
+lo spazio sul piccolo stendino, in previsione di una seconda lavatrice che dovr` a preparare. Lo
+stendino che ha in dotazione consta solo di 4 file, ognuna lunga 110 cm. Ogni panno, una volta
+piegato appositamente e pronto per essere steso, occuper` a sul filo una lunghezzaLed avr` a un
+proprio pesoP. Entrambe le quantit` a per ogni panno sono riportate nella tabella seguente.
+3
+
+--- Page 4 ---
+IndumentiL(cm)P(kg)
+maglietta bianca 40 0,2
+maglietta verde 45 0,25
+felpa 50 0,35
+pantalone lungo 50 0,6
+costume da bagno blu 30 0,25
+costume da bagno rosso 25 0,25
+telo da spiaggia 100 1,1
+mutande bianche 30 0,2
+mutande nere 20 0,15
+Per non far sbilanciare lo stendino, Remo sa che il peso complessivo dei panni stesi sulle due
+file estreme dovr` a essere al massimo uguale al peso totale dei panni posti sulle altre due file.
+Formulare un modello di Programmazione Lineare Intera che aiuti Remo a decidere dove
+posizionare i panni (ogni panno deve obbligatoriamente essere steso), minimizzando il numero
+di file utilizzate.
+Esercizio 9.Modificare il modello formulato nell’esercizio 8 per tenere conto anche delle
+seguenti condizioni:
+•stendere complessivamente almeno 5 indumenti;
+•stendere almeno 2 dei capi da mare (costume blu, costume rosso e telo da spiaggia) oppure
+almeno 3 dei primi 4 indumenti in tabella;
+•stendere il telo da spiaggia solo se almeno uno dei due costumi ` e stato steso.
+4
+
+--- Page 5 ---
+Soluzioni
+Esercizio 1.Il problema si pu` o formulare come problema di cammino di costo minimo dal
+nodo 1 al nodo 6 sul seguente grafo:
+1
+2
+3a 3b
+4a 4b 4c 4d
+5a 5b 5c 5d 5e 5f 5g 5h
+6
+2100
+2100 1000
+2100 1000 2100 1500
+2100 1000 2100 1500 2100 1000 2100 2100
+0
+0 0 0 0 0 0
+0
+Il nodo 1 rappresenta la situazione all’inizio del primo anno: poich´ e viene deciso di cambiare
+la fotocopiatrice e di pagare la manutenzione per il primo anno, ` e necessario pagare 2100e;
+2100 ` e il costo dell’arco (1,2).
+Il nodo 2 rappresenta la situazione all’inizio del secondo anno, ci sono due possibilit` a: cam-
+biare di nuovo la fotocopiatrice e pagare la manutenzione (1600+500e) oppure pagare solo
+1000eper il secondo anno di manutenzione. Gli archi (2,3a) e (2,3b) (ed i loro costi associati)
+rappresentano queste due alternative.
+Analogamente, i due archi uscenti dal nodo 3arappresentano le due alternative possibili
+all’inizio del terzo anno, dopo che si ` e deciso di cambiare la fotocopiatrice all’inizio del secondo
+anno: cambiare di nuovo la fotocopiatrice e pagare il primo anno di manutenzione (2100e)
+oppure pagare solo il secondo anno di manutenzione (1000e). I due archi uscenti dal nodo
+3brappresentano le due alternative possibili all’inizio del terzo anno, dopo che si ` e deciso di
+non cambiare la fotocopiatrice all’inizio del secondo anno: cambiare la fotocopiatrice e pagare il
+primo anno di manutenzione (2100e) oppure pagare solo il terzo anno di manutenzione (1500
+e).
+In modo simile si costruiscono gli archi uscenti dai nodi 4a, . . . ,4d. Infine, tutti i nodi
+5a, . . . ,5hvengono collegati con archi di costo nullo ad un nodo fittizio 6.
+5
+
+==================== Programmazione lineare intera completo.pdf ====================
+Number of pages: 34
+
+--- Page 1 ---
+PROGRAMMAZIONE LINEARE INTERAINTRODUZIONE
+
+
+--- Page 2 ---
+Ottimizzazione Intera e Binaria Fino ad ora abbiamo visto diversi esempi delle numerose e diverse applicazioni della PL. 
+Una limitazione chiave che non abbiamo ancora affrontato è l’ipotesi di divisibilità, che richiede che le variabili decisionali siano del dominio reale.
+In molti problemi pratici, tuttavia le variabili di decisione effettivamente hanno senso solo se hanno valori interi, come abbiamo visto in alcune applicazioni come assegnamento, trasporto o problemi di flusso su reti.
+In generale se si richiede che le variabili di decisione assumano valori interi allora si parla di Programmazione Lineare Intera(PLI, o Programmazione Intera).
+Se solo alcune della variabili di decisione devono essere intere allora si parla di Programmazione Lineare Mista( o Programmazione Mista)
+
+
+--- Page 3 ---
+Ottimizzazione Intera e Binaria opt𝑓𝒙=𝒄!𝒙(funzioneobiettivolineare)
+𝑋=𝒙∶𝑔"𝒙≥=≤0,𝑖=1,…,𝑚,con𝑔"𝒙=𝒂"!𝒙−𝑏"(vincolilineari)
+ØConsideriamo un generico problema di programmazione lineare (PL) con 𝑛variabili e 𝑚vincoli
+dove 𝒂∈ℝ#,𝒃∈ℝ$e 𝐜∈ℝ#eopt=minmaxØSe 𝒙∈ℤ#abbiamo un problema di Programmazione Lineare Intera (PLI)
+ØSe 𝒙∈0,1#abbiamo un problema di Programmazione Lineare Binaria (PB)
+ØSe 𝒙∈ℝ%×ℤ&con 𝑝+𝑞=𝑛e 𝑝>0e 𝑞>0abbiamo un problema di Programmazione Lineare Mista (PLM) o Mixed IntegerProgramming(MIP)
+3
+
+
+--- Page 4 ---
+Il problema della Lombardia ManufactoringCo.ØL’azienda LOMBARDIA MANUFACTORING COMPANY sta considerando la possibilità di espandersi costruendo una nuova fabbrica ed un nuovo magazzino avendo a disposizione un budget di 10 milioni di euro.ØLa nuova fabbrica può essere collocata a Saronno oppure a Gallarate oppure in entrambe le località. 
+ØIl magazzino deve essere collocato nella città dove verrà costruita la fabbricaØNella tabella seguente è riportato, per ciascuna alternativa di investimento, il valore atteso (seconda colonna) ed il capitale necessario (terza colonna).Domanda sì/noValore attuale netto ($)Capitale richiesto ($)Costruisco la fabbrica a Saronno?9 6Costruisco la fabbrica a Gallarate?5 3Costruisco un magazzino a Saronno?6 5Costruisco un magazzino a Gallarate?4 2
+ØIl nuovo magazzino può essere collocato alternativamente a Saronno o a Gallarate. 
+ØQual è la città dove si può collocare la fabbrica ed il magazzino affinché si massimizzi il valore attuale netto atteso, rispettando i vincoli di budget?4
+
+
+--- Page 5 ---
+Le variabili di decisioneØT utte le variabili decisionalidel problema sono variabili binariedel tipo
+Domanda sì/noVariabile decisionaleValore attuale netto ($)Capitale richiesto ($)Costruisco la fabbrica a Saronno?𝑥' 9 6Costruisco la fabbrica a Gallarate?𝑥( 5 3Costruisco il magazzino a Saronno?𝑥) 6 5Costruisco il magazzino a Gallarate?𝑥* 4 2
+𝑥+=R1seladecisioneèsi0seladecisioneèno𝑗=1,2,3,4
+x1: Costruiamouna fabbricaa Saronno? Si (x1=1)  o  No (x1=0)x2: Costruiamouna fabbricaa Gallarate? Si (x2=1)  o  No (x2=0)x3: Costruiamoun magazzinoa Saronno? Si (x3=1)  o  No (x3=0)x4: Costruiamoun magazzinoa Gallarate? Si (x4=1)  o  No (x4=0)
+5

@@ -1,0 +1,6 @@
+question,answer,topic,difficulty
+"La ricerca locale garantisce l'ottimo globale?","No. Garantisce solo un ottimo locale rispetto al vicinato scelto.","Metaeuristiche",1
+"In SA, come varia la probabilità di accettare mosse peggiorative?","Diminuisce con la temperatura T (raffreddamento). p = e^(-Df/T).","Metaeuristiche SA",2
+"A cosa serve la lista tabù?","Evitare di rivisitare soluzioni recenti → prevenire cycling e facilitare escape da ottimi locali.","Metaeuristiche tabu",2
+"Intensificazione vs diversificazione?","Intensificazione: approfondire regione promettente. Diversificazione: esplorare regioni nuove.","Metaeuristiche",2
+"Operatori base degli algoritmi genetici?","Crossover (combina genitori) e mutazione (modifica casuale).","Metaeuristiche GA",2

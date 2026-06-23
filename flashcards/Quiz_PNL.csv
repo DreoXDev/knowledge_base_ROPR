@@ -1,0 +1,8 @@
+question,answer,topic,difficulty
+"Direzione di discesa nel metodo del gradiente (min)?","-∇f(x_k). Per max: +∇f(x_k).","PNL gradiente",1
+"Formula di aggiornamento di Newton multivariabile?","Risolvi H_f(x_k) s_k = -∇f(x_k); poi x_{k+1} = x_k + s_k.","PNL Newton",2
+"Condizione di complementarità KKT?","mu_j * h_j(x) = 0. O mu_j=0 (vincolo inattivo) o h_j=0 (attivo).","PNL KKT",1
+"Segno dei moltiplicatori KKT per minimizzazione?","mu_j >= 0.","PNL KKT",1
+"Bisezione: aggiornamento dell'intervallo dopo calcolo del punto medio?","Se f'(a)*f'(x_mid)<0: b=x_mid. Altrimenti: a=x_mid.","PNL bisezione",2
+"Newton su funzione quadratica: quante iterazioni?","Una sola iterazione: Newton è esatto per funzioni quadratiche con H costante.","PNL Newton",2
+"In KKT per min, quando si scarta un candidato?","Se un moltiplicatore mu_j < 0 (viola ammissibilità duale) o se x viola ammissibilità primale.","PNL KKT",2

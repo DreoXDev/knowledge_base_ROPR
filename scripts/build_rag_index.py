@@ -3,7 +3,7 @@ import re
 
 ROOT = Path(__file__).resolve().parents[1]
 RAG_INDEX = ROOT / "10_rag" / "RAG_RETRIEVAL_INDEX.md"
-WATCH_DIRS = ["04_methods", "05_theory", "07_solved_examples", "06_exam_patterns"]
+WATCH_DIRS = ["03_exercise_catalog", "04_methods", "05_theory", "07_solved_examples", "06_exam_patterns"]
 
 
 def collect_md_files():

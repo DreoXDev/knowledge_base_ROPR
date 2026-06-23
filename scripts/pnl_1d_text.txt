@@ -1,0 +1,215 @@
+Number of pages: 29
+
+--- Page 1 ---
+OTTIMIZZAZIONE NON LINEARE IN UNA VARIABILEINTRODUZIONE
+
+--- Page 2 ---
+2
+Massimizzazione di funzioni concaveØConsideriamo un problema di massimizzazione con una funzione obiettivo concava da massimizzare. 
+ØCondizione sufficiente affinché 𝑥∗ sia punto di massimo è che
+Esempio𝑓𝑥=−𝑥"+5𝑥+4
+𝑑𝑓(𝑥∗)𝑑𝑥=0ØSe tale equazione può essere risolta analiticamente allora il procedimento per trovare l’ottimo termina.
+𝑑𝑓(𝑥)𝑑𝑥=−2𝑥+5=0 𝑥∗=#" punto di massimo
+max-∈ℝ𝑓(𝑥)
+ØUn discorso equivalente si può fare per problemi di minimizzazione di funzioni convesse
+
+--- Page 3 ---
+3
+Algoritmi di risoluzione numerica
+ØIn mancanza di una risoluzione analitica sono disponibili algoritmi per la risoluzione numerica del problema
+IDEA:  Si costruisce una sequenza di punti 𝑥$ tali che lim!→#$𝑥!=𝑥∗
+ØAd ogni iterazione 𝑘, partendo da 𝑥$ si esegue una ricerca sistematica per identificare un punto migliore 𝑥$%&
+𝑔𝑥=2𝑥'−𝑒() *+())*)=6𝑥"−𝜋𝑒()=0 e poi?
+ØCosa succede *.())*)=0 non può essere risolta analiticamente?Esempio
+e𝑓(𝑥!#&)≤𝑓(𝑥!)
+(se sto minimizzando)
+
+--- Page 4 ---
+4
+Criteri di arrestoDOMANDA: Quando conviene fermare la sequenza di punti?  
+ØA differenza dell’algoritmo del simplesso, in questo caso la sequenza di punti 𝑥$ non è detto che converga alla soluzione ottima del problema in un numero finito di iterazioni.
+§La soluzione è sufficientemente accurata ovvero *.()!)*)≈0§Quando si è raggiunto un numero massimo di iterazioni 𝑁 o un tempo computazionale massimo§I  progressi sono «lenti» ovvero 𝑥$%&−𝑥$<𝜖) o 𝑓(𝑥$%&)−𝑓(𝑥$)<𝜖.§ La soluzione diverge (𝑥$→+∞)§Si verificano ciclixkxk+1
+
+--- Page 5 ---
+5
+Algoritmi disponibili 
+ØPer l’ottimizzazione di funzioni in una variabile abbiamo:§metodo di bisezione (algoritmo dicotomico)§metodo di Newton (algoritmo di approssimazione)
+ØEsistono due tipi di algoritmi:§Dicotomici: algoritmi di ricerca per individuare un determinato valore (per il quale la funzione derivata si annulla) all'interno di un intervallo che ad ogni iterazione viene ridotto.§Di approssimazione: utilizzano approssimazioni locali della funzione
+
+--- Page 6 ---
+6
+Idea sottostanteØSe 𝑓(𝑥) è continua e concava in un intervallo chiuso 𝑎,𝑏 allora, considerando un generico punto 𝑥$:§se *.()!)*)<0 allora il punto ottimo 𝑥∗ si trova a sinistra di 𝑥$
+§se *.()!)*)>0 allora il punto ottimo 𝑥∗ si trova a destra di 𝑥$
+§se *.()!)*)≈0 allora 𝑥$≈𝑥∗ 
+𝑑𝑓𝑑𝑥>0
+𝑑𝑓𝑑𝑥≈0
+𝑑𝑓𝑑𝑥<0
+
+--- Page 7 ---
+7
+Metodo di bisezioneØIl metodo di bisezione è una procedura intuitiva e semplice che può essere applicata quando 𝑓(𝑥) è una funzione concava/convessa continua su un intervallo 𝑎,𝑏 e derivabile su (𝑎,𝑏).Idea?1. La pendenza (derivata) di 𝑓 per un punto 𝑥$fornisce informazioni su dove cercare il punto di ottimo.
+§Se 𝑓/𝑥$>0 allora si può ottenere il nuovo punto 𝑥$%& spostandosi verso destra
+§Se 𝑓/𝑥$<0 allora si può ottenere il nuovo punto 𝑥$%& spostandosi verso sinistra𝑑𝑓𝑑𝑥<0𝑑𝑓𝑑𝑥>0ØNel caso convesso si può fare un ragionamento simile per problemi di minimo
+
+--- Page 8 ---
+8
+Metodo di bisezione2. Consideriamo un generico punto 𝑥$:§Se 𝑓/𝑥$>0  allora 𝑥$ rappresenta un estremo inferiore 𝑥	per il punto 𝑥∗
+§Se 𝑓/𝑥$<0  allora 𝑥$ rappresenta un estremo superiore ̅𝑥	per il punto 𝑥∗
+3. Ad ogni iterazione 𝑘 posso indentificare un sotto-intervallo di ricerca 𝑎$,𝑏$⊂𝑎$0&,𝑏$0&⊂𝑎,𝑏	per ridurre lo spazio di ricerca in modo da identificare un’iterazione 𝑘 per cui 𝑏$−𝑎$<2𝜖 con 𝑎$−𝑥∗<𝜖	e𝑥∗−𝑏$<𝜖
+𝑎& 𝑏& 𝑎 𝑏
+massimo
+𝑎" 𝑏" 
+𝑥
+
+--- Page 9 ---
+9
+Algoritmo di bisezione (per problemi di max)Inizializzazione
+Iterazione del metodo di bisezione
+𝑘=0	e 𝜖 piccolo a piacere. Si determinano i valori 𝑥 e ̅𝑥 cercando dei valori di 𝑥 per cui la derivata sia rispettivamente positiva e negativa. Si seleziona il punto iniziale𝑥1=𝑥 + ̅𝑥2§Calcolare 𝑓/𝑥$ 
+If 𝑓/𝑥$<0 
+𝑥=𝑥$
+else̅𝑥=𝑥$
+§Pongo 𝑥$%&=) + ̅)" e 𝑘=𝑘+1 
+§If 𝑓/𝑥$=0 allora 𝑥$=𝑥∗ 
+else
+Criterio di arresto: se ̅𝑥	−𝑥 ≤2𝜖 allora il punto di ottimo 𝑥∗ avrà una distanza minore di 𝜖 da 𝑥 (o ̅𝑥 ) altrimenti eseguo una nuova iterazione del metodo di bisezione
+𝑥 iniziale
+massimo
+nuovo 𝑥 per k=1nuovo ̅𝑥 per k=2
+𝑥1𝑥&
+̅𝑥 iniziale
+
+--- Page 10 ---
+10
+Algoritmo di bisezione (per problemi di max)Inizializzazione
+Iterazione del metodo di bisezione
+𝑘=0	e 𝜖 piccolo a piacere. Si determinano i valori 𝑥 e ̅𝑥 cercando dei valori di 𝑥 per cui la derivata sia rispettivamente positiva e negativa. Si seleziona il punto iniziale𝑥1=𝑥 + ̅𝑥2§Calcolare 𝑓/𝑥$ 
+If 𝑓/𝑥$<0 
+𝑥=𝑥$
+else̅𝑥=𝑥$
+§Pongo 𝑥$%&=) + ̅)" e 𝑘=𝑘+1 
+§If 𝑓/𝑥$=0 allora 𝑥$=𝑥∗ 
+else
+Criterio di arresto: se ̅𝑥	−𝑥 ≤2𝜖 allora il punto di ottimo 𝑥∗ avrà una distanza minore di 𝜖 da 𝑥 (o ̅𝑥 ) altrimenti eseguo una nuova iterazione del metodo di bisezione
+𝑥 iniziale
+massimo
+nuovo 𝑥 per k=1nuovo ̅𝑥 per k=2
+𝑥1𝑥&
+̅𝑥 iniziale
+
+--- Page 11 ---
+11
+EsempioØSupponiamo di voler massimizzare la seguente funzione nell’intervallo 0,2max	𝑓𝑥=12𝑥−3𝑥E−2𝑥FCalcoliamo la derivata prima e seconda𝑓/𝑥=12−12𝑥'−12𝑥#
+𝑓//𝑥=−36𝑥"−60𝑥3
+ØNotiamo che 𝑓//𝑥≤0 sempre à 𝑓𝑥 concava
+§Poichè 𝑓/0=12>0 e 𝑓/2<0, possiamo porre 𝑥=0 e 𝑥=2 e𝑥1=̅𝑥−𝑥2=1
+Inizializzazione§Poniamo 2𝜖=0.02 e 𝑘=0
+
+--- Page 12 ---
+12
+Esempio𝑥1=̅𝑥−𝑥2=1
+§Avendo ̅𝑥	−𝑥=1>0.02	à dobbiamo eseguire un interazione del metodo di bisezioneCriterio di arresto
+§Calcoliamo 𝑓/𝑥1à𝑓/1=−12Prima iterazione del metodo di bisezione
+§𝑓/𝑥1<0 à poniamo ̅𝑥=1 (nuovo estremo superiore)§Poniamo 𝑥&=) + ̅)"=0.5 e 𝑘=𝑘+1=1 
+𝑓𝑥=12𝑥−3𝑥3−2𝑥4
+𝑓/𝑥=12−12𝑥'−12𝑥#
+
+--- Page 13 ---
+13
+EsempioCriterio di arresto: ̅𝑥	−𝑥=1>0.02àdobbiamo eseguire una nuova interazione
+Seconda iterazione del metodo di bisezione
+...Criterio di arresto: ̅𝑥	−𝑥=0.5>𝜖à dobbiamo eseguire una nuova interazione
+𝑓𝑥=12𝑥−3𝑥3−2𝑥4
+𝑓/𝑥=12−12𝑥'−12𝑥#
+§Calcoliamo 𝑓/𝑥&à𝑓/0.5=10.12§𝑓/𝑥&>0 à poniamo 𝑥=0.5 (nuovo estremo inferiore)§Poniamo 𝑥"=) + ̅)"=0.75 e 𝑘=𝑘+1=2
+
+--- Page 14 ---
+Esempio𝑓𝑥=12𝑥−3𝑥3−2𝑥4
+𝑓/𝑥=12−12𝑥'−12𝑥#ØProseguendo nelle iterazioni abbiamo...Iterazione̅𝑥𝑥𝑥$𝒇𝑥$𝑓/𝑥$̅𝑥	−𝑥00217-1221010.55.781310.12120.510.757.69484.090.530.7510.8757.8439-2.190.2540.81250.8750.81257.86721.310.12550.81250.8750.843757.8829-0.340.062560.8281250.843750.8281257.88150.510.031370.8281250.843750.83593757.88390.0156ØNotiamo che nell’algoritmo non è necessario calcolare il valore di 𝑓𝑥$ ad ogni iterazione, ma solo alla fine ØAl termine dell’algoritmo otteniamo 𝑥∗≈0.836 con 𝑓𝑥∗≈7.884ØIn conclusione	abbiamo	che	0.828125< x∗ < 0.84375
+
+--- Page 15 ---
+15
+Approssimazione quadratica di una funzioneØIl metodo di bisezione è una procedura semplice ed intuitiva, MA ha lo svantaggio di convergere molto lentamente. Il motivo di tale lentezza è dovuto al fatto che esso considera solo l’informazione relativa alla derivata prima 𝑓/(𝑥).
+ØUn modo per aumentare la velocità di convergenza è quello di considerare anche la derivata seconda 𝑓//(𝑥)
+ØTramite la formula di Taylor (centrata in 𝑥$) si può ottenere un’ approssimazione quadratica di tale funzione𝑓𝑥$%&=𝑓𝑥$+𝑓/𝑥$𝑥$%&−𝑥$+12𝑓//𝑥$𝑥$%&−𝑥$"+O(𝑥$%&−𝑥$")
+𝑓𝑥$%&≈𝑓𝑥$+𝑓/𝑥$𝑥$%&−𝑥$+12𝑓//𝑥$𝑥$%&−𝑥$"
+ØCome possiamo utilizzare tale informazione?
+
+--- Page 16 ---
+16
+Approssimazione quadratica di una funzione𝑓𝑥$%&≈𝑓𝑥$+𝑓/𝑥$𝑥$%&−𝑥$+12𝑓//𝑥$𝑥$%&−𝑥$"
+ØL’idea del metodo di Newton diventa quella di usare l’ottimo dell’approssimazione quadratica di 𝑓(𝑥) dato da𝑥$%&=𝑥$−𝑓/𝑥$𝑓//𝑥$ØTale formula è quella che viene usata ad ogni generica iterazione 𝑘 per calcolare il punto successivo 𝑥$%&
+IMPORTANTE: se 𝑓𝑥 è concava allora 𝑥$ converge verso un punto di massimoPerché?
+𝑓/𝑥$+𝑓//𝑥$𝑥$%&−𝑥$=0ØL’approssimazione quadratica è funzione solo di 𝑥$%&! Calcoliamo la derivata dell’approssimazione quadratica 𝑥$%&=𝑥$−𝑓/𝑥$𝑓//𝑥$
+se 𝑓𝑥 è concava allora se 𝑥$ è a sinistra del punto di massimo à 𝑓/𝑥$>0à −.")!."")!>0à 𝑥$%&>𝑥$   se 𝑓𝑥 è concava allora se 𝑥$ è a destra del punto di massimo  à 𝑓/𝑥$<0à −.")!."")!<0à 𝑥$%&<𝑥$   
+ØSe 𝑓𝑥 è convessa allora 𝑥$ converge verso un punto di minimo
+
+--- Page 17 ---
+17
+Algoritmo di NewtonInizializzazione
+Iterazione del metodo di NewtonØSi fissa 𝜖 e 𝑘=0. 
+§Calcolare 𝑓/𝑥$ e 𝑓//(𝑥$) §Si ponga 𝑥$%&=𝑥$−.")!."")!
+Criterio di arresto: se 𝑥$%&−𝑥$≤𝜖 allora il 𝑥$%&=𝑥∗ è la soluzione ottima, altrimenti eseguo una nuova iterazione del metodo di Newton e pongo 𝑘=𝑘+1
+
+--- Page 18 ---
+18
+EsempioØSupponiamo di voler minimizzare la seguente funzione nell’intervallomax𝑓𝑥=12𝑥−3𝑥E−2𝑥FCalcoliamo la derivata prima e seconda𝑓/𝑥=12−12𝑥'−12𝑥#
+𝑓//𝑥=−36𝑥"−60𝑥3
+ØNotiamo che 𝑓//𝑥≤0 sempre à 𝑓𝑥 concavaInizializzazione§Poniamo 𝜖=0.02 e 𝑘=0 e 𝑥1=1
+§Calcoliamo 𝑓/𝑥$ e 𝑓//𝑥$à 𝑓/1=−12 e 𝑓//1=−96  Prima iterazione del metodo di Newton
+Criterio di arresto: 𝑥$%&−𝑥$=0.125>𝜖àdobbiamo eseguire una nuova interazione ponendo 𝑘=𝑘+1§Poniamo	𝑥$%&=𝑥$−.")!."")!à 𝑥$%&=1−0&"054=0.875
+
+--- Page 19 ---
+19
+Esempio§Calcoliamo 𝑓/𝑥$ e 𝑓//𝑥$à 𝑓/0.875=−2.1950 e 𝑓//0.875=−62.733  Seconda iterazione del metodo di Newton
+Criterio di arresto: 𝑥$%&−𝑥$=0.035>𝜖 àdobbiamo eseguire una nuova interazione§Poniamo	𝑥$%&=𝑥$−.")!."")!à 𝑥$%&=0.84003
+...Iterazione𝑥$𝒇𝑥$𝑓/𝑥$𝑓//𝑥$𝑥$%&𝑥$%&−𝑥$017-12-0.960.8750.12510.8757.8439-2.1940-62.7330.840030.035020.840037.8838-0.1325-55.2790.837630.0024
+ØEssendo 𝜖=0.02 possiamo fermarci già alla terza iterazione àIl punto di ottimo è dato da 𝑥∗=𝑥'=0.83763
+
+--- Page 20 ---
+20
+Bisezione vs Newton
+Iterazione𝑥!𝒇𝑥!𝑓"𝑥!𝑓""𝑥!𝑥!#$𝑥!#$−𝑥!
+017-12-0.960.8750.12510.8757.8439-2.1940-62.7330.840030.035020.840037.8838-0.1325-55.2790.837630.0024
+Iterazione̅𝑥𝑥𝑥!𝒇𝑥!𝑓"𝑥!̅𝑥	−𝑥00217 21010.55.7813-12120.510.757.694810.120.530.7510.8757.84394.090.2540.81250.8750.81257.8672-2.190.12550.81250.8750.843757.88291.310.062560.8281250.843750.8281257.8815-0.340.031370.8281250.843750.83593757.88390.510.0156
+Vantaggi:§Richiede solo il calcolo della derivata prima§Converge sempre Svantaggi: §È lento
+Vantaggi: §la velocità di convergenza è quadratica
+Svantaggi: §richiede il calcolo della derivata seconda§Potrebbe divergere
+ØQuale dei due metodi è migliore?
+Newton
+Bisezione
+
+--- Page 21 ---
+METODODI NEWTON
+
+--- Page 22 ---
+METODODI NEWTON
+
+--- Page 23 ---
+METODODI NEWTON
+
+--- Page 24 ---
+METODODI NEWTON
+
+--- Page 25 ---
+METODODI NEWTON
+
+--- Page 26 ---
+METODODI NEWTON
+•La convergenzaglobaledel metododi Newton è scarsa•Puòfallirese ilpunto inizialeinizialeè lontanodal punto di ottimo
+•Nella praticadeveessereutilizzatocon strategiedi ottimizzazioneglobale
+
+--- Page 27 ---
+METODODI NEWTON
+•La convergenzaglobaledel metododi Newton è scarsa•Puòfallirese ilpunto inizialeinizialeè lontanodal punto di ottimo
+•Nella praticadeveessereutilizzatocon strategiedi ottimizzazioneglobale
+
+--- Page 28 ---
+METODODI NEWTON
+•La convergenzaglobaledel metododi Newton è scarsa•Puòfallirese ilpunto inizialeinizialeè lontanodal punto di ottimo
+•Nella praticadeveessereutilizzatocon strategiedi ottimizzazioneglobale
+
+--- Page 29 ---
+METODODI NEWTON
+•La convergenzaglobaledel metododi Newton è scarsa•Puòfallirese ilpunto inizialeinizialeè lontanodal punto di ottimo
+•Nella praticadeveessereutilizzatocon strategiedi ottimizzazioneglobale

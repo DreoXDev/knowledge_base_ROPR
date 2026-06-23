@@ -1,0 +1,227 @@
+
+==================== Page 1 ====================
+PRO GRA MMA ZIO NE 
+LINEA RE INTER A
+L’ A L G O R I T M O  D E L  B R A N C H  A N D  B O U N D
+
+
+==================== Page 2 ====================
+2
+Metodo del Branch and Bound (B &B)
+➢ È una tecnica generale per la risoluzione di problemi di
+ottimizzazione intera
+➢ Proposto da A.H. Land e A.G. Doig nel 1960 (*) per risolvere
+problemi di PLI
+(*) Land, A. H., & Doig, A. G. (2010). An automatic method for solving discrete programming problems. In50 Years of Integer Programming 
+1958-2008 (pp. 105-132). Springer, Berlin, Heidelberg.
+➢ La tecnica del Branch and Bound è una tecnica di enumerazione implicita, 
+ovvero 
+▪ «valuta» le soluzioni possibili fino a trovare quella ottima.
+▪ scarta alcune di queste soluzioni a priori, dimostrando la loro non ottimalità.
+▪ si basa sul concetto di dividi et impera
+➢ Inizialmente venne sviluppato per risolvere modelli di programmazione lineare
+intera per il trasporto e lo stoccaggio di petrolio
+➢ Ancora oggi il metodo del Branch and Bound rappresenta una delle tecniche
+più usate per risolvere i problemi di PL intera, binaria e mista
+
+
+==================== Page 3 ====================
+3
+Come funziona il B & B
+➢ Supponiamo di avere un problema PLI:
+max 𝑧 = 𝒄𝑇𝒙 (funzione obiettivo lineare)
+𝑋 = 𝒙 ∈ ℤ𝑛 ∶ 𝑔𝑖 𝒙
+≥
+=
+≤
+0, 𝑖 = 1, … , 𝑚 , con 𝑔𝑖 𝒙 = 𝒂𝑖
+𝑇𝒙 − 𝑏𝑖 (vincoli lineari)
+dove 𝒂 ∈ ℝ𝑛, 𝒃 ∈ ℝ𝑚 e 𝐜 ∈ ℝ𝑛.
+➢ Indichiamo tale problema come problema completo
+➢ Un problema PLI rappresenta un sotto-problema del problema completo se:
+▪ presenta la medesima funzione obiettivo ma ha un sottoinsieme proprio di 𝑋 come regione ammissibile
+➢ Sia 𝑧∗ = 𝑓 𝑥∗ la soluzione ottima del problema completo e ǁ𝑧 = 𝑓 ෤𝑥 la soluzione ottima di un sotto-problema, 
+allora si ha che f ෤x ≤ f x∗
+➢ Basta solo notare che tra le soluzioni ammissibili del problema completo vi è anche ෤𝑥 e che per definizione di 
+ottimo 𝑓 ෤𝑥 ≤ 𝑓 𝑥∗
+➢ ATTENZIONE: per un problema di min vale il contrario!
+
+
+==================== Page 4 ====================
+4
+▪ la partizione rispetto al valorre delle variabili, o branching
+▪ la determinazione di un limite superiore (bounding)
+▪ l’eliminazione di sottoproblemi (fathoming)
+➢ Il B & B fa uso delle tre seguenti tecniche per risolvere un generico problema PLI:
+Come funziona il B & B
+
+
+==================== Page 5 ====================
+5
+Il branching per problemi PB
+➢ Nel caso di problemi a variabili binarie (PB), il modo più semplice per dividere l’insieme delle soluzioni
+ammissibili in sottoinsiemi è fissare il valore di una delle variabili, per esempio 𝑥1 = 0, per un sottoinsieme e a
+𝑥1 = 1 per l’altro sottoinsieme
+➢ La variabile che viene utilizzata per eseguire questa suddivisione ad ogni iterazione è chiamata variabile di 
+branching
+➢ Per selezionare ad ogni iterazione la variabile di branching si può utilizzare l’ordinamento naturale delle variabili 
+𝑥1, 𝑥2, …
+Esempio
+▪ 1/3𝑥1 + 3𝑥2 + 5𝑥3 ≤ 8
+▪ 𝑥1, 𝑥2, 𝑥3 ∈ {0,1}
+max z = 𝑥1 + 2𝑥2 + 4x3𝑃0 𝑥1 = 0
+𝑥2 = 1𝑥2 = 0
+𝑥1 = 1
+➢ Notiamo che, nel caso binario, ad ogni branching generiamo due nuovi sotto-problemi
+𝐶𝑜𝑚𝑝𝑙𝑒𝑡𝑜
+𝑥2 = 1𝑥2 = 0
+…
+
+
+==================== Page 6 ====================
+Il branching per problemi PB
+Branching
+➢ Prendiamo in considerazione il problema precedentemente formulato «Lombardia Manufacturing»:
+➢ Quando si ha a che fare con variabili binarie, il modo più semplice per partizionare l’insieme di soluzioni 
+ammissibili in sottoinsiemi consiste nel fissare il valore di una delle variabili (diciamo, 𝑥1) a 𝑥1=0 per un 
+sottoinsieme e 𝑥1=1 per l'altro sottoinsieme. 
+
+
+==================== Page 7 ====================
+Il branching per problemi PB
+Branching: Il problema viene suddiviso in due sotto-problemi considerando il brancing di 𝑥1 :
+Per 𝑥1=0 Per 𝑥1=1
+
+
+==================== Page 8 ====================
+Il branching per problemi PB
+Bounding: Per ognuno dei sotto-problemi dobbiamo ricavare un limite superiore (perché stiamo risolvendo un 
+problema di massimo, altrimenti otterremmo un limite inferiore) che ci indichi quanto prromettente
+è il sotto-problema.
+Per ottenere questo limite si risolve il problema rilassato (ovvero senza considerare i vincoli di 
+interezza ma, essendo il problema binario, limitando le variabili tra 0 e 1).
+Quindi risolvo i sotto-problemi sostituendo l’ultima riga con i vincoli 𝑥𝑗 ≥ 0 𝑒 𝑥𝑗 ≤ 1
+Come prima cosa risolviamo la versione rilassata del problema completo (per esempio con il 
+metodo del simplesso) e otteniamo:
+(𝑥1, 𝑥2, 𝑥3, 𝑥4) = 5
+6 , 1, 0, 1 corrispondente a 
+Quindi il nostro problema a numeri binare avrà 𝑍 ≤ 16,5 per qualsiasi soluzione ammissibile
+In realtà, osservando che i coefficienti della funzione obiettivo del problema sono tutti interi e che le 
+soluzioni del problema devono essere binarie, possiamo anche arrotondare il limite a 𝑍 ≤ 16
+Quindi il limite superiore per le soluzioni del problema sarà 𝑍 ≤ 16 per qualsiasi soluzione ammissibile
+𝑍 = 9𝑥1 + 5𝑥2 + 6𝑥3 + 4𝑥4 = 16,5
+
+==================== Page 9 ====================
+Il branching per problemi PB
+Bounding:
+Analogamente possiamo trovare i limiti (bound) per i sotto-problemi risolvendo la loro versione rilassata:
+Sottoproblema 1 (𝑥1= 0). (𝑥1, 𝑥2, 𝑥3, 𝑥4) = 0, 1, 0, 1 . 𝑍 ≤ 9
+Sottoproblema 2 (𝑥1= 1). (𝑥1, 𝑥2, 𝑥3, 𝑥4) = 1, 4
+5 , 0, 4
+5 . 𝑍 ≤ 16
+
+==================== Page 10 ====================
+Il branching per problemi PB
+Fathoming: Un sotto-problema può essere «eliminato» dalla lista dei problemi da considerare per tre 
+possibili ragioni: 
+1) La soluzione ottenuta soddisfa i vincoli di interezza (come la soluzione del sotto-problema 1.
+In particolare, questa soluzione può essere considerata come la soluzione interra migliore trovata 
+fino a questo momento (soluzione incombente Z*). 
+Quindi il valore della soluzione incombente a questo punto è Z*=9) 
+La soluzione incombente cambierà ogni volta che un sotto-problema otterrà una soluzione intera 
+migliore della soluzione incombente corrente.
+2) La soluzione incombente può essere utilizzata per un’altra possibilità di fathoming: se il bound
+di un sotto-problema (che rappresenta la soluzione ottima migliore che si potrà trovare 
+continuando a considerare il sotto-problema) è peggiore della soluzione incombente (migliore 
+soluzione ammissibile intera già trovata) allora non vale la pena continuare a considerare il sotto-
+problema che quindi può essere chiuso (fathomed).
+3) Il sotto-problema non ammette soluzioni ammissibili.
+Quindi verranno ulteriormente risolti ed analizzati solo quei problemi che hanno una soluzione non intera  
+migliore della soluzione incombente.   
+
+==================== Page 11 ====================
+Il branching per problemi PB
+Continuiamo la soluzione del nostro problema e continuiamo ad analizzare il sotto-problema 2.
+Sottoproblema 2 (𝑥1= 1). (𝑥1, 𝑥2, 𝑥3, 𝑥4) = 1, 4
+5 , 0, 4
+5 . 𝑍 ≤ 16
+Facciamo branching sulla variabile 𝑥2
+Sottoproblema 3 ((𝑥1= 1 𝑒 𝑥2= 0).
+ Sottoproblema 4 (𝑥1= 1 𝑒 𝑥2 = 1).
+
+
+==================== Page 12 ====================
+Il branching per problemi PB
+Continuiamo la soluzione del nostro problema e continuiamo ad analizzare il sotto-problema 2.
+Sottoproblema 2 (𝑥1= 1). (𝑥1, 𝑥2, 𝑥3, 𝑥4) = 1, 4
+5 , 0, 4
+5 . 𝑍 ≤ 16
+Facciamo branching sulla variabile 𝑥2
+Sottoproblema 3 ((𝑥1= 1 𝑒 𝑥2= 0).
+ Sottoproblema 4 (𝑥1= 1 𝑒 𝑥2 = 1).
+(𝑥1, 𝑥2, 𝑥3, 𝑥4) = 1,0, 4
+5 , 0 . 𝑍 ≤ 13 (𝑥1, 𝑥2, 𝑥3, 𝑥4) = 1,1,0, 1
+2 . 𝑍 ≤ 16
+
+==================== Page 13 ====================
+Il branching per problemi PB
+Continuiamo la soluzione del nostro problema e continuiamo ad analizzare il sotto-problema 2.
+Sottoproblema 2 (𝑥1= 1). (𝑥1, 𝑥2, 𝑥3, 𝑥4) = 1, 4
+5 , 0, 4
+5 . 𝑍 ≤ 16
+Facciamo branching sulla variabile 𝑥2
+Sottoproblema 3 ((𝑥1= 1 𝑒 𝑥2= 0).
+ Sottoproblema 4 (𝑥1= 1 𝑒 𝑥2= 1).
+(𝑥1, 𝑥2, 𝑥3, 𝑥4) = 1,0, 4
+5 , 0 . 𝑍 ≤ 13 (𝑥1, 𝑥2, 𝑥3, 𝑥4) = 1,1,0, 1
+2 . 𝑍 ≤ 16
+Nessuno dei due problemi soddisfa le condizioni di fathoming e quindi non possono essere chiusi
+
+==================== Page 14 ====================
+Il branching per problemi PB
+L’albero delle soluzioni risultante è il seguente:
+Siccome il sotto-problema 4 (𝑥1= 1 𝑒 𝑥2= 1) è quello con bound più promettente,  eseguamo il 
+branching a partire da questo. 
+
+==================== Page 15 ====================
+Il branching per problemi PB
+Continuiamo ad analizzare il sotto-problema 4.
+Sottoproblema 4 (𝑥1 = 1 𝑒 𝑥2= 1). (𝑥1 , 𝑥2, 𝑥3, 𝑥4) = 1,1,0, 1
+2 . 𝑍 ≤ 16
+Facciamo branching sulla variabile 𝑥4
+Sottoproblema 5 (𝑥1= 1; 𝑥2 = 1; 𝑥3 = 0). Sottoproblema 6 (𝑥1= 1; 𝑥2 = 1; 𝑥3 = 1).
+(𝑥1, 𝑥2, 𝑥3, 𝑥4) = 1,1,0, 1
+2 . 𝑍 ≤ 16 Non ammette soluzione ammissibile 
+
+
+==================== Page 16 ====================
+Il branching per problemi PB
+L’albero delle soluzioni risultante è il seguente:
+Quindi il sotto-problema 6 viene chiuso e si sceglie il sotto-problema 5 per fare il branching
+F
+F
+
+==================== Page 17 ====================
+Il branching per problemi PB
+Continuiamo ad analizzare il sotto-problema 5.
+Sottoproblema 5 (𝑥1= 1; 𝑥2 = 1; 𝑥3 = 0). (𝑥1 , 𝑥2, 𝑥3, 𝑥4) = 1,1,0, 1
+2 . 𝑍 ≤ 16
+Facciamo branching sulla variabile 𝑥4
+Sottoproblema 7 (𝑥1= 1; 𝑥2 = 1; 𝑥3 = 0; 𝑥4 = 0).
+(𝑥1, 𝑥2, 𝑥3, 𝑥4) = 1,1,0,0 . 𝑍 = 14
+La soluzione incombente viene sostituita dalla soluzione del sotto-problema 7 
+Sottoproblema 7 (𝑥1= 1; 𝑥2 = 1; 𝑥3 = 0; 𝑥4 = 1).
+(𝑥1, 𝑥2, 𝑥3, 𝑥4) = 1,1,0,1 . Non ammissibile
+(𝑥1, 𝑥2, 𝑥3, 𝑥4) = 1,1,0,0 . 𝑍 = 14
+
+==================== Page 18 ====================
+Il branching per problemi PB
+L’albero delle soluzioni risultante è il seguente:
+F
+F
+F
+F
+L’unico problema ancora aperto è il sotto-problema 3 ma notiamo che la soluzione incombente (14) è 
+migliore del suo bound (13) e quindi il problema può essere chiuso.
+Non essendoci altri problemi aperti possiamo fermarci e affermare che la soluzione ottima è la 
+soluzione incombente (𝑥1, 𝑥2, 𝑥3, 𝑥4) = 1,1,0,0 con funzione obiettivo pari a 𝑍 = 14

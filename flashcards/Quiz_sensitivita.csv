@@ -1,0 +1,7 @@
+question,answer,topic,difficulty
+"Per variazioni di b_i, cosa si mantiene?","L'ammissibilità della base: x_B(Delta) = b_bar + Delta*d >= 0.","PL sensitività",1
+"Per variazioni di c_j, cosa si mantiene?","L'ottimalità: i costi ridotti devono mantenere il segno corretto (max: c_bar_j<=0, min: c_bar_j>=0).","PL sensitività",1
+"Come si determina l'intervallo ammissibile per Delta?","Risolvendo le disequazioni che mantengono ammissibile/ottima la base. Si prende l'intersezione degli intervalli.","PL sensitività",2
+"Formula per la soluzione di base dopo perturbazione su b_i?","x_B(Delta) = b_bar + Delta * d, dove d = B^(-1)*e_i.","PL sensitività",2
+"Cosa sono i costi ridotti nel tableau finale?","Valori nella riga obiettivo per le variabili fuori base. Sono zero per le variabili di base.","PL simplesso",1
+"Differenza tra variazione di c_j in base vs fuori base?","Fuori base: solo il suo costo ridotto cambia. In base: i costi ridotti di TUTTE le variabili fuori base cambiano.","PL sensitività",3

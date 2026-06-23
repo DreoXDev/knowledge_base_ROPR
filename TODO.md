@@ -9,19 +9,20 @@
 
 ## Ingestion
 - [x] Analizzare fonti ufficiali di Programmazione Lineare.
-- [ ] Analizzare fonti ufficiali di Programmazione Lineare Intera.
-- [ ] Analizzare fonti ufficiali di Programmazione Non Lineare.
+- [x] Analizzare fonti ufficiali di Programmazione Lineare Intera (Modelli, Branch and Bound ed Esercizi completati).
+- [x] Analizzare fonti ufficiali di Programmazione Non Lineare.
 - [ ] Analizzare materiali Mega rilevanti.
 
 ## Consolidamento
-- [/] Creare note teoria (PL completato).
-- [/] Creare method card (PL completato).
-- [/] Creare esempi svolti (PL completato).
-- [/] Creare flashcard (PL completato).
-- [/] Aggiornare RAG (PL completato).
+- [x] Creare note teoria (PL, PLI e PNL completi).
+- [x] Creare method card (PL, PLI e PNL completi).
+- [x] Creare esempi svolti (PL, PLI e PNL completi).
+- [x] Creare flashcard (PL, PLI e PNL completi).
+- [x] Aggiornare RAG (PL, PLI e PNL completi).
 
 ## Esame
-- [/] Scrivere prompt finale (PL completato).
+- [x] Scrivere prompt finale (PL, PLI e PNL completi).
 - [ ] Testare su tracce/foto.
 - [ ] Correggere warning.
 - [ ] Fare audit finale.
+

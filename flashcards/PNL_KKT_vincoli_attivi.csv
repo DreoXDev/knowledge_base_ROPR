@@ -1,0 +1,7 @@
+Front,Back
+Segno dei moltiplicatori KKT per minimizzazione con vincoli $g_i(x) \le 0$,"$\mu_i \ge 0$"
+Implicazione complementarità per vincolo inattivo $g_i(x) < 0$,"$\mu_i = 0$"
+Definizione di vincolo attivo in $x^*$,"$g_i(x^*) = 0$"
+Numero massimo di combinazioni con $m$ vincoli di disuguaglianza,"$2^m$"
+Tre cause di scarto di un candidato KKT,"1. Violazione ammissibilità primale ($g_i > 0$); 2. Moltiplicatore negativo ($\mu_i < 0$); 3. Sistema incompatibile."
+Ottimo vincolato di $\min 4(x-1)^2+(y-2)^2$ s.t. $x+y \le 2$ e $x,y \ge -1$,"$(0.8, 1.2)$ con $\mu_1 = 1.6 > 0$ e $f = 0.8$"

@@ -1,0 +1,10 @@
+Front,Back
+Classificazione punto stazionario non vincolato,"Annullamento gradiente + segno autovalori Hessiana"
+Hessiana definita positiva ($H \succ 0$),"Minimo locale stretto"
+Hessiana definita negativa ($H \prec 0$),"Massimo locale stretto"
+Hessiana indefinita ($\det(H) < 0$),"Punto di sella"
+Hessiana semidefinita ($\det(H) = 0$),"Test del secondo ordine inconclusivo"
+Weierstrass su regione non limitata,"Non garantito; l'ottimo globale potrebbe non esistere"
+Moltiplicatore KKT attivo per minimo,"$\mu_j \ge 0$"
+Moltiplicatore KKT attivo per massimo,"$\mu_j \le 0$"
+Moltiplicatore KKT inattivo,"$\mu_j = 0$"

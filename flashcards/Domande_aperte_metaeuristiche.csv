@@ -1,0 +1,8 @@
+question,answer,topic,difficulty
+"Cos'è una metaeuristica?","Strategia di ricerca generale che produce buone soluzioni senza garantire l'ottimo globale.","Metaeuristiche",1
+"Ruolo della mutazione negli AG?","Diversificazione: mantiene diversità ed esplora nuove regioni. Previene convergenza prematura.","Metaeuristiche AG",1
+"Probabilità accettazione mossa peggiorativa in SA (min)?","p = exp(-Df/T), dove Df > 0 è il peggioramento e T è la temperatura.","Metaeuristiche SA",2
+"Temperatura e exploration/exploitation in SA?","T alta => exploration (quasi tutto accettato). T bassa => exploitation (solo miglioramenti).","Metaeuristiche SA",2
+"Criterio di aspirazione in Tabu Search?","Si ignora il tabu e si accetta la mossa se produce una soluzione migliore della best globale x*.","Metaeuristiche TS",2
+"Differenza crossover vs mutazione?","Crossover: combina due genitori (intensificazione). Mutazione: modifica casuale un individuo (diversificazione).","Metaeuristiche AG",2
+"Quando si aggiorna x* in Tabu Search?","Ogni volta che la soluzione corrente è migliore di x*, indipendentemente dal tabu.","Metaeuristiche TS",1

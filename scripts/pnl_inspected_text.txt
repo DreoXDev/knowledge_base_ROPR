@@ -1,0 +1,893 @@
+
+==================== PNL.pdf ====================
+Number of pages: 45
+
+--- Page 1 ---
+PROGRAMMAZIONE NON LINEAREINTRODUZIONE
+
+--- Page 2 ---
+2
+Programmazione non-lineareØUn problema di programmazione non lineare (PLN) può essere formulato come:opt	𝑓𝒙	soggetto ai seguenti vincoli:𝑔!𝒙≤0	con	𝑗=1,…,𝑚dove con	opt=minmax intendiamo che può essere opt=min oppure opt=max 
+in cui 𝑓: ℝ!	→ℝ e 𝑔": ℝ!	→ℝ sono funzioni note di 𝒙∈ℝ! ØOsservazione: Nel caso della Programmazione Lineare si assume che 𝑓 e 𝑔" siano lineari. ØL’assunzione di linearità non è valida per molte applicazioni !
+𝑥"≥0 con i=1,…,𝑛
+ØEsistono diversi tipi di modelli non lineari, a seconda delle caratteristiche delle funzioni 𝑓 e 𝑔#
+
+--- Page 3 ---
+3
+Programmazione non-lineareAlcune situazioni in cui è possibile applicare la programmazione non lineare. ØNel problema del mix di prodotti si può avere : üelasticità del prezzo: la quantità di un prodotto che può essere venduto ha una relazione inversa rispetto al prezzo applicato. üIl costo marginale di produzione varia con il livello di produzione: il costo marginale può diminuire a causa di un effetto della curva di apprendimento (produzione più efficiente con più esperienza). Ø Nel problema del trasporto, sono disponibili sconti sul volume per spedizioni di grandi dimensioni.
+
+--- Page 4 ---
+4
+Esempi di applicazione
+
+--- Page 5 ---
+5
+Mix di Prodotti con elasticità del prezzoElasticità del prezzo: la quantità di un prodotto che può essere venduto ha una relazione inversa rispetto al prezzo applicato.
+
+==================== PNL 1D.pdf ====================
+Number of pages: 29
+
+--- Page 1 ---
+OTTIMIZZAZIONE NON LINEARE IN UNA VARIABILEINTRODUZIONE
+
+--- Page 2 ---
+2
+Massimizzazione di funzioni concaveØConsideriamo un problema di massimizzazione con una funzione obiettivo concava da massimizzare. 
+ØCondizione sufficiente affinché 𝑥∗ sia punto di massimo è che
+Esempio𝑓𝑥=−𝑥"+5𝑥+4
+𝑑𝑓(𝑥∗)𝑑𝑥=0ØSe tale equazione può essere risolta analiticamente allora il procedimento per trovare l’ottimo termina.
+𝑑𝑓(𝑥)𝑑𝑥=−2𝑥+5=0 𝑥∗=#" punto di massimo
+max-∈ℝ𝑓(𝑥)
+ØUn discorso equivalente si può fare per problemi di minimizzazione di funzioni convesse
+
+--- Page 3 ---
+3
+Algoritmi di risoluzione numerica
+ØIn mancanza di una risoluzione analitica sono disponibili algoritmi per la risoluzione numerica del problema
+IDEA:  Si costruisce una sequenza di punti 𝑥$ tali che lim!→#$𝑥!=𝑥∗
+ØAd ogni iterazione 𝑘, partendo da 𝑥$ si esegue una ricerca sistematica per identificare un punto migliore 𝑥$%&
+𝑔𝑥=2𝑥'−𝑒() *+())*)=6𝑥"−𝜋𝑒()=0 e poi?
+ØCosa succede *.())*)=0 non può essere risolta analiticamente?Esempio
+e𝑓(𝑥!#&)≤𝑓(𝑥!)
+(se sto minimizzando)
+
+--- Page 4 ---
+4
+Criteri di arrestoDOMANDA: Quando conviene fermare la sequenza di punti?  
+ØA differenza dell’algoritmo del simplesso, in questo caso la sequenza di punti 𝑥$ non è detto che converga alla soluzione ottima del problema in un numero finito di iterazioni.
+§La soluzione è sufficientemente accurata ovvero *.()!)*)≈0§Quando si è raggiunto un numero massimo di iterazioni 𝑁 o un tempo computazionale massimo§I  progressi sono «lenti» ovvero 𝑥$%&−𝑥$<𝜖) o 𝑓(𝑥$%&)−𝑓(𝑥$)<𝜖.§ La soluzione diverge (𝑥$→+∞)§Si verificano ciclixkxk+1
+
+--- Page 5 ---
+5
+Algoritmi disponibili 
+ØPer l’ottimizzazione di funzioni in una variabile abbiamo:§metodo di bisezione (algoritmo dicotomico)§metodo di Newton (algoritmo di approssimazione)
+ØEsistono due tipi di algoritmi:§Dicotomici: algoritmi di ricerca per individuare un determinato valore (per il quale la funzione derivata si annulla) all'interno di un intervallo che ad ogni iterazione viene ridotto.§Di approssimazione: utilizzano approssimazioni locali della funzione
+
+==================== PNL 2D.pdf ====================
+Number of pages: 36
+
+--- Page 1 ---
+PROGRAMMAZIONE NON LINEAREOTTIMIZZAZIONE NON LINEARE IN PIÙ VARIABILI
+
+--- Page 2 ---
+2
+Come cerchiamo i punti massimo/minimo?ØPoniamo il gradiente della funzione uguale a zero per cercare i punti stazionari ovvero i punti candidati ad essere massimo o minimo
+ØUna volta trovati i punti candidati, valutiamo la matrice Hessiana della funzione in quei punti:§Se la matrice è definita positiva allora il punto candidato è minimo§Se la matrice è definita negativa allora il punto candidato è di massimo
+∇𝑓=0In questo caso dovremmo risolvere 𝑛 equazioni (!"!#!=0) in 𝑛 incognite 𝑥$,𝑥%,…,𝑥&
+In questo caso dovremo calcolare il segno degli 𝑛 autovalori
+Soluzione analitica
+
+--- Page 3 ---
+3
+EsempioØConsideriamo il seguente problema di ottimizzazione in tre variabili
+min𝑓𝑥),𝑥*,𝑥+=𝑥)*+𝑥)1−𝑥*+𝑥**−𝑥*𝑥++𝑥+*+𝑥+
+ØCalcoliamo il gradiente di tale funzione
+∇𝑓=
+𝜕𝑓𝜕𝑥)𝜕𝑓𝜕𝑥*𝜕𝑓𝜕𝑥+
+=2𝑥)+1−𝑥*−𝑥)+2𝑥*−𝑥+−𝑥*+2𝑥++1
+
+--- Page 4 ---
+4
+EsempioØOra poniamo a zero il gradiente 
+∇𝑓=02𝑥)+1−𝑥*=0−𝑥)+2𝑥*−𝑥+=0−𝑥*+2𝑥++1=0ØOtteniamo un sistema lineare di 3 equazioni in 3 incognite che ha come soluzione (unica)
+𝑥)𝑥*𝑥+=−1−1−1ØAbbiamo quindi un solo punto candidato dove dobbiamo andare a valutare la matrice Hessiana
+
+--- Page 5 ---
+5
+EsempioØCalcoliamo le derivate seconde della funzione∇	𝑓=2𝑥)+1−𝑥*−𝑥)+2𝑥*−𝑥+−𝑥*+2𝑥++1
+𝜕*𝑓𝜕𝑥)*=2𝜕*𝑓𝜕𝑥**=2𝜕*𝑓𝜕𝑥+*=2
+Derivate seconde pureDerivate seconde miste𝜕*𝑓𝜕𝑥)𝜕𝑥*=−1𝜕*𝑓𝜕𝑥)𝜕𝑥+=0𝜕*𝑓𝜕𝑥*𝜕𝑥+=−1ØNotiamo che essendo simmetrica la matrice Hessiana dobbiamo calcolare solo le 3 derivate pure e 3 della 6 derivate misteDOMANDA Nel caso di n variabili, quante derivate seconde bisogna calcolare?
+n pure +∑'($&)$𝑛−𝑖	miste
+
+==================== PNL 2D 1.pdf ====================
+Number of pages: 14
+
+--- Page 1 ---
+PROGRAMMAZIONE NON LINEAREOTTIMIZZAZIONE NON LINEARE IN PIÙ VARIABILI
+
+--- Page 2 ---
+2
+Estensione al caso n-dimensionaleØNel caso unidimensionale si utilizzano la derivata prima e seconda della funzione obiettivo:§La derivata prima da informazione sulla stazionarietà o meno di un punto§La derivata seconda fornisce informazioni sulla convessità della funzioneØEsistono concetti simili nel caso n-dimensionale? 
+SIØDerivata prima ØGradiente
+ØDerivata seconda ØHessiano ØConvessitàØConvessità
+
+--- Page 3 ---
+3
+Derivata direzionaleØSia 𝑓:ℝ!→ℝ una funzione continua e 𝐯∈ℝ! un vettore direzionale (𝑣=1) di ℝ!. Allora il limite 𝜕𝑓(𝒙)𝜕𝑣=lim*→+𝑓𝒙+ℎ𝒗−𝑓(𝑥)ℎviene chiamato derivata direzionale di 𝑓 in 𝒙 nella direzione 𝒗
+ØPer le direzioni della base canonica, "#(𝒙)"'! vengono chiamate derivate parziali
+
+--- Page 4 ---
+4
+GradienteØIl gradiente rappresenta l’estensione del concetto di derivabilità per una funzione in più dimensioni
+∇𝑓(𝒙)=𝜕𝑓(𝒙)𝜕𝑥.𝜕𝑓(𝒙)𝜕𝑥/…𝜕𝑓(𝒙)𝜕𝑥02
+31
+3
+21
+)(3)(215 xxxxf -+=
+∇f=15−3(x3)26(x2)2−6x1x3⎡⎣⎢⎤⎦⎥Esempio
+ØSia 𝑓:ℝ!→ℝ una funzione reale.  Allora il gradiente di 𝑓 in 𝒙 corrisponde al vettore delle derivate parziali
+
+--- Page 5 ---
+5
+L’HessianoØLa matrice Hessiana rappresenta l’estensione del concetto di derivata seconda per una funzione in più dimensioni
+∇(𝑓=𝐻#=
+𝜕(𝑓𝜕𝑥)(𝜕(𝑓𝜕𝑥)𝜕𝑥(…𝜕(𝑓𝜕𝑥)𝜕𝑥!𝜕(𝑓𝜕𝑥(𝜕𝑥)𝜕(𝑓𝜕𝑥((…𝜕(𝑓𝜕𝑥(𝜕𝑥!⋮⋮⋱⋮𝜕(𝑓𝜕𝑥!𝜕𝑥)𝜕(𝑓𝜕𝑥!𝜕𝑥(⋯𝜕(𝑓𝜕𝑥!(
+IMPORTANTE: Se le derivate seconde sono continue allora ""#"*!"+=""#"*#"*#!à𝐻# è simmetrica 
+La matrice Hessiana è una matrice quadrata di dimensione 𝑛×𝑛
+
+==================== PNL_non_vincolata.pdf ====================
+Number of pages: 5
+
+--- Page 1 ---
+Esercizi sulla Programmazione Non Lineare non vincolata
+Esercizio 1. Si consideri la seguente funzione di due variabili reali:
+f(x, y) = 2x2 + y2 − xy − 2x − 3y.
+a) Trovare tutti i punti stazionari di f.
+b) Dire se la funzione f ` e convessa oppure concava nello spazioR2.
+c) Trovare tutti i punti di minimo locale e massimo locale di f.
+Esercizio 2. Si consideri la seguente funzione di due variabili reali:
+f(x, y) = x3 + y3 − 3xy.
+a) Trovare tutti i punti stazionari di f.
+b) Dire se la funzione f ` e convessa oppure concava nello spazioR2.
+c) Trovare tutti i punti di minimo locale e massimo locale di f.
+Esercizio 3. Si consideri la seguente funzione di due variabili reali:
+f(x, y) = 2x3 + y3 − 3x2 − 3y.
+a) Trovare tutti i punti stazionari di f.
+b) Dire se la funzione f ` e convessa oppure concava nello spazioR2.
+c) Trovare tutti i punti di minimo locale e massimo locale di f.
+Esercizio 4. Si consideri la seguente funzione di due variabili reali:
+f(x, y) = x4 + x2y + y2 + 3.
+a) Trovare tutti i punti stazionari di f.
+b) Dire se la funzione f ` e convessa oppure concava nello spazioR2.
+c) Trovare tutti i punti di minimo locale e massimo locale di f.
+Esercizio 5. Si consideri la seguente funzione di due variabili reali:
+f(x, y) = x4 + y4 − 2x2 − 2y2 + 4xy.
+a) Trovare tutti i punti stazionari di f.
+b) Dire se la funzione f ` e convessa oppure concava nello spazioR2.
+c) Trovare tutti i punti di minimo locale e massimo locale di f.
+
+--- Page 2 ---
+Esercizio 6. Si consideri il seguente problema di PNL non vincolata:
+(
+max −x2 − 2y2 + 2xy + 2y
+(x, y) ∈ R2
+a) Effettuare due iterazioni del metodo del gradiente, effettuando la line search in modo esatto, a partire dal
+punto (0, 0).
+b) Effettuare una iterazione del metodo di Newton a partire dal punto (0 , 0).
+c) Verificare se i punti trovati dai due metodi sono punti di massimo locale/globale della funzione obiettivo.
+Esercizio 7. Si consideri il seguente problema di PNL non vincolata:
+(
+min x2 + 2y2 + xy − 12y
+(x, y) ∈ R2
+a) Effettuare una iterazione del metodo del gradiente, effettuando la line search in modo esatto, a partire dal
+punto (−1, 2).
+b) Effettuare una iterazione del metodo di Newton a partire dal punto ( −1, 2).
+c) Verificare se i punti trovati dai due metodi sono punti di minimo locale/globale della funzione obiettivo.
+Esercizio 8. Si consideri il seguente problema di PNL non vincolata:
+
+
+
+min x2 + y2
+10000
+(x, y) ∈ R2
+a) Effettuare due iterazioni del metodo del gradiente, effettuando la line search in modo esatto, a partire dal
+punto (1, 1).
+b) Effettuare una iterazione del metodo di Newton a partire dal punto (1 , 1).
+c) Verificare se i punti trovati dai due metodi sono punti di minimo locale/globale della funzione obiettivo.
+Esercizio 9. Si consideri il seguente problema di PNL non vincolata:
+(
+min x3 + y3 − 3xy
+(x, y) ∈ R2
+a) Effettuare una iterazione del metodo del gradiente, effettuando la line search in modo esatto, a partire dal
+punto (1, 0).
+b) Effettuare una iterazione del metodo di Newton a partire dal punto (1 , 0).
+c) Verificare se i punti trovati dai due metodi sono punti di minimo locale/globale della funzione obiettivo.
+
+--- Page 3 ---
+Soluzioni
+1. a) Il punto stazionario ` e (1, 2).
+b) La matrice hessiana di f ` e
+Hf (x, y) =
+ 4 −1
+−1 2
+
+.
+Poich´ edet(Hf (x, y)) = 7 e tr(Hf (x, y)) = 6, entrambi gli autovalori sono positivi, quindi Hf (x, y) ` e
+definita positiva per ogni ( x, y) ∈ R2 e la funzione f ` e convessa inR2.
+c) Poich´ ef ` e convessa inR2, il punto (1 , 2) ` e un minimo globale.
+2. a) I punti stazionari sono (0 , 0) e (1 , 1).
+b) La matrice hessiana di f ` e
+Hf (x, y) =
+6x −3
+−3 6 y
+
+.
+Poich´ edet(Hf (x, y)) = 36 xy − 9, si ha det(Hf (0, 0)) = −9, quindi gli autovalori di Hf (0, 0) sono
+discordi e la matrice Hf (0, 0) non ` e n´ e semidefinita positiva n´ e semidefinita negativa, quindi la funzione
+f non ` e n´ e convessa n´ e concava inR2.
+c) La matrice
+Hf (0, 0) =
+ 0 −3
+−3 0
+
+ha autovalori discordi, quindi (0 , 0) ` e un punto di sella. La matrice
+Hf (1, 1) =
+ 6 −3
+−3 6
+
+ha autovalori positivi, quindi (1 , 1) ` e un punto di minimo locale.
+3. a) I punti stazionari sono (0 , 1), (0, −1), (1, 1) e (1 , −1).
+b) La matrice hessiana di f ` e
+Hf (x, y) =
+12x − 6 0
+0 6 y
+
+,
+in particolare
+Hf (0, 1) =
+−6 0
+0 6
+
+ha gli autovalori discordi, perci` oHf (0, 1) non ` e n´ e semidefinita positiva n´ e semidefinita negativa, quindi
+la funzione f non ` e n´ e convessa n´ e concava inR2.
+c) (0 , 1) ` e un punto di sella, (0, −1) ` e un punto di massimo locale, (1 , 1) ` e un punto di minimo locale,
+(1, −1) ` e un punto di sella.
+4. a) Il punto stazionario ` e (0, 0).
+b) La matrice hessiana di f ` e
+Hf (x, y) =
+12x2 + 2y 2x
+2x 2
+
+,
+in particolare
+Hf (0, −1) =
+
+−2 0
+0 2
+
+ha gli autovalori discordi, perci` o Hf (0, −1) non ` e n´ e semidefinita positiva n´ e semidefinita negativa,
+quindi la funzione f non ` e n´ e convessa n´ e concava inR2.
+c) La matrice
+Hf (0, 0) =
+0 0
+0 2
+
+` e semidefinita positiva ma non ` e definita positiva, quindi le condizioni del secondo ordine non sono
+sufficienti per stabilire se (0 , 0) sia un punto di minimo locale. Notiamo per` o che per ogni ( x, y) ∈ R2
+si ha
+f(x, y) = 1
+2(x2 + y)2 + x4
+2 + y2
+2 + 3 ≥ 3 = f(0, 0),
+quindi (0, 0) ` e un punto di minimo globale.
+
+--- Page 4 ---
+5. a) I punti stazionari sono (0 , 0), (
+√
+2, −
+√
+2) e ( −
+√
+2,
+√
+2).
+b) La matrice hessiana di f ` e
+Hf (x, y) =
+
+12x2 − 4 4
+4 12 y2 − 4
+
+,
+in particolare
+Hf (1/2, 1/2) =
+−1 4
+4 −1
+
+,
+che ha gli autovalori discordi, perci` o Hf (1/2, 1/2) non ` e n´ e semidefinita positiva n´ e semidefinita
+negativa, quindi la funzione f non ` e n´ e convessa n´ e concava inR2.
+c) La matrice
+Hf (0, 0) =
+−4 4
+4 −4
+
+` e semidefinita negativa (con un autovalore negativo ed uno nullo) ma non ` e semidefinita positiva, quindi
+(0, 0) non ` e un punto di minimo locale. TuttaviaHf (0, 0) non ` e definita negativa, quindi le condizioni
+del secondo ordine non sono sufficienti per stabilire se (0 , 0) sia un punto di massimo locale. Notiamo
+che lungo la retta y = x, con x ̸= 0, si ha
+f(x, x) = 2x4 > 0 = f(0, 0),
+quindi (0, 0) non ` e un punto di massimo locale. Pertanto (0, 0) ` e un punto di sella.
+Poich´ e
+Hf (−
+√
+2,
+√
+2) = Hf (
+√
+2, −
+√
+2) =
+20 4
+4 20
+
+che ` e definita positiva, i punti (
+√
+2, −
+√
+2) e ( −
+√
+2,
+√
+2) sono punti di minimo locale.
+6. Si ha
+∇f(x, y) =
+ 2y − 2x
+2x − 4y + 2
+
+Hf (x, y) =
+−2 2
+2 −4
+
+.
+a) Punto iniziale = (0 , 0), direzione di spostamento = (0 , 2), passo = 1 /4, nuovo punto = (0 , 1/2),
+direzione di spostamento = (1 , 0), passo = 1 /2, nuovo punto = (1/2, 1/2).
+b) Punto iniziale = (0 , 0), nuovo punto = (1, 1).
+c) Il punto (1 /2, 1/2) non ` e un punto di massimo locale perch´ e non ` e un punto stazionario.
+Il punto (1 , 1) ` e un punto di massimo globale perch´ e ` e un punto stazionario e la funzione obiettivo ` e
+concava, in quanto Hf (x, y) ` e definita negativa per ogni (x, y) ∈ R2.
+7. Si ha
+∇f(x, y) =
+ 2x + y
+x + 4y − 12
+
+Hf (x, y) =
+2 1
+1 4
+
+.
+a) Punto iniziale = ( −1, 2), direzione di spostamento = (0 , 5), passo = 1 /4, nuovo punto = (−1, 13/4).
+b) Punto iniziale = ( −1, 2), nuovo punto = (−12/7, 24/7).
+c) Il punto ( −1, 13/4) non ` e un punto di minimo locale perch´ e non ` e un punto stazionario.
+Il punto ( −12/7, 24/7) ` e un punto di minimo globale perch´ e ` e un punto stazionario e la funzione
+obiettivo ` e convessa, in quantoHf (x, y) ` e definita positiva per ogni (x, y) ∈ R2.
+8. Si ha
+∇f(x, y) =
+ 2x
+y/5000
+
+Hf (x, y) =
+2 0
+0 1 /5000
+
+.
+a) Punto iniziale = (1 , 1), direzione di spostamento =
+
+−2, − 1
+5000
+
+, passo = 500000005000
+1000000000001,
+nuovo punto =
+
+− 9999
+1000000000001 , 999900000000
+1000000000001
+
+,
+direzione =
+ 19998
+1000000000001 , − 199980000
+1000000000001
+
+,
+passo = 100000001
+20002 ,
+nuovo punto =
+ 999800010000
+10001000000010001 , 999800010000
+10001000000010001
+
+.
+
+--- Page 5 ---
+b) Punto iniziale = (1 , 1), nuovo punto = (0, 0).
+c) Il punto (999800010000 /10001000000010001, 999800010000/10001000000010001) non ` e un punto di
+minimo locale perch´ e non ` e un punto stazionario.
+Il punto (0 , 0) ` e un punto di minimo globale perch´ e ` e un punto stazionario e la funzione obiettivo ` e
+convessa, in quanto Hf (x, y) ` e definita positiva per ogni (x, y) ∈ R2.
+9. Si ha
+∇f(x, y) =
+3x2 − 3y
+3y2 − 3x
+
+Hf (x, y) =
+6x −3
+−3 6 y
+
+.
+a) Punto iniziale = (1 , 0), direzione di spostamento = ( −3, 3), passo = 1 /6, nuovo punto = (1/2, 1/2).
+b) Punto iniziale = (1 , 0), nuovo punto = (0, −1).
+c) Il punto (1 /2, 1/2) non ` e un punto di minimo locale perch´ e non ` e un punto stazionario.
+Il punto (0, −1) non ` e un punto di minimo locale perch´ e non ` e un punto stazionario.
+
+==================== PNL_nonvincolata.pdf ====================
+Number of pages: 20
+
+--- Page 1 ---
+G. LULLI 1
+Programmazione matematica non lineareGuglielmo LULLI
+Programmazione non-lineareModelli di programmazione matematica in cui la funzione obiettivo e/o dei vincoli sono non-lineari oprogrammazione non-lineare non vincolata oprogrammazione matematica convessaoprogrammazione non lineareoprogrammazione matematica non lineare intera
+1
+2
+
+--- Page 2 ---
+G. LULLI 2
+3Insieme convessoA B CED 
+4Funzione convessaf(x)xtutti i punti del segmento delimitato da due qualsiasipunti di f(x)sonof(x)3
+4
+
+--- Page 3 ---
+G. LULLI 3
+5Funzione concavaf(x)xtutti i punti del segmento delimitato da due qualsiasipunti di f(x)sonof(x)
+6Concava o Convessa ?f(x)xConcavaConvessa
+5
+6
+
+--- Page 4 ---
+G. LULLI 4
+Esempi di problemi
+Elasticità della domanda, economie di scala 
+Esempi di problemi
+Elasticità della domanda, economie di scala 
+Ottimizzazione del portafoglio (modello di Markowitz)
+Produzione/distribuzione dell’energia elettrica7
+8
+
+--- Page 5 ---
+G. LULLI 5
+Esempio 1: problema dello zainoExample image
+Picture source Wikipedia
+Sono disponibili noggetti e b unità di capacità (budget) owi peso oggetto i,oviutilità oggetto i.ocij: extra utilità se entrambi gli oggetti ie j sono selezionatiTrova un sottoinsieme degli oggetti che abbia utilità massima e rispetti il vincolo di capacitàProblema dello zaino quadratico9
+10
+
+==================== PNL_vincolata.pdf ====================
+Number of pages: 4
+
+--- Page 1 ---
+Esercizi sulla Programmazione Non Lineare vincolata
+Esercizio 1.Data la funzionef(x, y) =x 2 +y 2 e la regione ammissibile
+Ω =
+
+(x, y)∈R 2 : (x−1) 2 + (y−2) 2 = 20
+	
+,
+a) trovare i punti di minimo difsu Ω utilizzando le condizioni KKT;
+b) trovare i punti di massimo difsu Ω utilizzando le condizioni KKT.
+Esercizio 2.Data la funzionef(x, y) = 4(x−1) 2 + (y−2) 2 e la regione ammissibile
+Ω =
+
+(x, y)∈R 2 :x+y−2≤0,−x−1≤0,−y−1≤0
+	
+,
+a) trovare i punti di minimo difsu Ω utilizzando le condizioni KKT;
+b) trovare i punti di massimo difsu Ω utilizzando le condizioni KKT.
+Esercizio 3.Data la funzionef(x, y) =x+ye la regione ammissibile
+Ω =
+
+(x, y)∈R 2 :−x+ 4y−3≤0, x−y 2 ≤0,−x≤0
+	
+,
+a) trovare i punti di minimo difsu Ω utilizzando le condizioni KKT;
+b) trovare i punti di massimo difsu Ω utilizzando le condizioni KKT.
+1
+
+--- Page 2 ---
+Soluzioni
+Esercizio 1.Poich´ e la funzionef` e continua e la regione Ω ` e chiusa e limitata (Ω ` e una circonferenza),
+esistono punti di massimo e di minimo globale difsu Ω. I punti di massimo e minimo globale soddisfano
+il sistema KKT 
+
+
+2x+ 2λ(x−1) = 0
+2y+ 2λ(y−2) = 0
+(x−1) 2 + (y−2) 2 = 20
+Il sistema KKT ha due soluzioni:x=−1, y=−2, λ=−1/2 ex= 3, y= 6, λ=−3/2. Poich´ e
+f(−1,−2) = 5 ef(3,6) = 45, si ricava che (−1,−2) ` e il punto di minimo globale e (3,6) ` e il punto di
+massimo globale.
+Esercizio 2.Poich´ e la funzionef` e continua e la regione Ω ` e chiusa e limitata (Ω ` e un triangolo),
+esistono punti di massimo e di minimo globale difsu Ω.
+I punti di minimo globale soddisfano il sistema KKT
+
+
+
+8(x−1) +µ 1 −µ 2 = 0
+2(y−2) +µ 1 −µ 3 = 0
+µ1(x+y−2) = 0
+µ2(−x−1) = 0
+µ3(−y−1) = 0
+µ≥0
+(x, y)∈Ω
+L’unica soluzione del sistema KKT ` ex= 4/5, y= 6/5, µ 1 = 8/5, µ2 = 0, µ3 = 0, quindi (4/5,6/5) ` e il
+punto di minimo globale.
+I punti di massimo globale soddisfano il sistema KKT
+
+
+
+8(x−1) +µ 1 −µ 2 = 0
+2(y−2) +µ 1 −µ 3 = 0
+µ1(x+y−2) = 0
+µ2(−x−1) = 0
+µ3(−y−1) = 0
+µ≤0
+(x, y)∈Ω
+Le soluzioni del sistema KKT sono:
+x= 1, y=−1, µ 1 = 0, µ2 = 0, µ3 =−6 ef(1,−1) = 9,
+x=−1, y= 2, µ 1 = 0, µ2 =−16, µ 3 = 0 ef(−1,2) = 16,
+x=−1, y=−1, µ 1 = 0, µ2 =−16, µ 3 =−6 ef(−1,−1) = 25,
+x= 3, y=−1, µ 1 =−16, µ 2 = 0, µ3 =−20 ef(3,−1) = 25,
+x=−1, y= 3, µ 1 =−2, µ 2 =−18, µ 3 = 0 ef(−1,3) = 17.
+Pertanto i due punti di massimo globale sono (−1,−1) e (3,−1).
+2
+
+--- Page 3 ---
+Esercizio 3.Disegnando la regione ammissibile Ω e gli insiemi di livello dif, notiamo che non esistono
+punti di massimo e di minimo globale difsu Ω.
+Gli eventuali punti di minimo locale soddisfano il sistema KKT
+
+
+
+1−µ 1 +µ 2 −µ 3 = 0
+1 + 4µ1 −2µ 2y= 0
+µ1(−x+ 4y−3) = 0
+µ2(x−y 2) = 0
+µ3x= 0
+µ≥0
+(x, y)∈Ω
+L’unica soluzione del sistema KKT ` ex= 9, y= 3, µ 1 = 7/2, µ2 = 5/2, µ3 = 0. Disegnando gli insiemi di
+livello difnotiamo che (9,3) ` e un punto di minimo locale.
+Gli eventuali punti di massimo locale soddisfano il sistema KKT
+
+
+
+1−µ 1 +µ 2 −µ 3 = 0
+1 + 4µ1 −2µ 2y= 0
+µ1(−x+ 4y−3) = 0
+µ2(x−y 2) = 0
+µ3x= 0
+µ≤0
+(x, y)∈Ω
+Le soluzioni del sistema KKT sono:x= 1/4, y=−1/2, µ 1 = 0, µ2 =−1, µ 3 = 0 ex= 1, y= 1, µ 1 =
+−3/2, µ2 =−5/2, µ 3 = 0.
+3
+
+--- Page 4 ---
+Disegnando gli insiemi di livello difnotiamo che (1,1) ` e un punto di massimo locale, mentre
+(1/4,−1/2) ` e un punto di sella.
+4
+
+==================== Ottimizzazione non lineare vincolata.pdf ====================
+Number of pages: 35
+
+--- Page 1 ---
+OTTIMIZZAZIONE NON LINEARE VINCOLATAOTTIMIZZAZIONE NON LINEARE IN PIÙ VARIABILI
+
+--- Page 2 ---
+2
+Programmazione Lineare vincolataopt	𝑓𝒙	soggetto ai seguenti vincoli:𝑔!𝒙=0 con	𝑖=1,…,𝑚ℎ"𝒙≤0 con	𝑗=1,…,𝑝
+ØConsideriamo un generico problema di programmazione non lineare vincolata
+dove con	opt=minmax intendiamo che può essere opt=min oppure opt=max 
+vincoli di uguaglianzavincoli di disuguaglianza
+ØPer affrontare tale problema vedremo tre possibili approcci:§riduzione del numero di variabili libere (dimensionality reduction)§metodo dei moltiplicatori di Lagrange§condizioni di Karash-Kuhn Tucker
+
+--- Page 3 ---
+3
+Riduzione del numero di variabili libereØConsideriamo il seguente problema di ottimizzazione non lineare vincolatomin𝑥#−2$+2𝑥$−1$soggetto al  seguente vincolo𝑥#+4𝑥$=3ØPossiamo esplicitare la variabile 𝑥! nel vincolo in funzione di 𝑥"𝑥#=3−4𝑥$e sostituire nella funzione obiettivo ottenendo un problema di ottimizzazione in una variabilemin3−4𝑥$−2$+2𝑥$−1$min1−4𝑥$$+2𝑥$−1$
+min18𝑥$$−12𝑥$+3𝑥$=13ØDa cui possiamo ottenere anche il valore di 𝑥!  𝑥#=3−4𝑥$𝑥#=53Øè generalizzabile tale metodo?
+
+--- Page 4 ---
+ØNel caso in cui sia possibile esplicitare 𝑙 variabili in funzione delle restanti 𝑛−𝑙 variabili utilizzando i vincoli di uguaglianza del problema allora possiamo trasformare tale problema in un problema di ottimizzazione non vincolata con	𝑛−𝑙 variabili 
+Riduzione del numero di variabili libereØSupponiamo di avere un problema di ottimizzazione soggetto ad un certo numero 𝑙 di vincoli di uguaglianza
+max𝑓𝑥!,𝑥",…,𝑥#𝑔$𝑥!,𝑥",…,𝑥#=𝑏$ con	𝑗=1,…,𝑙 max𝑓𝑥!,𝑥",…,𝑥#%&
+𝑥#=7𝑔&𝑥!,…,𝑥#%&
+𝑥#%&'!=7𝑔!𝑥!,…,𝑥#%&⋯
+Problema: tale metodo molto spesso non è possibile applicarloEsempiomin𝑥#+𝑥$soggetto al  seguente vincolo𝑥#$+𝑥$$=1
+In questo fissato	𝑥!, 𝑥" può assumere 2 valori e viceversa. Quindi non posso esplicitare univocamente una variabile in funzione dell’altra. Analizziamo cosa succede dal punto di vista grafico
+
+--- Page 5 ---
+f(x) = 1f(x) = 0f(x) = -1.414
+Regioneammissibile)(xfÑ
+Grafico
+𝑥!
+𝑥"
+min𝑥#+𝑥$𝑥#$+𝑥$$=1ØLa regione ammissibile è un cerchio di raggio unitarioØLe curve di livello della funzione obiettivo sono rette con pendenza -1ØIl punto di minimo corrisponderà a quel punto del cerchio tangente alla curva di livello avente valore più basso 
+𝐱∗=−0.707−0.707
+
+==================== PNL Vincolata 4.pdf ====================
+Number of pages: 11
+
+--- Page 1 ---
+1
+Esempio-1
+Consideriamo il seguente problema di minimizzazione
+•x+y≤2;•x≥-1;•y≥-1;
+𝑓𝑥,𝑦=4𝑥−1!+𝑦−2!soggetto ai seguenti vincoli
+Calcoliamo la Lagrangiana (moltiplico il II e III vincolo per -1)𝐿(𝑥,𝜆,𝜇)=𝑓(𝑥)++!"#
+$𝜆!𝑔!(𝑥)++%"#
+&𝜇%ℎ%(𝑥)
+𝐿𝑥,𝜆,𝜇=4𝑥−1!+𝑦−2!+𝜇"𝑥+𝑦−2−𝜇!𝑥+1−𝜇#𝑦+1Vi sono tre vincoli di disuguaglianza, ognuno di essi può essere attivo oppure no, per un totale di 8 combinazioni possibili MAàtutti e tre i vincoli non possono essere attivi (x+y=2 & x=-1 & y=-1 non ha soluzione)àdall’intersezione di 2 vincoli si ottiene un solo punto
+
+--- Page 2 ---
+𝑥+𝑦=2𝑒𝑥=−1⇒𝑥,𝑦=−1,3𝑥+𝑦=2e𝑦=−1⇒𝑥,𝑦=3,−1𝑥=−1e𝑦=−1⇒𝑥,𝑦=−1,−1𝑥+𝑦=2e𝑥=−1e𝑦=−1⇒𝑥,𝑦=∅
+𝑥+𝑦=2⇒𝐿𝑥,𝑦,𝜇=4𝑥−1!+𝑦−2!+𝜇"𝑥+𝑦−2𝐿𝑥,𝜆,𝜇=4𝑥−1!+𝑦−2!+𝜇"𝑥+𝑦−2−𝜇!𝑥+1−𝜇#𝑦+1
+𝑥=−1⇒𝐿𝑥,𝑦,𝜇=4𝑥−1!+𝑦−2!−𝜇!𝑥+1𝑦=−1⇒𝐿𝑥,𝑦,𝜇=4𝑥−1!+𝑦−2!−𝜇#𝑦+1
+(1)(2)(3)(4)(5)(6)(7)(8)Nonvincolato:𝐿𝑥,𝑦=4𝑥−1.+𝑦−2.
+Esempio-2Nel caso generale dobbiamo considerare tutte le combinazioni di vincoli attivi o non attivi
+Si ricorda che per le condizioni di complementarietà  ai vincoli non attivi corrispondono variabili lagrangiane uguale a zero
+
+--- Page 3 ---
+(1)𝐿𝑥,𝑦,𝑧=4𝑥−1.+𝑦−2.+𝜇/𝑥+𝑦−2
+Esempio-3Analizziamo ora caso per caso
+0102!=𝑥+𝑦−20103=8𝑥−8+𝜇/0104=2𝑦−4+𝜇/⟹ 5𝑥=2−𝑦𝜇/=8−8𝑥2𝑦−4+8−82−𝑦=0⟹𝑥,𝑦=(0.8,1.2)𝑓𝑥,𝑦=0.8𝜇/=1.6>0𝜇.=𝜇5=0
+
+--- Page 4 ---
+(1)𝐿𝑥,𝑦,𝑧=4𝑥−1.+𝑦−2.+𝜇/𝑥+𝑦−2
+Esempio-3Analizziamo ora caso per casocaso 1
+0102!=𝑥+𝑦−20103=8𝑥−8+𝜇/0104=2𝑦−4+𝜇/⟹ 5𝑥=2−𝑦𝜇/=8−8𝑥2𝑦−4+8−82−𝑦=0⟹𝑥,𝑦=(0.8,1.2)𝑓𝑥,𝑦=0.8𝜇/=1.6>0𝜇.=𝜇5=0
+
+--- Page 5 ---
+(1)𝐿𝑥,𝑦,𝑧=4𝑥−1.+𝑦−2.+𝜇/𝑥+𝑦−2
+Esempio-3Analizziamo ora caso per casocaso 1
+0102!=𝑥+𝑦−20103=8𝑥−8+𝜇/0104=2𝑦−4+𝜇/⟹ 5𝑥=2−𝑦𝜇/=8−8𝑥2𝑦−4+8−82−𝑦=0⟹𝑥,𝑦=(0.8,1.2)𝑓𝑥,𝑦=0.8𝜇/=1.6>0𝜇.=𝜇5=0
+2𝐿𝑥,𝑦,𝑧=4𝑥−1.+𝑦−2.−𝜇.𝑥+10102"=−(𝑥+1)0103=8𝑥−8−𝜇.0104=2𝑦−4⟹5𝑥=−1𝜇.=−16𝑦=2⟹𝑥,𝑦=(−1,2)𝑓𝑥,𝑦=16𝜇.=16<0𝜇/=𝜇5=0
+
+==================== 20_esercizi_pnl.pdf ====================
+Number of pages: 4
+
+--- Page 1 ---
+20 esercizi sulla Programmazione Non Lineare
+Esercizio 1. Trovare massimi e minimi locali della funzione
+f (x, y) = 2 x3 − 2 x2 y + 3 x2 − 2 x y + 3 y2.
+Esercizio 2. Trovare massimi e minimi locali della funzione
+f (x, y) = −2 y3 + x y2 + x2 − 2 x y + 3 y2.
+Esercizio 3. Trovare massimi e minimi locali della funzione
+f (x, y) = (3 x − 3 y)2 + (−y2 + 3 x − y)2 + 1.
+Esercizio 4. Trovare massimi e minimi locali della funzione
+f (x, y) = x3 − x2 y + 2 x2 − 3 x y + y2 − 2.
+Esercizio 5. Trovare massimi e minimi locali della funzione
+f (x, y) = 2 y3 + 2 x y2 + 3 x2 + 2 x y − y2 − 3.
+Esercizio 6. Trovare massimi e minimi locali della funzione
+f (x, y) = ( −x − 3 y)2 + (−y2 − x − y)2 − 1.
+Esercizio 7. Trovare massimi e minimi locali della funzione
+f (x, y) = x3 − x2 y + 4 x2 + 4 x y + 3 y2 − 2.
+Esercizio 8. Trovare massimi e minimi locali della funzione
+f (x, y) = −4 y3 − 3 x y2 − x2 + 2 x y − 5 y2 + 2.
+Esercizio 9. Trovare massimi e minimi locali della funzione
+f (x, y) = ( x − 4 y)2 + (2 x2 − 3 x − 4 y)2 − 5.
+Esercizio 10. Trovare massimi e minimi locali della funzione
+f (x, y) = −x3 + x2 y + 2 x2 − x y − y2 − 4.
+1
+
+--- Page 2 ---
+Esercizio 11. Trovare massimi e minimi globali della funzione f (x, y) = y − x2 sull’insieme
+{(x, y) ∈ R2 : −x2 − (y − 1)2 + 1 ≤ 0, −x ≤ 0}.
+Esercizio 12. Trovare massimi e minimi globali della funzione f (x, y) = x2 + y2 sull’insieme
+{(x, y) ∈ R2 : −x2 + y + 4 ≤ 0, −x + y − 2 ≤ 0}.
+Esercizio 13. Trovare massimi e minimi globali della funzione f (x, y) = x2+(y−2)2 sull’insieme
+{(x, y) ∈ R2 : x2 − 1 ≤ 0, y 2 − 1 ≤ 0}.
+Esercizio 14. Trovare massimi e minimi globali della funzione f (x, y) = ( x − 3)2 + (y − 1)2
+sull’insieme
+{(x, y) ∈ R2 : −x ≤ 0, −y ≤ 0}.
+Esercizio 15. Trovare massimi e minimi globali della funzione f (x, y) = ( x+1)2+y2 sull’insieme
+{(x, y) ∈ R2 : x2 + 4 y2 − 4 ≤ 0}.
+Esercizio 16. Trovare massimi e minimi globali della funzione f (x, y) = −x2 − (y − 1)2
+sull’insieme
+{(x, y) ∈ R2 : x2 − y ≤ 0, y − 4 ≤ 0}.
+Esercizio 17. Trovare massimi e minimi globali della funzione f (x, y) = x + y sull’insieme
+{(x, y) ∈ R2 : −x2 − 4 y2 + 4 ≤ 0, x 2 + 4 y2 − 16 ≤ 0}.
+Esercizio 18. Trovare massimi e minimi globali della funzione f (x, y) = ( x − 2)2 + (y − 2)2
+sull’insieme
+{(x, y) ∈ R2 : −x2 − y2 + 1 ≤ 0, x − 4 ≤ 0}.
+Esercizio 19. Trovare massimi e minimi globali della funzione f (x, y) = ( x−1)2+y2 sull’insieme
+{(x, y) ∈ R2 : x2 + 4 y2 − 8 ≤ 0, x 2 − 4 = 0 }.
+Esercizio 20. Trovare massimi e minimi globali della funzione f (x, y) = ( x − 1)2 + (y − 2)2
+sull’insieme
+{∈ R2 : x − y ≤ 0, −x − y ≤ 0}.
+2
+
+--- Page 3 ---
+Soluzioni
+Esercizio 1. Punti stazionari: (0 , 0), (4 , 20/3), ( −1, 0).
+Massimi locali: nessuno.
+Minimi locali: (0,0).
+Esercizio 2. Punti stazionari: (0 , 0), (1 /2, 1), ( −12, −4).
+Massimi locali: nessuno.
+Minimi locali: (0 , 0).
+Esercizio 3. Punti stazionari: (0 , 0), (2 , 2), (5 /6, 1).
+Massimi locali: nessuno.
+Minimi locali: (0 , 0), (2 , 2).
+Esercizio 4. Punti stazionari: (0 , 0), ( −1/2, −5/8), ( −1, −1)
+Massimi locali: nessuno.
+Minimi locali: ( −1/2, −5/8).
+Esercizio 5. Punti stazionari: (0 , 0), ( −2, 2), ( −2/3, 1).
+Massimi locali: nessuno.
+Minimi locali: ( −2/3, 1).
+Esercizio 6. Punti stazionari: (0 , 0), ( −6, 2), ( −5/2, 1).
+Massimi locali: nessuno.
+Minimi locali: (0 , 0), ( −6, 2).
+Esercizio 7. Punti stazionari: (0 , 0), (16 , 32), ( −1, 5/6).
+Massimi locali: nessuno.
+Minimi locali: (0 , 0).
+Esercizio 8. Punti stazionari: (0 , 0), ( −8, 8/3), ( −1/2, −1/3).
+Massimi locali: (0 , 0).
+Minimi locali: nessuno.
+Esercizio 9. Punti stazionari: (0 , 0), (1 , 0), (2 , 1/2).
+Massimi locali: nessuno.
+Minimi locali: (0 , 0), (2 , 1/2).
+Esercizio 10. Punti stazionari: (0 , 0), (3 , 3), (3 /2, 3/8).
+Massimi locali: (3 /2, 3/8).
+Minimi locali: nessuno.
+Esercizio 11. Soluzioni del sistema KKT con µ ≤ 0: (0 , 0), (
+√
+3/2, 1/2).
+Soluzioni del sistema KKT con µ ≥ 0: (0 , 2).
+Massimi globali: nessuno.
+Minimi globali: nessuno.
+3
+
+--- Page 4 ---
+Esercizio 12. Soluzioni del sistema KKT con µ ≤ 0: nessuna.
+Soluzioni del sistema KKT con µ ≥ 0: (
+√
+14/2, −1/2), ( −
+√
+14/2, −1/2), (0 , −4).
+Massimi globali: nessuno.
+Minimi globali: (
+√
+14/2, −1/2), ( −
+√
+14/2, −1/2).
+Esercizio 13. Soluzioni del sistema KKT con µ ≤ 0: (0 , −1), (1 , −1), ( −1, −1).
+Soluzioni del sistema KKT con µ ≥ 0: (0 , 1).
+Massimi globali: (1 , −1), ( −1, −1).
+Minimi globali: (0 , 1).
+Esercizio 14. Soluzioni del sistema KKT con µ ≤ 0: (3 , 1), (3 , 0), (0 , 1), (0 , 0).
+Soluzioni del sistema KKT con µ ≥ 0: (3 , 1).
+Massimi globali: nessuno.
+Minimi globali: (3 , 1).
+Esercizio 15. Soluzioni del sistema KKT con µ ≤ 0: ( −1, 0), ( −2, 0), (2 , 0), ( −4/3,
+√
+5/3),
+(−4/3, −
+√
+5/3).
+Soluzioni del sistema KKT con µ ≥ 0: ( −1, 0).
+Massimi globali: (2 , 0).
+Minimi globali: ( −1, 0).
+Esercizio 16. Soluzioni del sistema KKT con µ ≤ 0: (0 , 1).
+Soluzioni del sistema KKT con µ ≥ 0: (0 , 1), (2, 4), (−2, 4), (0, 0), (0, 4), (
+√
+2/2, 1/2), (−
+√
+2/2, 1/2).
+Massimi globali: (0 , 1).
+Minimi globali: (2 , 4), ( −2, 4).
+Esercizio 17. Soluzioni del sistema KKT con µ ≤ 0: ( −4/
+√
+5, −1/
+√
+5), (8 /
+√
+5, 2/
+√
+5).
+Soluzioni del sistema KKT con µ ≥ 0: (4 /
+√
+5, 1/
+√
+5), ( −8/
+√
+5, −2/
+√
+5).
+Massimi globali: (8 /
+√
+5, 2/
+√
+5).
+Minimi globali: ( −8/
+√
+5, −2/
+√
+5).
+Esercizio 18. Soluzioni del sistema KKT con µ ≤ 0: (2 , 2), (4 , 2), (1 /
+√
+2, 1/
+√
+2).
+Soluzioni del sistema KKT con µ ≥ 0: (2 , 2), ( −1/
+√
+2, −1/
+√
+2)
+Massimi globali: nessuno.
+Minimi globali: (2 , 2).
+Esercizio 19. Soluzioni del sistema KKT con µ ≤ 0: (2 , 0), ( −2, 0), (2 , 1), (2 , −1), ( −2, 1),
+(−2, −1).
+Soluzioni del sistema KKT con µ ≥ 0: (2 , 0), ( −2, 0).
+Massimi globali: ( −2, 1), ( −2, −1).
+Minimi globali: (2 , 0).
+Esercizio 20. Soluzioni del sistema KKT con µ ≤ 0: (1 , 2), (3 /2, 3/2), ( −1/2, 1/2), (0 , 0).
+Soluzioni del sistema KKT con µ ≥ 0: (1 , 2).
+Massimi globali: nessuno.
+Minimi globali: (1 , 2).
+4
+
+==================== esercizi_riepilogo.pdf ====================
+Number of pages: 1
+
+--- Page 1 ---
+Esercizi di riepilogo su Programmazione Lineare Intera
+e Programmazione Non Lineare
+Esercizio 1. Un’industria cartiera specializzata nella produzione di album da disegno possiede tre stabilimenti
+produttivi S1,S 2,S 3 che al massimo possono produrre rispettivamente 125, 180 e 170 album alla settimana.
+L’industria ha 4 punti vendita all’ingrosso di cartoleria:P1,P 2,P 3,P 4. Ogni settimana, questi punti vendita
+richiedono rispettivamente almeno 100, 150, 50 e 75 album da disegno. La tabella seguente mostra le distanze
+in km che separano ogni stabilimento di produzione da ogni punto vendita che i veicoli dovranno percorrere per
+consegnare la merce.
+Punti vendita
+Stabilimenti P1 P2 P3 P4
+S1 20 25 15 5
+S2 12 14 18 30
+S3 19 11 40 12
+I costi per la spedizione sono stimati in 0,3 Euro/km per ogni album.
+a) Si formuli un modello di Programmazione Lineare che sappia pianiﬁcare ogni settimana quali spedizioni di
+album eﬀettuare (da ogni stabilimento ad ogni punto vendita) in modo da minimizzare i costi di trasporto.
+b) Modiﬁcare il modello formulato al punto precedente tenendo ora in considerazione che:
+ la capacit`a non utilizzata dello stabilimentoS2 deve essere minore o uguale a 20 album;
+ la distanza coperta complessivamente dai veicoli che partono dallo stabilimentoS1 deve essere inferiore
+al 50% della distanza complessivamente coperta dai veicoli che partono dagli altri due stabilimenti.
+Esercizio 2. Si consideri il seguente problema dello zaino:
+
+
+
+max 9x1 +8 x2 +7 x3 +6 x4 +3 x5
+2x1 +3 x2 +5 x3 +4 x4 +9 x5 ≤12
+xi ∈{0,1}∀ i =1 ,..., 5.
+Trovare la soluzione ottima del problema con il metodo Branch and Boundcon strategia di visita in ampiezza
+dell’albero di enumerazione.
+Esercizio 3. Si consideri il seguente problema di programmazione non lineare non vincolato:
+{
+min x2 +2 y2 −xy −3x−2y
+(x, y) ∈R2
+a) Eﬀettuare una iterazione del metodo del gradiente conline search esatta a partire dal puntoA =( 3,3).
+b) Eﬀettuare una iterazione del metodo di Newton a partire dal puntoA.
+c) Veriﬁcare se i punti trovati dai due metodi sono o meno punti di minimo locale della funzione obiettivo.
+Esercizio 4. Si consideri il seguente problema di programmazione non lineare vincolato:
+
+
+
+min x2 +( y −5)2
+x2 −y ≤0
+x+ y −2 ≤0
+Trovare tutte le soluzioni ottime del problema risolvendo il sistema KKT associato.

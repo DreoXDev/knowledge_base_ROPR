@@ -65,20 +65,27 @@ Questa nota serve solo per tenere traccia manuale degli asset già analizzati e 
 
 > Priorità consigliata: prima modelli PLI, poi Branch and Bound, poi esercizi.
 
-- [ ] `raw_assets/Programmazione Lineare Intera/Programmazione lineare intera completo.pdf`  
+- [x] `raw_assets/Programmazione Lineare Intera/Programmazione lineare intera completo.pdf`  
   `area:: Programmazione Lineare Intera` `source_type:: official` `priority:: high`
-- [ ] `raw_assets/Programmazione Lineare Intera/modelli_PLI.pdf`  
+  `status:: completed` `ingestion_date:: 2026-06-22` `report:: [[012_pli_completo_ingestion_report]]`
+- [x] `raw_assets/Programmazione Lineare Intera/modelli_PLI.pdf`  
   `area:: Programmazione Lineare Intera` `source_type:: official` `priority:: high`
-- [ ] `raw_assets/Programmazione Lineare Intera/9_esercizi_modelli.pdf`  
+  `status:: completed` `ingestion_date:: 2026-06-22` `report:: [[008_modelli_pli_ingestion_report]]`
+- [x] `raw_assets/Programmazione Lineare Intera/9_esercizi_modelli.pdf`  
   `area:: Programmazione Lineare Intera` `source_type:: official` `priority:: high`
-- [ ] `raw_assets/Programmazione Lineare Intera/branch_and_bound.pdf`  
+  `status:: completed` `ingestion_date:: 2026-06-22` `report:: [[011_esercizi_modelli_bb_ingestion_report]]`
+- [x] `raw_assets/Programmazione Lineare Intera/branch_and_bound.pdf`  
   `area:: Programmazione Lineare Intera` `source_type:: official` `priority:: high`
-- [ ] `raw_assets/Programmazione Lineare Intera/BB PLI.pdf`  
+  `status:: completed` `ingestion_date:: 2026-06-22` `report:: [[009_branch_and_bound_ingestion_report]]`
+- [x] `raw_assets/Programmazione Lineare Intera/BB PLI.pdf`  
   `area:: Programmazione Lineare Intera` `source_type:: official` `priority:: high`
-- [ ] `raw_assets/Programmazione Lineare Intera/Programmazione Lineare Intera_Branch and Bound binario.pdf`  
+  `status:: completed` `ingestion_date:: 2026-06-22` `report:: [[010_bb_pli_ingestion_report]]`
+- [x] `raw_assets/Programmazione Lineare Intera/Programmazione Lineare Intera_Branch and Bound binario.pdf`  
   `area:: Programmazione Lineare Intera` `source_type:: official` `priority:: high`
-- [ ] `raw_assets/Programmazione Lineare Intera/16_esercizi_BB.pdf`  
+  `status:: completed` `ingestion_date:: 2026-06-22` `report:: [[013_bb_binario_ingestion_report]]`
+- [x] `raw_assets/Programmazione Lineare Intera/16_esercizi_BB.pdf`  
   `area:: Programmazione Lineare Intera` `source_type:: official` `priority:: high`
+  `status:: completed` `ingestion_date:: 2026-06-22` `report:: [[011_esercizi_modelli_bb_ingestion_report]]`
 
 ---
 
@@ -86,28 +93,40 @@ Questa nota serve solo per tenere traccia manuale degli asset già analizzati e 
 
 > Priorità consigliata: PNL 1D/2D, non vincolata, vincolata, poi esercizi/riepilogo.
 
-- [ ] `raw_assets/Programmazione Non Lineare/PNL.pdf`  
+- [x] `raw_assets/Programmazione Non Lineare/PNL.pdf`  
   `area:: Programmazione Non Lineare` `source_type:: official` `priority:: high`
-- [ ] `raw_assets/Programmazione Non Lineare/PNL 1D.pdf`  
+  `status:: completed` `ingestion_date:: 2026-06-23` `report:: [[014_pnl_teoria_unidimensionale_e_non_vincolata_report]]`
+- [x] `raw_assets/Programmazione Non Lineare/PNL 1D.pdf`  
   `area:: Programmazione Non Lineare` `source_type:: official` `priority:: high`
-- [ ] `raw_assets/Programmazione Non Lineare/PNL 2D.pdf`  
+  `status:: completed` `ingestion_date:: 2026-06-23` `report:: [[014_pnl_teoria_unidimensionale_e_non_vincolata_report]]`
+- [x] `raw_assets/Programmazione Non Lineare/PNL 2D.pdf`  
   `area:: Programmazione Non Lineare` `source_type:: official` `priority:: high`
-- [ ] `raw_assets/Programmazione Non Lineare/PNL 2D 1.pdf`  
+  `status:: completed` `ingestion_date:: 2026-06-23` `report:: [[014_pnl_teoria_unidimensionale_e_non_vincolata_report]]`
+- [x] `raw_assets/Programmazione Non Lineare/PNL 2D 1.pdf`  
   `area:: Programmazione Non Lineare` `source_type:: official` `priority:: high`
-- [ ] `raw_assets/Programmazione Non Lineare/PNL_non_vincolata.pdf`  
+  `status:: completed` `ingestion_date:: 2026-06-23` `report:: [[014_pnl_teoria_unidimensionale_e_non_vincolata_report]]`
+- [x] `raw_assets/Programmazione Non Lineare/PNL_non_vincolata.pdf`  
   `area:: Programmazione Non Lineare` `source_type:: official` `priority:: high`
-- [ ] `raw_assets/Programmazione Non Lineare/PNL_nonvincolata.pdf`  
+  `status:: completed` `ingestion_date:: 2026-06-23` `report:: [[016_pnl_esercizi_e_riepiloghi_report]]`
+- [x] `raw_assets/Programmazione Non Lineare/PNL_nonvincolata.pdf`  
   `area:: Programmazione Non Lineare` `source_type:: official` `priority:: high`
-- [ ] `raw_assets/Programmazione Non Lineare/PNL_vincolata.pdf`  
+  `status:: completed` `ingestion_date:: 2026-06-23` `report:: [[014_pnl_teoria_unidimensionale_e_non_vincolata_report]]`
+- [x] `raw_assets/Programmazione Non Lineare/PNL_vincolata.pdf`  
   `area:: Programmazione Non Lineare` `source_type:: official` `priority:: high`
-- [ ] `raw_assets/Programmazione Non Lineare/Ottimizzazione non lineare vincolata.pdf`  
+  `status:: completed` `ingestion_date:: 2026-06-23` `report:: [[016_pnl_esercizi_e_riepiloghi_report]]`
+- [x] `raw_assets/Programmazione Non Lineare/Ottimizzazione non lineare vincolata.pdf`  
   `area:: Programmazione Non Lineare` `source_type:: official` `priority:: high`
-- [ ] `raw_assets/Programmazione Non Lineare/PNL Vincolata 4.pdf`  
+  `status:: completed` `ingestion_date:: 2026-06-23` `report:: [[015_pnl_teoria_vincolata_kkt_report]]`
+- [x] `raw_assets/Programmazione Non Lineare/PNL Vincolata 4.pdf`  
   `area:: Programmazione Non Lineare` `source_type:: official` `priority:: high`
-- [ ] `raw_assets/Programmazione Non Lineare/20_esercizi_pnl.pdf`  
+  `status:: completed` `ingestion_date:: 2026-06-23` `report:: [[015_pnl_teoria_vincolata_kkt_report]]`
+- [x] `raw_assets/Programmazione Non Lineare/20_esercizi_pnl.pdf`  
   `area:: Programmazione Non Lineare` `source_type:: official` `priority:: high`
-- [ ] `raw_assets/Programmazione Non Lineare/esercizi_riepilogo.pdf`  
+  `status:: completed` `ingestion_date:: 2026-06-23` `report:: [[016_pnl_esercizi_e_riepiloghi_report]]`
+- [x] `raw_assets/Programmazione Non Lineare/esercizi_riepilogo.pdf`  
   `area:: Programmazione Non Lineare` `source_type:: official` `priority:: high`
+  `status:: completed` `ingestion_date:: 2026-06-23` `report:: [[016_pnl_esercizi_e_riepiloghi_report]]`
+
 
 ---
 

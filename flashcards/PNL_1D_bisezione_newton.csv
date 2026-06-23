@@ -1,0 +1,10 @@
+Front,Back
+Condizione necessaria per ottimo interno 1D,"$f'(x^*) = 0$"
+Condizione sufficiente secondo ordine massimo locale 1D,"$f'(x^*) = 0$ e $f''(x^*) < 0$"
+Condizione sufficiente secondo ordine minimo locale 1D,"$f'(x^*) = 0$ e $f''(x^*) > 0$"
+Formula Newton 1D,"$x_{k+1} = x_k - \frac{f'(x_k)}{f''(x_k)}$"
+Criterio di arresto bisezione 1D,"$\bar{x} - \underline{x} \le 2\epsilon$"
+Velocità convergenza bisezione 1D,"Lineare (riduzione del 50% ad ogni iterazione)"
+Velocità convergenza Newton 1D,"Quadratica locale ($e_{k+1} \approx C \cdot e_k^2$)"
+Rischio principale Newton 1D,"Può divergere se $x_0$ è lontano dall'ottimo; fallisce se $f''(x_k) = 0$"
+Ipotesi fondamentale Bisezione 1D,"Derivate agli estremi dell'intervallo con segno opposto ($f'(\underline{x}) \cdot f'(\bar{x}) < 0$)"

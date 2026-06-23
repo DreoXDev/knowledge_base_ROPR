@@ -1,0 +1,7 @@
+question,answer,topic,difficulty
+"Quando si aggiorna l'incumbent Z_I in B&B?","Quando si trova una soluzione INTERA ammissibile migliore: Z > Z_I (max) o Z < Z_I (min).","PLI B&B",1
+"Quando si pota per dominanza in massimizzazione?","Quando UB <= Z_I: il nodo non può migliorare l'incumbent.","PLI B&B",1
+"Errore classico nell'aggiornamento dell'incumbent?","Aggiornare Z_I con una soluzione FRAZIONARIA del rilassamento invece di una intera.","PLI B&B",1
+"Best Bound First per massimizzazione?","Si sviluppa prima il nodo aperto con UB massimo.","PLI B&B",2
+"Elenca le 3 regole di potatura B&B.","1) Dominanza: bound <= Z_I. 2) Interezza: soluzione intera trovata. 3) Inammissibilità: sotto-problema vuoto.","PLI B&B",1
+"Cosa si fa quando si trova una soluzione intera in B&B?","Se migliore di Z_I: aggiorna Z_I. Poi pota il nodo per interezza.","PLI B&B",2

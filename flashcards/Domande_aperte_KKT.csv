@@ -1,0 +1,6 @@
+question,answer,topic,difficulty
+"Le quattro condizioni KKT?","1. Stazionarietà: grad_x L = 0. 2. Ammissibilità primale. 3. Ammissibilità duale: mu_j >= 0 (min). 4. Complementarità: mu_j h_j = 0.","PNL KKT",1
+"Cosa significa vincolo attivo?","h_j(x*) = 0: il vincolo vale con uguaglianza nel punto ottimo.","PNL KKT",1
+"Le KKT sono necessarie o sufficienti?","In generale necessarie (sotto LICQ). Sufficienti se f convessa e h_j convessi (per min).","PNL KKT",2
+"Segno dei moltiplicatori KKT per massimizzazione?","mu_j <= 0 per problemi di massimizzazione.","PNL KKT",2
+"Se mu_j > 0, cosa si può dire di h_j(x*)?","Per complementarità: il vincolo è attivo, h_j(x*) = 0.","PNL KKT",2

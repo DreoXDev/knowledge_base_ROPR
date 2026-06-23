@@ -1,0 +1,273 @@
+
+==================== Page 1 ====================
+PROGRAMMAZIONE LINEARE INTERAINTRODUZIONE
+
+
+==================== Page 2 ====================
+Ottimizzazione Intera e Binaria Fino ad ora abbiamo visto diversi esempi delle numerose e diverse applicazioni della PL. 
+Una limitazione chiave che non abbiamo ancora affrontato è l’ipotesi di divisibilità, che richiede che le variabili decisionali siano del dominio reale.
+In molti problemi pratici, tuttavia le variabili di decisione effettivamente hanno senso solo se hanno valori interi, come abbiamo visto in alcune applicazioni come assegnamento, trasporto o problemi di flusso su reti.
+In generale se si richiede che le variabili di decisione assumano valori interi allora si parla di Programmazione Lineare Intera(PLI, o Programmazione Intera).
+Se solo alcune della variabili di decisione devono essere intere allora si parla di Programmazione Lineare Mista( o Programmazione Mista)
+
+
+==================== Page 3 ====================
+Ottimizzazione Intera e Binaria opt𝑓𝒙=𝒄!𝒙(funzioneobiettivolineare)
+𝑋=𝒙∶𝑔"𝒙≥=≤0,𝑖=1,…,𝑚,con𝑔"𝒙=𝒂"!𝒙−𝑏"(vincolilineari)
+ØConsideriamo un generico problema di programmazione lineare (PL) con 𝑛variabili e 𝑚vincoli
+dove 𝒂∈ℝ#,𝒃∈ℝ$e 𝐜∈ℝ#eopt=minmaxØSe 𝒙∈ℤ#abbiamo un problema di Programmazione Lineare Intera (PLI)
+ØSe 𝒙∈0,1#abbiamo un problema di Programmazione Lineare Binaria (PB)
+ØSe 𝒙∈ℝ%×ℤ&con 𝑝+𝑞=𝑛e 𝑝>0e 𝑞>0abbiamo un problema di Programmazione Lineare Mista (PLM) o Mixed IntegerProgramming(MIP)
+3
+
+
+==================== Page 4 ====================
+Il problema della Lombardia ManufactoringCo.ØL’azienda LOMBARDIA MANUFACTORING COMPANY sta considerando la possibilità di espandersi costruendo una nuova fabbrica ed un nuovo magazzino avendo a disposizione un budget di 10 milioni di euro.ØLa nuova fabbrica può essere collocata a Saronno oppure a Gallarate oppure in entrambe le località. 
+ØIl magazzino deve essere collocato nella città dove verrà costruita la fabbricaØNella tabella seguente è riportato, per ciascuna alternativa di investimento, il valore atteso (seconda colonna) ed il capitale necessario (terza colonna).Domanda sì/noValore attuale netto ($)Capitale richiesto ($)Costruisco la fabbrica a Saronno?9 6Costruisco la fabbrica a Gallarate?5 3Costruisco un magazzino a Saronno?6 5Costruisco un magazzino a Gallarate?4 2
+ØIl nuovo magazzino può essere collocato alternativamente a Saronno o a Gallarate. 
+ØQual è la città dove si può collocare la fabbrica ed il magazzino affinché si massimizzi il valore attuale netto atteso, rispettando i vincoli di budget?4
+
+
+==================== Page 5 ====================
+Le variabili di decisioneØT utte le variabili decisionalidel problema sono variabili binariedel tipo
+Domanda sì/noVariabile decisionaleValore attuale netto ($)Capitale richiesto ($)Costruisco la fabbrica a Saronno?𝑥' 9 6Costruisco la fabbrica a Gallarate?𝑥( 5 3Costruisco il magazzino a Saronno?𝑥) 6 5Costruisco il magazzino a Gallarate?𝑥* 4 2
+𝑥+=R1seladecisioneèsi0seladecisioneèno𝑗=1,2,3,4
+x1: Costruiamouna fabbricaa Saronno? Si (x1=1)  o  No (x1=0)x2: Costruiamouna fabbricaa Gallarate? Si (x2=1)  o  No (x2=0)x3: Costruiamoun magazzinoa Saronno? Si (x3=1)  o  No (x3=0)x4: Costruiamoun magazzinoa Gallarate? Si (x4=1)  o  No (x4=0)
+5
+
+
+==================== Page 6 ====================
+I vincoli
+Domanda sì/noVariabile decisionaleValore attuale netto ($)Capitale richiesto ($)Costruisco la fabbrica a Saronno?𝑥' 9 6Costruisco la fabbrica a Gallarate?𝑥( 5 3Costruisco il magazzino a Saronno?𝑥) 6 5Costruisco il magazzino a Gallarate?𝑥* 4 2
+Ø«Il nuovo magazzino può essere collocato o a Saronno o a Gallarate» rappresenta un vincolo di mutua esclusionetra le variabili 𝑥)e 𝑥*ovvero𝑥)+𝑥*≤1
+Ø«avendo a disposizione un budget di 10 milioni di euro» rappresenta un vincolo di budget ovvero6𝑥'+3𝑥(+5𝑥)+2𝑥*≤10
+6
+
+
+==================== Page 7 ====================
+I vincoliØ«Il magazzino deve essere collocato nella città dove verrà costruita la fabbrica» rappresenta una condizione di contingenza.§Se costruisco la fabbrica a Gallarate, costruisco il magazzino a Gallarate (e non lo costruisco a Saronno)§Se costruisco la fabbrica a Saronno, costruisco il magazzino a Saronno (e non lo costruisco a Gallarate)
+Domanda sì/noVariabile decisionaleValore attuale netto ($)Capitale richiesto ($)Costruisco la fabbrica a Saronno?𝑥' 9 6Costruisco la fabbrica a Gallarate?𝑥( 5 3Costruisco il magazzino a Saronno?𝑥) 6 5Costruisco il magazzino a Gallarate?𝑥* 4 2
+𝑥)≤𝑥'
+ØQuesta decisione di contingenza si traduce nella seguente coppia di vincoli
+𝑥*≤𝑥(
+Se 𝑥'=0allora 𝑥)=0
+Se 𝑥(=0allora 𝑥*=0
+7
+
+
+==================== Page 8 ====================
+I vincoliØ«Il magazzino deve essere collocato nella città dove verrà costruita la fabbrica» rappresenta una condizione di contingenza.§Se costruisco la fabbrica a Gallarate, costruisco il magazzino a Gallarate (e non lo costruisco a Saronno)§Se costruisco la fabbrica a Saronno, costruisco il magazzino a Saronno (e non lo costruisco a Gallarate)
+Domanda sì/noVariabile decisionaleValore attuale netto ($)Capitale richiesto ($)Costruisco la fabbrica a Saronno?𝑥' 9 6Costruisco la fabbrica a Gallarate?𝑥( 5 3Costruisco il magazzino a Saronno?𝑥) 6 5Costruisco il magazzino a Gallarate?𝑥* 4 2
+𝑥)≤𝑥'
+ØQuesta decisione di contingenza si traduce nella seguente coppia di vincoli
+𝑥*≤𝑥(
+Se 𝑥'=0allora 𝑥)=0
+Se 𝑥(=0allora 𝑥*=0
+8
+
+
+==================== Page 9 ====================
+La funzione obiettivoØPertanto la funzione obiettivo (da massimizzare) relativo al valore attuale netto totale è data da 
+DecisioneVariabile decisionaleValore attuale netto ($)Capitale richiesto ($)fabbrica a Saronno𝑥' 9 6fabbrica a Gallarate𝑥( 5 3magazzino a Saronno𝑥) 6 5magazzino a Gallarate𝑥* 4 2
+𝑍=9𝑥'+5𝑥(+6𝑥)+4𝑥*
+9
+
+
+==================== Page 10 ====================
+Formulazionedel problema ØIl modello matematico di questo problema è di tipo lineare con variabili binariemax𝑧=9𝑥'+5𝑥(+6𝑥)+4𝑥*
+6𝑥'+3𝑥(+5𝑥)+2𝑥*≤10soggetto ai seguenti vincoli:
+𝑥)≤𝑥'𝑥)+𝑥*≤1
+𝑥*≤𝑥(
+ØNotiamo che abbiamo 4 variabili e 4 vincoli
+𝑥',𝑥(,𝑥),𝑥*∈{0,1}
+ØQuante sono le possibili soluzioni ?àessendo solo variabili binarie, il numero di soluzione è 2*=16 10
+
+
+==================== Page 11 ====================
+PROGRAMMAZIONE LINEARE INTERAINTRODUZIONE
+
+
+==================== Page 12 ====================
+Usi delle variabili binarieØLe variabili binarie hanno un vasto impiego in Ricerca Operativa per modellare le decisioni di tipo Si o NoEsempi§Analisi di investimenti àDevo o no investire in un progetto? La decisione di investire nel progetto 𝑖viene modellato con una variabile binaria 𝑥"∈{0,1}§Selezioni di siti àUna specifica località deve essere scelta per un determinato nuovo servizio?Ogni coppia località-servizio 𝑖𝑗viene modellata con una variabile binaria 𝑥",+∈{0,1}§Spedizioni di beni àUno specifico percorso deve essere selezionato per un autoveicolo?Ogni arco (i, j) in un grafo è rappresentato da una variabile binaria 𝑥",+∈{0,1}
+12
+
+
+==================== Page 13 ====================
+Usi delle variabili binarieØLe variabili binarie hanno un vasto impiego in Ricerca Operativa per modellare le decisioni di tipo Si o NoEsempi§Compagnie aereeàUno specifico velivolo deve essere utilizzato in una specifica tratta?Ogni coppia velivolo-tratta 𝑖𝑗viene modellata con una variabile binaria 𝑥",+∈{0,1}con 𝑖indice del velivolo e 𝑗indice della tratta.
+§Schedulazione  di attività àUna certa attività deve iniziare in uno specifico istante? L’inizio di una attività viene modellata con una variabile binaria per ogni istante temporale 𝑥-∈{0,1}e le variabili devono essere mutuamente esclusive ovvero 𝑥'+𝑥(+⋯𝑥!=1)
+§etc.
+13
+
+
+==================== Page 14 ====================
+Altri possibili usi delle variabili binarieØLe variabili binarie permettono di introdurre condizioni logiche:Vincoli di tipo «either-or»Consideriamo il caso in cui, dati due vincoli, almeno uno di questi deve essere soddisfatto (per esempio perché potrebbe esserci una scelta su risorse alternative da utilizzare per un determinato scopo, in modo che sia necessario solo uno dei due vincoli)3𝑥'+2𝑥(≤18𝑥'+4𝑥(≤16oppure
+𝑀è un numero positivo molto grande e 𝑦∈{0,1}
+La formulazione (*) risulta equivalente al seguente insieme di vincoli
+(*)
+3𝑥'+2𝑥(≤18+𝑀𝑦𝑥'+4𝑥(≤16+M(1−y)
+14
+
+
+==================== Page 15 ====================
+Altri possibili usi delle variabili binarieØLe variabili binarie permettono di introdurre condizioni logiche:Vincoli di tipo «either-or»Consideriamo il caso in cui, dati due vincoli, almeno uno di questi deve essere soddisfatto (per esempio perché potrebbe esserci una scelta su risorse alternative da utilizzare per un determinato scopo, in modo che sia necessario solo uno dei due vincoli)3𝑥'+2𝑥(≤18𝑥'+4𝑥(≤16oppure
+𝑀è un numero positivo molto grande e 𝑦∈{0,1}
+La formulazione (*) risulta equivalente al seguente insieme di vincoli
+(*)
+3𝑥'+2𝑥(≤18+𝑀𝑦𝑥'+4𝑥(≤16+M(1−y)Infatti:•se 𝑦=0allora 3𝑥'+2𝑥(≤18rimane mentre 𝑥'+4𝑥(≤16+Mè sempre soddisfatto per M molto grande quindi può essere eliminato.•se 𝑦=1allora 𝑥'+4𝑥(≤16rimane mentre 3𝑥'+2𝑥(≤18+𝑀è sempre soddisfatto per M molto grande quindi può essere eliminato15
+
+
+==================== Page 16 ====================
+ØLe variabili binarie permettono di introdurre condizioni logiche:Dati 𝑵vincoli, solo 𝑲di questi sono presentiConsideriamo il caso in cui un modello includa 𝑁vincoli tali se solo 𝐾devono essere soddisfatti (con 𝐾<𝑁)𝑓'𝑥',𝑥(,…,𝑥#≤𝑑'𝑓(𝑥',𝑥(,…,𝑥#≤𝑑(
+𝑓.𝑥',𝑥(,…,𝑥#≤𝑑.…Consideriamo 𝑁variabili binarie 𝑦"∈{0,1}per 𝑖=1,…,𝑁ed un numero 𝑀positivo molto grande.Abbiamo la seguente formulazione equivalente al requisito che solo 𝐾di questi 𝑁vincoli devono essere soddisfatti𝑓'𝑥',𝑥(,…,𝑥#≤𝑑'+𝑀𝑦'𝑓(𝑥',𝑥(,…,𝑥#≤𝑑(+𝑀𝑦(
+𝑓.𝑥',𝑥(,…,𝑥#≤𝑑.+𝑀𝑦.…
+m"/'
+.𝑦"=𝑁−𝐾 16
+Altri possibili usi delle variabili binarie
+
+
+==================== Page 17 ====================
+ØLe variabili binarie permettono di introdurre condizioni logiche:Dati 𝑵vincoli, solo 𝑲di questi sono presentiConsideriamo il caso in cui un modello includa 𝑁vincoli tali se solo 𝐾devono essere soddisfatti (con 𝐾<𝑁)𝑓'𝑥',𝑥(,…,𝑥#≤𝑑'𝑓(𝑥',𝑥(,…,𝑥#≤𝑑(
+𝑓.𝑥',𝑥(,…,𝑥#≤𝑑.…Consideriamo 𝑁variabili binarie 𝑦"∈{0,1}per 𝑖=1,…,𝑁ed un numero 𝑀positivo molto grande.Abbiamo la seguente formulazione equivalente al requisito che solo 𝐾di questi 𝑁vincoli devono essere soddisfatti𝑓'𝑥',𝑥(,…,𝑥#≤𝑑'+𝑀𝑦'𝑓(𝑥',𝑥(,…,𝑥#≤𝑑(+𝑀𝑦(
+𝑓.𝑥',𝑥(,…,𝑥#≤𝑑.+𝑀𝑦.…
+m"/'
+.𝑦"=𝑁−𝐾 17
+Altri possibili usi delle variabili binarie
+
+
+==================== Page 18 ====================
+ØLe variabili binarie permettono di introdurre condizioni logiche:La funzione assume solo 𝑵possibili valoriSi consideri la situazione in cui una data funzione assuma uno fra 𝑁possibili valori.𝑓𝑥',𝑥(,…,𝑥#=𝑑'o 𝑑(,…, o 𝑑.Ad esempio 𝑓𝑥',𝑥(,…,𝑥#=∑+/'#𝑎+𝑥+oppure 𝑓𝑥',𝑥(,…,𝑥#=𝑥+
+Consideriamo 𝑁variabili binarie 𝑦"∈{0,1}per 𝑖=1,…,𝑁Abbiamo la seguente formulazione equivalente al requisito che una data funzione assuma uno fra 𝑁possibili valori. 𝑓𝑥',𝑥(,…,𝑥#=m"/'
+.𝑑"𝑦"
+m"/'
+.𝑦"=1
+Usi innovativi delle variabili binarie
+18
+
+
+==================== Page 19 ====================
+Nell’esempio della WindorGlass Co. si supponeva che la capacità, in ore, utilizzabile per la produzione dei due nuovi prodotti fosse 18. Supponiamo invece che il management imponga che, per far in modo che la capacità lasciata libera sia in blocchi da 6 ore, il tempo dedicato alla produzione dei due prodotti sia 6, 12 oppure 18.Siccome il vincolo di capacità rispetto alle ore di lavorazione era 3𝑥'+2𝑥(≤18Avremo che:  N=3 con 𝑑'=6,𝑑(=12,𝑑)=18e conseguentemente 
+Usi innovativi delle variabili binarie
+19
+3𝑥'+2𝑥(=6𝑦'+12𝑦(+18𝑦)𝑦'+𝑦(+𝑦)=1𝑦',𝑦(,𝑦)∈0,1Il nuovo modello sarà il modello originale in cui questo insieme di vincoli sostituisce il vincolo 3𝑥'+2𝑥(≤18
+
+
+==================== Page 20 ====================
+PROGRAMMAZIONE LINEARE INTERAINTRODUZIONE
+
+
+==================== Page 21 ====================
+Il problema del costo fissoØLe variabili binarie permettono di introdurre condizioni logiche:
+Supponiamo che si voglia intraprendere un attività 𝑗il cui costo sia caratterizzato dalla seguente funzione:𝑓𝑥=R𝑘+𝑐𝑥𝑠𝑒𝑥>00𝑠𝑒𝑥=0dove 𝑘>0denota il costo fisso, 𝑥≥0è il livello di attività e 𝑐è il costo per ogni unità incrementaleLa minimizzazione di tale funzione può essere espressa attraverso il seguente modello PLImin𝑧=𝑘𝑦+𝑐𝑥soggetto ai seguenti vincoli:𝑥−𝑀𝑦≤0𝑦∈{0,1}e 𝑥≥0dove 𝑀denota un numero molto grande. Notiamo che:•se 𝑦=0allora si ha 𝑥≤0à𝑥=0e 𝑧=0•se 𝑦=1allora 𝑥≤𝑀,ovveroxpuòassumereunqualsiasivalore,e 𝑧=𝑘+𝑐𝑥 21
+Altri possibili usi delle variabili binarie
+oequivalentemente𝑥≤𝑀𝑦
+
+
+==================== Page 22 ====================
+ØLe variabili binarie permettono di introdurre condizioni logiche:Rappresentazione binarie di variabili intere generiche
+Usi innovativi delle variabili binarieSi supponga da avere un problema PLI puro (solo variabili intere)  dove tutte le variabili sono binarie eccetto unaSupponiamo che tale variabile intera 𝑥abbia valore nell’intervallo 0,𝑢Chiamiamo 𝑁quell’intero tale che  2.≤𝑢≤2.0'La rappresentazione binaria di 𝑥è data da𝑥=m"/1
+.2"𝑦"
+con 𝑦"variabili binarie aggiuntive.Sostituendo nel modello 𝑥con tale rappresentazione è possibile passare ad un problema caratterizzato solo da variabili binarie 22
+
+
+==================== Page 23 ====================
+ØLe variabili binarie permettono di introdurre condizioni logiche:Rappresentazione binarie di variabili intere generiche
+Usi innovativi delle variabili binarieSi supponga per esempio che un problema PLI abbia tutte le variabili sono binarie eccetto due 𝑥'𝑒𝑥(che devono soddisfare i vincoli:
+Questo implica che 𝑢'=5e 𝑢(=10ovvero 
+𝑥'=𝑦1+2𝑦'+4𝑦(
+23
+𝑥'≤52𝑥'+3𝑥(≤30
+2(≤𝑢'≤2)2)≤𝑢(≤2*
+Quindi 𝑥(=𝑦)+2𝑦*+4𝑦2+8𝑦3
+
+
+==================== Page 24 ====================
+ØLe variabili binarie permettono di introdurre condizioni logiche:Rappresentazione binarie di variabili intere generiche
+Usi innovativi delle variabili binarieSi supponga per esempio che un problema PLI abbia tutte le variabili sono binarie eccetto due 𝑥'𝑒𝑥(che devono soddisfare i vincoli:
+Questo implica che 𝑢'=5e 𝑢(=10ovvero 
+𝑥'=𝑦1+2𝑦'+4𝑦(
+24
+𝑥'≤52𝑥'+3𝑥(≤30
+2(≤𝑢'≤2)2)≤𝑢(≤2*
+Quindi 𝑥(=𝑦)+2𝑦*+4𝑦2+8𝑦3
+𝑦1+2𝑦'+4𝑦(≤52𝑦1+4𝑦'+8𝑦(+3𝑦)+6𝑦*+12𝑦2+24𝑦3≤30
+
+
+==================== Page 25 ====================
+PROGRAMMAZIONE LINEARE INTERAINTRODUZIONE
+
+
+==================== Page 26 ====================
+Alcune considerazioni sui problemi PLIØApparentemente i problemi di PLI potrebbero risultare più facili da risolvere rispetto ai problemi PLØUn possibile ragionamento potrebbe essere:§I problemi PL possono essere risolti efficientemente tramite il metodo del Simplesso§un problema PLI è simile ad un problema PL eccetto che Il numero di soluzione di un problema PLI è molto minore§Inoltre, i problemi PLI con regione ammissibile limitata ai punti interi hanno un numero finito di soluzioni ammissibili vQuindi i problemi PLI sono facili da risolvere? 
+26
+
+
+==================== Page 27 ====================
+Alcune considerazioni sui problemi PLIØApparentemente i problemi di PLI potrebbero risultare più facili da risolvere rispetto ai problemi PLØUn possibile ragionamento potrebbe essere:§I problemi PL possono essere risolti efficientemente tramite il metodo del Simplesso§un problema PLI è simile ad un problema PL eccetto che Il numero di soluzione di un problema PLI è molto minore§Inoltre, i problemi PLI con regione ammissibile limitata ai punti interi hanno un numero finito di soluzioni ammissibili vQuindi i problemi PLI sono facili da risolvere? 
+Assolutamente no!!!27
+
+
+==================== Page 28 ====================
+Alcune considerazioni sui problemi PLI1. Il fatto di avere un numero finito di soluzioni ammissibili non assicura che un problema PLI sia facilmente risolvibileNelcasodiunPLIconnvariabilibinarie,ho2#soluzionipossibilidaconsiderare,ovveroilnumerodisoluzionicresceesponenzialmenteconilnumerodivariabilidaconsiderareEsempioSeho𝑛=20variabilihopiùdiunmilionedisoluzionepossibili!!!2. La rimozione di alcune soluzioni ammissibili (quelle non intere) da un problema PL non lo rende più semplice. Nelmetododelsimplessorisultafondamentalechelevariabilipossanoassumerevaloricontinui.Altrimentinonèpossibilegarantirel’esistenzadiverticiammissibilie,quindidisoluzioniammissibilidibaseEsempiomax𝑧=2𝑥!+4𝑥"+3𝑥#
+3𝑥'+4𝑥(+2𝑥)≤602𝑥'+𝑥(+2𝑥)≤40𝑥'+3𝑥(+2𝑥)≤80𝑥',𝑥(,𝑥)≥0.
+soggettoaiseguentivincoli: §La  soluzione ottima del problema è 0,(1),21)(non intera)§Non è possibile utilizzare il metodo del simplesso restringendosi al caso di variabili intere28
+
+
+==================== Page 29 ====================
+ØPer un qualsiasi problema PLI  è possibile formulare il corrispettivo problema PL, ovvero lo stesso problema senza i vincoli di interezza. Tale problema prende il nome di rilassamento linearemax𝑧=2𝑥!+4𝑥"+3𝑥#
+3𝑥!+4𝑥"+2𝑥#≤602𝑥!+𝑥"+2𝑥#≤40𝑥!+3𝑥"+2𝑥#≤80𝑥!,𝑥",𝑥#∈ℤ#.
+soggettoaiseguentivincoli: max𝑧=2𝑥!+4𝑥"+3𝑥#
+3𝑥!+4𝑥"+2𝑥#≤602𝑥!+𝑥"+2𝑥#≤40𝑥!+3𝑥"+2𝑥#≤80𝑥!,𝑥",𝑥#≥0.
+soggettoaiseguentivincoli:Esempi
+max𝑧=2𝑥!+4𝑥"+3𝑥#
+3𝑥!+4𝑥"+2𝑥#≤602𝑥!+𝑥"+2𝑥#≤40𝑥!+3𝑥"+2𝑥#≤80𝑥!,𝑥",𝑥#∈{0,1}.
+soggettoaiseguentivincoli: max𝑧=2𝑥!+4𝑥"+3𝑥#
+3𝑥!+4𝑥"+2𝑥#≤602𝑥!+𝑥"+2𝑥#≤40𝑥!+3𝑥"+2𝑥#≤80𝑥!≤1,𝑥"≤1,𝑥#≤1𝑥!,𝑥",𝑥#≥0.
+soggettoaiseguentivincoli:
+Il metodo del rilassamento lineare
+29
+
+
+==================== Page 30 ====================
+Il metodo del rilassamento lineare
+ØVi sono casi particolari in cui risolvere un problema PLI  non è più difficile di risolvere un problema PL, ovvero quando la soluzione ottima del problema rilassato è una soluzione intera.(In questo caso la soluzione del rilassamento lineare DEVE necessariamente essere ottima anche per il problema PLI)
+ØQuando si affronta un problema PLI è comune partire risolvendo il suo rilassamento lineare allo scopo di verificare se la soluzione ottima trovata sia intera, nel qual caso abbiamo trovato la soluzione ottima. In caso contrario, si ottiene comunque un upper(lower) boundper problemi di max(min).
+DOMANDA: Per quali problemi di PLI si può garantire che il rilassamento lineare abbia soluzione intera? 
+EsempioOttimo del rilassamento lineare0,225max𝑧=𝑥(𝑥!+52𝑥"≤11𝑥!,𝑥"∈ℤ"
+𝑥'+52𝑥(≤11
+30
+
+
+==================== Page 31 ====================
+Il metodo del rilassamento lineare
+ØVi sono casi particolari in cui risolvere un problema PLI  non è più difficile di risolvere un problema PL, ovvero quando la soluzione ottima del problema rilassato è una soluzione intera.(In questo caso la soluzione del rilassamento lineare DEVE necessariamente essere ottima anche per il problema PLI)
+ØQuando si affronta un problema PLI è comune partire risolvendo il suo rilassamento lineare allo scopo di verificare se la soluzione ottima trovata sia intera, nel qual caso abbiamo trovato la soluzione ottima. In caso contrario, si ottiene comunque un upper(lower) boundper problemi di max(min).
+DOMANDA: Per quali problemi di PLI si può garantire che il rilassamento lineare abbia soluzione intera? 
+EsempioOttimo del rilassamento lineare0,225max𝑧=𝑥(𝑥!+52𝑥"≤11𝑥!,𝑥"∈ℤ"
+𝑥'+52𝑥(≤11
+31
+
+
+==================== Page 32 ====================
+Il metodo del rilassamento lineare
+ØATTENZIONE: In generale, la soluzione ottima di un problema PLI può non corrispondere ad una delle sue soluzioni intere ottenute arrotondando le variabili non intere (per esempio all’intero più vicino)
+EsempioOttimo del rilassamento lineare0,225
+Soluzione approssimata0,4
+max𝑧=𝑥(𝑥!+52𝑥"≤11𝑥!,𝑥"∈ℤ"
+𝑥'+52𝑥(≤11
+32
+
+
+==================== Page 33 ====================
+Contro-esempiØUna soluzione ottima di un problema PL non è necessariamente ammissibile dopo l’arrotondamentoEsempiomax𝑧=𝑥"−𝑥!+𝑥"≤12𝑥!+𝑥"≤72𝑥!,𝑥"∈ℤ"
+32,2
+ØLa soluzione ottima del rilassamento lineare è il punto )(,2ØLe soluzioni ottenute approssimando 𝑥'=)(all’intero più vicino sono entrambe non ammissibili
+−𝑥'+𝑥(≤12 𝑥'+𝑥(≤72
+33
+
+
+==================== Page 34 ====================
+Contro-esempiØNon vi è nessuna garanzia che la soluzione ottima di un problema PLI corrisponda alla soluzione approssimata del rilassamento lineareEsempiomax𝑧=𝑥!+5𝑥"𝑥!+10𝑥"≤20𝑥!≤2𝑥!,𝑥"∈ℤ"
+ 𝑥'+10𝑥(≤2010=𝑥'+5𝑥(
+ØLa soluzione ottima del rilassamento lineare è 2,42
+ØLa soluzione ottima del problema PLI è 0,2
+ØLa soluzione intera ottenuta approssimando 2,42alle soluzione intera più vicine sono 2,2e 2,1 sottimo del rilassamento lineareottimo del problema PLIsoluzioni approssimate del rilassamento lineare34

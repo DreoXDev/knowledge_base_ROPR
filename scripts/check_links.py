@@ -16,7 +16,11 @@ def main() -> None:
         for _, target in LINK_RE.findall(text):
             if target.startswith(("http://", "https://", "#", "mailto:")):
                 continue
-            target_path = (md.parent / target).resolve()
+            # Strip anchor from target path if present
+            target_file = target.split("#")[0]
+            if not target_file:
+                continue
+            target_path = (md.parent / target_file).resolve()
             if not target_path.exists():
                 broken.append((md.relative_to(ROOT), target))
 

@@ -1,0 +1,13 @@
+Front,Back
+Forma standard PNL vincolata,"$\min/\max f(x)$ s.t. $g_i(x)=0$ e $h_j(x) \le 0$"
+Applicabilità riduzione variabili,"Vincoli di uguaglianza invertibili univocamente (lineari)"
+Lagrangiana (uguaglianze),"$L(x, \lambda) = f(x) + \sum_{i=1}^m \lambda_i g_i(x)$"
+Condizione stazionarietà Lagrange,"$\nabla_x L(x^*, \lambda^*) = 0$ e $g(x^*) = 0$"
+Interpretazione geometrica moltiplicatore,"Gradiente di f parallelo al gradiente del vincolo: $\nabla f(x^*) = -\lambda^* \nabla g(x^*$)"
+Complementarità degli scarti KKT,"$\mu_j^* \cdot h_j(x^*) = 0$"
+Vincolo attivo,"Punto ottimo sulla frontiera: $h_j(x^*) = 0$"
+Vincolo inattivo,"Punto ottimo interno: $h_j(x^*) < 0 \implies \mu_j^* = 0$"
+Segno moltiplicatore KKT per minimo,"$\mu_j^* \ge 0$ (vincoli in forma $h_j(x) \le 0$)"
+Segno moltiplicatore KKT per massimo,"$\mu_j^* \le 0$ (vincoli in forma $h_j(x) \le 0$)"
+Qualificazione dei vincoli LICQ,"Gradienti di uguaglianze e disuguaglianze attive linearmente indipendenti"
+Natura delle condizioni KKT,"Condizioni necessarie del primo ordine per ottimo locale"

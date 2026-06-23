@@ -1,0 +1,9 @@
+front,back,tags
+"Quali sono le quattro condizioni KKT per un minimo con vincoli di disuguaglianza $h_j(x) \le 0$?","Stazionarietà, ammissibilità primale, ammissibilità duale ($\mu_j \ge 0$), complementarità ($\mu_j h_j(x) = 0$)","ROPR;PNL;vincolata-kkt"
+"Qual è il segno dei moltiplicatori dei vincoli attivi nelle condizioni KKT per un problema di massimo con vincoli $h_j(x) \le 0$?","$\mu_j \le 0$ (non positivi)","ROPR;PNL;vincolata-kkt"
+"I moltiplicatori lagrangiani $\lambda$ associati a vincoli di uguaglianza hanno vincoli di segno?","No, sono liberi in segno ($\lambda \in \mathbb{R}$)","ROPR;PNL;vincolata-kkt"
+"Cosa stabilisce la condizione di complementarità degli scarti nelle condizioni KKT?","Che per ogni vincolo di disuguaglianza si ha $\mu_j h_j(x) = 0$ (se il vincolo è inattivo $h_j < 0 \implies \mu_j = 0$)","ROPR;PNL;vincolata-kkt"
+"Cosa significa che un vincolo di disuguaglianza $h_j(x) \le 0$ è attivo in un punto ammissibile?","Che il punto giace sul bordo del vincolo: $h_j(x) = 0$. Il moltiplicatore associato $\mu_j$ può essere non nullo.","ROPR;PNL;vincolata-kkt"
+"Quanti casi combinatori si analizzano per risolvere un sistema KKT con $p$ vincoli di disuguaglianza?","$2^p$ combinazioni di vincoli attivi/inattivi","ROPR;PNL;vincolata-kkt"
+"In problemi KKT con regioni ammissibili chiuse e limitate, quale teorema garantisce l'esistenza degli ottimi globali?","Il teorema di Weierstrass per funzioni continue","ROPR;PNL;vincolata-kkt"
+"Cosa occorre fare se KKT fornisce candidati ottimi locali su una regione ammissibile non limitata?","Analizzare qualitativamente gli insiemi di livello (curve di livello) per verificare se siano effettivi massimi/minimi o selle","ROPR;PNL;vincolata-kkt"

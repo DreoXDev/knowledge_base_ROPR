@@ -1,0 +1,7 @@
+question,answer,topic,difficulty
+"Come riconosco un ottimo multiplo nel tableau finale?","Una variabile fuori base ha costo ridotto nullo (c_bar_j = 0). Si può fare pivot per un altro ottimo.","PL simplesso",1
+"Come riconosco degenerazione?","Una variabile DI BASE ha valore RHS = 0.","PL simplesso",1
+"Come riconosco illimitatezza?","Esiste una variabile entrante, ma la colonna ha tutti i coefficienti <=0 (max). Nessun rapporto minimo valido.","PL simplesso",2
+"Come si rileva non ammissibilità nel metodo a due fasi?","Alla fine della Fase 1: W* > 0. Una variabile artificiale rimane in base con valore positivo.","PL simplesso",2
+"Differenza tra ottimo multiplo e degenerazione?","Ottimo multiplo: var. fuori base con c_bar=0 nel tableau ottimo. Degenerazione: var. in base con valore 0.","PL simplesso",2
+"Un problema degenere può avere cycling?","Sì, il simplesso potrebbe ciclare se non si usa una regola antiblocking (es. Bland).","PL simplesso",3

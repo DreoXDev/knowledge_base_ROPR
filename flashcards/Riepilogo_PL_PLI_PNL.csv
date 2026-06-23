@@ -1,0 +1,11 @@
+question,answer,topic,difficulty
+"Come si formulano variabili e vincoli di un modello di trasporto PL?","x_ij = quantità da sorgente i a destinazione j ≥ 0. min Σ c_ij x_ij. Vincoli capacità: Σ_j x_ij ≤ s_i. Vincoli domanda: Σ_i x_ij ≥ d_j.","PL trasporto",1
+"Come si linearizza 'distanza S1 ≤ 50% distanza degli altri'?","Σ_j d_1j x_1j ≤ 0.5 (Σ_j d_2j x_2j + Σ_j d_3j x_3j). Lineare perché d_ij sono costanti.","PL modello",2
+"Come si calcola l'upper bound di un nodo zaino 0/1 in B&B?","Rilassamento continuo: si riempie lo zaino in ordine di efficienza valore/peso, inserendo la variabile critica in modo frazionario. UB = valore accumulato + frazione rimanente.","PLI branch and bound",2
+"Quando si pota un nodo nel B&B (massimizzazione)?","1) Inammissibile. 2) Dominanza: UB ≤ Z_I. 3) Interezza: soluzione intera trovata, aggiorna Z_I.","PLI branch and bound",1
+"Quali sono i 4 passi del metodo del gradiente con line search esatta?","1) d_k = -∇f(x_k). 2) x(α) = x_k + α d_k. 3) φ(α) = f(x(α)), risolvi φ'(α)=0 → α_k. 4) x_{k+1} = x_k + α_k d_k.","PNL non vincolata",1
+"Come si calcola la direzione di Newton s_k?","Risolvi H_f(x_k) s_k = -∇f(x_k). Poi x_{k+1} = x_k + s_k (passo unitario).","PNL non vincolata",2
+"Come si trovano i candidati KKT con p vincoli di disuguaglianza?","Si analizzano tutti i 2^p casi attivo/inattivo. Attivo: h_i=0. Inattivo: μ_i=0. Si scartano i casi con μ_i < 0 o ammissibilità violata.","PNL vincolata KKT",2
+"Come si verifica che un punto stazionario è minimo globale in PNL non vincolata?","Calcola H_f(x*). Se H_f ≻ 0 ovunque (minori principali tutti > 0), la funzione è strettamente convessa → x* è minimo globale.","PNL non vincolata",2
+"Struttura tipica di un esame ROPR: quali parti copre?","1) Formulazione PL (modello). 2) PLI Branch and Bound. 3) PNL non vincolata (gradiente/Newton). 4) PNL vincolata (KKT).","Riepilogo esame",1
+"In un problema KKT con 2 vincoli di disuguaglianza, quanti casi devi analizzare?","2^2 = 4 casi: (μ1=0,μ2=0), (h1=0,μ2=0), (μ1=0,h2=0), (h1=0,h2=0).","PNL vincolata KKT",2

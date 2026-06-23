@@ -4,6 +4,11 @@ Indice semi-automatico dei file utili al retrieval.
 
 ## File indicizzabili
 
+- `03_exercise_catalog/by_topic/pli_branch_and_bound_esercizi.md`
+- `03_exercise_catalog/by_topic/pli_modellazione_esercizi.md`
+- `03_exercise_catalog/by_topic/pnl_esercizi.md`
+- `03_exercise_catalog/EXERCISE_INDEX.md`
+- `03_exercise_catalog/EXERCISE_TYPES.md`
 - `04_methods/programmazione_lineare/pl_casi_particolari_simplesso.md`
 - `04_methods/programmazione_lineare/pl_costruire_duale_sensible_odd_bizarre.md`
 - `04_methods/programmazione_lineare/pl_costruire_duale_standard.md`
@@ -22,6 +27,29 @@ Indice semi-automatico dei file utili al retrieval.
 - `04_methods/programmazione_lineare/pl_variabili_libere_e_segno.md`
 - `04_methods/programmazione_lineare/pl_vertici_adiacenti_e_ottimalita.md`
 - `04_methods/programmazione_lineare_intera/pl_set_covering_e_maximum_coverage.md`
+- `04_methods/programmazione_lineare_intera/pli_algoritmo_branch_and_bound.md`
+- `04_methods/programmazione_lineare_intera/pli_algoritmo_branch_and_bound_binario.md`
+- `04_methods/programmazione_lineare_intera/pli_calcolare_gap_branch_and_bound.md`
+- `04_methods/programmazione_lineare_intera/pli_greedy_zaino.md`
+- `04_methods/programmazione_lineare_intera/pli_interpretare_albero_branch_and_bound.md`
+- `04_methods/programmazione_lineare_intera/pli_modellare_variabili_binarie.md`
+- `04_methods/programmazione_lineare_intera/pli_modelli_su_grafi.md`
+- `04_methods/programmazione_lineare_intera/pli_vincoli_logici_e_big_m.md`
+- `04_methods/programmazione_non_lineare/pnl_combinatoria_vincoli_attivi.md`
+- `04_methods/programmazione_non_lineare/pnl_condizioni_kkt.md`
+- `04_methods/programmazione_non_lineare/pnl_confronto_bisezione_newton.md`
+- `04_methods/programmazione_non_lineare/pnl_metodo_bisezione.md`
+- `04_methods/programmazione_non_lineare/pnl_metodo_gradiente_line_search.md`
+- `04_methods/programmazione_non_lineare/pnl_metodo_gradiente_line_search_esatta.md`
+- `04_methods/programmazione_non_lineare/pnl_metodo_moltiplicatori_lagrange.md`
+- `04_methods/programmazione_non_lineare/pnl_metodo_newton_1d.md`
+- `04_methods/programmazione_non_lineare/pnl_metodo_newton_multivariabile.md`
+- `04_methods/programmazione_non_lineare/pnl_metodo_newton_non_vincolata.md`
+- `04_methods/programmazione_non_lineare/pnl_non_vincolata_punti_stazionari_hessiana.md`
+- `04_methods/programmazione_non_lineare/pnl_riduzione_variabili_libere.md`
+- `04_methods/programmazione_non_lineare/pnl_vincolata_condizioni_KKT.md`
+- `04_methods/programmazione_non_lineare/pnl_vincolata_kkt_vincoli_attivi.md`
+- `04_methods/programmazione_non_lineare/pnl_vincoli_attivi_e_complementarita.md`
 - `05_theory/00_index.md`
 - `05_theory/programmazione_lineare/01_introduzione_programmazione_lineare.md`
 - `05_theory/programmazione_lineare/02_formulazione_generale_pl.md`
@@ -47,6 +75,23 @@ Indice semi-automatico dei file utili al retrieval.
 - `05_theory/programmazione_lineare/23_prezzi_ombra_interpretazione.md`
 - `05_theory/programmazione_lineare/24_complementary_slackness.md`
 - `05_theory/programmazione_lineare/25_relazioni_primale_duale_limite.md`
+- `05_theory/programmazione_lineare_intera/00_index.md`
+- `05_theory/programmazione_lineare_intera/pli_branch_and_bound.md`
+- `05_theory/programmazione_lineare_intera/pli_branch_and_bound_binario.md`
+- `05_theory/programmazione_lineare_intera/pli_branch_and_bound_plim.md`
+- `05_theory/programmazione_lineare_intera/pli_concetti_base.md`
+- `05_theory/programmazione_lineare_intera/pli_logica_e_variabili_binarie.md`
+- `05_theory/programmazione_lineare_intera/pli_rilassamento_lagrangiano.md`
+- `05_theory/programmazione_lineare_intera/pli_scelte_branch_and_bound.md`
+- `05_theory/programmazione_lineare_intera/pli_soluzioni_ottime_alternative.md`
+- `05_theory/programmazione_lineare_intera/pli_soluzioni_quasi_ottime.md`
+- `05_theory/programmazione_lineare_intera/rilassamento_continuo_e_totale_unimodularita.md`
+- `05_theory/programmazione_non_lineare/00_index.md`
+- `05_theory/programmazione_non_lineare/pnl_introduzione.md`
+- `05_theory/programmazione_non_lineare/pnl_ottimizzazione_non_vincolata_multivariabile.md`
+- `05_theory/programmazione_non_lineare/pnl_ottimizzazione_unidimensionale.md`
+- `05_theory/programmazione_non_lineare/pnl_ottimizzazione_vincolata.md`
+- `07_solved_examples/AAA_bibbia_RO_catalogo_visuale.md`
 - `07_solved_examples/programmazione_lineare/distribution_network_min_cost_flow.md`
 - `07_solved_examples/programmazione_lineare/miscelazione_benzine.md`
 - `07_solved_examples/programmazione_lineare/pl_cammino_minimo_formulazione.md`
@@ -67,9 +112,57 @@ Indice semi-automatico dei file utili al retrieval.
 - `07_solved_examples/programmazione_lineare/reti_distribuzione_bell_computers.md`
 - `07_solved_examples/programmazione_lineare/wyndor_glass.md`
 - `07_solved_examples/programmazione_lineare_intera/call_spa_ripetitori.md`
+- `07_solved_examples/programmazione_lineare_intera/pli_assegnamento_costo_minimo.md`
+- `07_solved_examples/programmazione_lineare_intera/pli_bb_binario_lombardia_manufacturing.md`
+- `07_solved_examples/programmazione_lineare_intera/pli_bb_esercizio_svolto_1.md`
+- `07_solved_examples/programmazione_lineare_intera/pli_bb_esercizio_svolto_zaino.md`
+- `07_solved_examples/programmazione_lineare_intera/pli_cammino_costo_minimo.md`
+- `07_solved_examples/programmazione_lineare_intera/pli_facility_location.md`
+- `07_solved_examples/programmazione_lineare_intera/pli_flusso_costo_minimo.md`
+- `07_solved_examples/programmazione_lineare_intera/pli_investimento_zaino.md`
+- `07_solved_examples/programmazione_lineare_intera/pli_modellazione_asili_nido_montani.md`
+- `07_solved_examples/programmazione_lineare_intera/pli_modellazione_lombardia_manufacturing.md`
+- `07_solved_examples/programmazione_lineare_intera/pli_modellazione_rifornimento_agende.md`
+- `07_solved_examples/programmazione_lineare_intera/pli_modellazione_smistamento_automobili.md`
+- `07_solved_examples/programmazione_lineare_intera/pli_modellazione_stendino_remo.md`
+- `07_solved_examples/programmazione_lineare_intera/pli_plim_bb_esercizio_svolto.md`
+- `07_solved_examples/programmazione_lineare_intera/pli_produzione_stoccaggio.md`
+- `07_solved_examples/programmazione_lineare_intera/pli_produzione_vincoli_alternativa.md`
+- `07_solved_examples/programmazione_non_lineare/pnl_20_esercizi_catalogo.md`
+- `07_solved_examples/programmazione_non_lineare/pnl_bisezione_funzione_concava.md`
+- `07_solved_examples/programmazione_non_lineare/pnl_esercizi_non_vincolati.md`
+- `07_solved_examples/programmazione_non_lineare/pnl_esercizi_vincolati_kkt.md`
+- `07_solved_examples/programmazione_non_lineare/pnl_kkt_esempio_quadratico_3_vincoli.md`
+- `07_solved_examples/programmazione_non_lineare/pnl_lagrange_cerchio_unitario.md`
+- `07_solved_examples/programmazione_non_lineare/pnl_newton_funzione_1d.md`
+- `07_solved_examples/programmazione_non_lineare/pnl_non_vincolata_esercizi_base.md`
+- `07_solved_examples/programmazione_non_lineare/pnl_non_vincolata_esercizi_punti_stazionari.md`
+- `07_solved_examples/programmazione_non_lineare/pnl_non_vincolata_gradiente_newton.md`
+- `07_solved_examples/programmazione_non_lineare/pnl_riduzione_variabili_esempio_lineare.md`
+- `07_solved_examples/programmazione_non_lineare/pnl_vincolata_esercizi_kkt_globali.md`
+- `07_solved_examples/programmazione_non_lineare/pnl_vincolata_kkt_esempi.md`
+- `07_solved_examples/riepilogo_pl_pli_pnl_esercizi_misti.md`
 - `06_exam_patterns/common_mistakes.md`
+- `06_exam_patterns/pattern_branch_and_bound_binario.md`
+- `06_exam_patterns/pattern_branch_and_bound_plim.md`
 - `06_exam_patterns/PATTERN_INDEX.md`
+- `06_exam_patterns/pattern_interpretazione_albero_branch_and_bound.md`
 - `06_exam_patterns/PATTERN_MAP.md`
+- `06_exam_patterns/pnl_non_vincolata_classificazione_hessiana.md`
+- `06_exam_patterns/pnl_pattern_gradiente_newton.md`
+- `06_exam_patterns/pnl_pattern_kkt.md`
+- `06_exam_patterns/pnl_pattern_kkt_enumerazione_vincoli_attivi.md`
+- `06_exam_patterns/pnl_pattern_ottimizzazione_1d.md`
+- `06_exam_patterns/pnl_pattern_studio_funzione_due_variabili.md`
+- `06_exam_patterns/pnl_pattern_vincolata_generale.md`
+- `06_exam_patterns/pnl_vincolata_kkt_globali.md`
+- `06_exam_patterns/Quiz_metaeuristiche.md`
+- `06_exam_patterns/Quiz_PL_analisi_sensitivita.md`
+- `06_exam_patterns/Quiz_PL_primale_duale.md`
+- `06_exam_patterns/Quiz_PLI_Branch_and_Bound.md`
+- `06_exam_patterns/Quiz_PNL_bisezione_gradiente_newton_KKT.md`
+- `06_exam_patterns/Quiz_simplesso_casi_particolari.md`
+- `06_exam_patterns/riepilogo_esame_pl_pli_pnl.md`
 
 ## Programmazione Lineare — Introduzione
 
@@ -260,6 +353,116 @@ Concetti:
 - variabili di copertura $y_j$ e prevenzione del doppio conteggio;
 - risoluzione grafica di problemi a due variabili.
 
+## Programmazione Lineare Intera / PLI
+
+Fonti:
+- `raw_assets/Programmazione Lineare Intera/modelli_PLI.pdf`
+- `raw_assets/Programmazione Lineare Intera/Programmazione lineare intera completo.pdf`
+- `raw_assets/Programmazione Lineare Intera/Programmazione Lineare Intera_Branch and Bound binario.pdf`
+- `05_theory/programmazione_lineare_intera/00_index.md`
+- `05_theory/programmazione_lineare_intera/pli_concetti_base.md`
+- `05_theory/programmazione_lineare_intera/pli_logica_e_variabili_binarie.md`
+- `05_theory/programmazione_lineare_intera/pli_branch_and_bound_binario.md`
+- `05_theory/programmazione_lineare_intera/rilassamento_continuo_e_totale_unimodularita.md`
+- `04_methods/programmazione_lineare_intera/pli_modellare_variabili_binarie.md`
+- `04_methods/programmazione_lineare_intera/pli_vincoli_logici_e_big_m.md`
+- `04_methods/programmazione_lineare_intera/pli_modelli_su_grafi.md`
+- `10_rag/method_cards/MC_PLI_formulazione_modello.md`
+- `10_rag/method_cards/MC_PLI_variabili_binarie.md`
+- `10_rag/method_cards/MC_PLI_vincoli_logici_big_m.md`
+- `10_rag/method_cards/MC_PLI_logica_vincoli_binari.md`
+- `10_rag/method_cards/MC_PLI_rappresentazione_binaria_interi.md`
+- `10_rag/method_cards/MC_PLI_branch_and_bound_binario.md`
+- `10_rag/method_cards/MC_PLI_assegnamento_costo_minimo.md`
+- `10_rag/method_cards/MC_PLI_cammino_costo_minimo.md`
+- `10_rag/method_cards/MC_PLI_flusso_costo_minimo.md`
+- `10_rag/method_cards/MC_PLI_produzione_stoccaggio.md`
+- `10_rag/method_cards/MC_PLI_facility_location.md`
+- `10_rag/method_cards/MC_PLI_knapsack.md`
+- `10_rag/method_cards/MC_PL_totale_unimodularita_rilassamento.md`
+- `07_solved_examples/programmazione_lineare_intera/pli_assegnamento_costo_minimo.md`
+- `07_solved_examples/programmazione_lineare_intera/pli_cammino_costo_minimo.md`
+- `07_solved_examples/programmazione_lineare_intera/pli_flusso_costo_minimo.md`
+- `07_solved_examples/programmazione_lineare_intera/pli_produzione_vincoli_alternativa.md`
+- `07_solved_examples/programmazione_lineare_intera/pli_produzione_stoccaggio.md`
+- `07_solved_examples/programmazione_lineare_intera/pli_facility_location.md`
+- `07_solved_examples/programmazione_lineare_intera/pli_investimento_zaino.md`
+- `07_solved_examples/programmazione_lineare_intera/pli_modellazione_lombardia_manufacturing.md`
+- `07_solved_examples/programmazione_lineare_intera/pli_bb_binario_lombardia_manufacturing.md`
+- `08_flashcards/programmazione_lineare_intera_modelli_flashcards.md`
+- `08_flashcards/programmazione_lineare_intera_vincoli_logici_e_grafi_flashcards.md`
+- `08_flashcards/programmazione_lineare_intera_logica_e_rappresentazione_flashcards.md`
+- `08_flashcards/programmazione_lineare_intera_bb_binario_flashcards.md`
+
+Concetti:
+- variabili binarie -> 10_rag/method_cards/MC_PLI_variabili_binarie.md
+- vincoli logici -> 10_rag/method_cards/MC_PLI_vincoli_logici_big_m.md
+- vincolo se allora -> 10_rag/method_cards/MC_PLI_vincoli_logici_big_m.md
+- Big-M -> 10_rag/method_cards/MC_PLI_vincoli_logici_big_m.md
+- assegnamento -> 10_rag/method_cards/MC_PLI_assegnamento_costo_minimo.md
+- cammino minimo PLI -> 10_rag/method_cards/MC_PLI_cammino_costo_minimo.md
+- flusso costo minimo -> 10_rag/method_cards/MC_PLI_flusso_costo_minimo.md
+- magazzino -> 10_rag/method_cards/MC_PLI_produzione_stoccaggio.md
+- facility location -> 10_rag/method_cards/MC_PLI_facility_location.md
+- zaino / knapsack -> 10_rag/method_cards/MC_PLI_knapsack.md
+- totale unimodularità -> 10_rag/method_cards/MC_PL_totale_unimodularita_rilassamento.md
+
+## PNL vincolata - Lagrange e KKT
+
+Fonti:
+- `Ottimizzazione non lineare vincolata.pdf`
+- `PNL Vincolata 4(1).pdf`
+- `PNL_vincolata.pdf`
+
+File principali:
+- `05_theory/programmazione_non_lineare/pnl_ottimizzazione_vincolata.md`
+- `04_methods/programmazione_non_lineare/pnl_riduzione_variabili_libere.md`
+- `04_methods/programmazione_non_lineare/pnl_vincoli_attivi_e_complementarita.md`
+- `07_solved_examples/programmazione_non_lineare/pnl_lagrange_cerchio_unitario.md`
+- `07_solved_examples/programmazione_non_lineare/pnl_riduzione_variabili_esempio_lineare.md`
+- `06_exam_patterns/pnl_pattern_vincolata_generale.md`
+- `10_rag/method_cards/MC_PNL_riduzione_variabili_libere.md`
+- `10_rag/method_cards/MC_PNL_Lagrange_vincoli_uguaglianza.md`
+- `10_rag/method_cards/MC_PNL_KKT_generale.md`
+- `10_rag/method_cards/MC_PNL_vincoli_attivi_complementarita.md`
+- `10_rag/topic_cards/TC_PNL_vincolata.md`
+- `10_rag/topic_cards/TC_PNL_Lagrange.md`
+- `10_rag/topic_cards/TC_PNL_KKT.md`
+
+Quando recuperare:
+- Esercizi con vincoli di uguaglianza o disuguaglianza.
+- Richiesta di usare moltiplicatori di Lagrange o condizioni KKT.
+- Richiesta di ridurre il numero delle variabili libere.
+- Regole di complementarità, vincoli attivi/inattivi.
+- Interpretazione geometrica dei gradienti (tangenza e parallelismo).
+
+## Esercizi PNL e Riepilogo
+
+Fonti:
+- `20_esercizi_pnl.pdf`
+- `esercizi_riepilogo.pdf`
+
+File principali:
+- `07_solved_examples/programmazione_non_lineare/pnl_20_esercizi_catalogo.md`
+- `07_solved_examples/programmazione_non_lineare/pnl_non_vincolata_esercizi_punti_stazionari.md`
+- `07_solved_examples/programmazione_non_lineare/pnl_vincolata_esercizi_kkt_globali.md`
+- `07_solved_examples/riepilogo_pl_pli_pnl_esercizi_misti.md`
+- `06_exam_patterns/pnl_non_vincolata_classificazione_hessiana.md`
+- `06_exam_patterns/pnl_vincolata_kkt_globali.md`
+- `06_exam_patterns/riepilogo_esame_pl_pli_pnl.md`
+- `10_rag/method_cards/MC_PL_modello_trasporto.md`
+- `10_rag/method_cards/MC_PLI_branch_and_bound_zaino.md`
+- `10_rag/method_cards/MC_Riepilogo_esame_misto_PL_PLI_PNL.md`
+- `10_rag/topic_cards/TC_PNL_esercizi.md`
+- `10_rag/topic_cards/TC_PNL_KKT_esercizi.md`
+- `10_rag/topic_cards/TC_esercizi_riepilogo_PL_PLI_PNL.md`
+
+Quando recuperare:
+- Esercizi su massimi/minimi locali.
+- Esercizi con gradiente e Hessiana.
+- Esercizi con KKT ed ottimalità globale.
+- Esercizi misti di riepilogo PL/PLI/PNL (trasporto, zaino B&B in ampiezza, Newton, gradiente).
+
 ## Query d'esame -> file da consultare
 
 | Query / richiesta | Prima fonte | Seconda fonte | Note |
@@ -278,8 +481,31 @@ Concetti:
 | scrivere il duale (casi misti / generale) | `10_rag/method_cards/METHOD_PL_DUALE.md` | `05_theory/programmazione_lineare/11_regole_costruire_duale.md` | |
 | scrivere il duale (standard) | `04_methods/programmazione_lineare/pl_costruire_duale_standard.md` | `10_rag/method_cards/PL_costruzione_duale.md` | |
 | scrivere il duale (non standard / SOB) | `04_methods/programmazione_lineare/pl_costruire_duale_sensible_odd_bizarre.md` | `10_rag/method_cards/PL_sensible_odd_bizarre.md` | |
-| branch and bound | `04_methods/programmazione_lineare_intera/` | `07_solved_examples/programmazione_lineare_intera/` | Da completare dopo ingestion |
-| condizioni KKT | `04_methods/programmazione_non_lineare/` | `05_theory/programmazione_non_lineare/` | Da completare dopo ingestion |
+| branch and bound | `10_rag/method_cards/MC_PLI_branch_and_bound.md` | `05_theory/programmazione_lineare_intera/pli_branch_and_bound.md` | |
+| branch and bound binario / variabili 0-1 | `10_rag/method_cards/MC_PLI_branch_and_bound_binario.md` | `05_theory/programmazione_lineare_intera/pli_branch_and_bound_binario.md` | |
+| zaino greedy / bound zaino | `10_rag/method_cards/MC_PLI_zaino_greedy.md` | `04_methods/programmazione_lineare_intera/pli_greedy_zaino.md` | |
+| branch and bound PLIM / misto | `10_rag/method_cards/MC_PLI_branch_and_bound_plim.md` | `05_theory/programmazione_lineare_intera/pli_branch_and_bound_plim.md` | |
+| interpretare albero B&B / max min da albero | `10_rag/method_cards/MC_PLI_interpretare_albero_branch_and_bound.md` | `04_methods/programmazione_lineare_intera/pli_interpretare_albero_branch_and_bound.md` | |
+| calcolare gap B&B / tolleranza / quasi-ottimo | `10_rag/method_cards/MC_PLI_gap_ottimalita_branch_and_bound.md` | `04_methods/programmazione_lineare_intera/pli_calcolare_gap_branch_and_bound.md` | |
+| rilassamento lagrangiano | `05_theory/programmazione_lineare_intera/pli_rilassamento_lagrangiano.md` | | |
+| formulare modello PLI / binario | `10_rag/method_cards/MC_PLI_formulazione_modello.md` | `05_theory/programmazione_lineare_intera/pli_concetti_base.md` | |
+| variabili binarie / logiche | `10_rag/method_cards/MC_PLI_variabili_binarie.md` | `04_methods/programmazione_lineare_intera/pli_modellare_variabili_binarie.md` | |
+| vincoli logici / se allora / Big-M | `10_rag/method_cards/MC_PLI_vincoli_logici_big_m.md` | `04_methods/programmazione_lineare_intera/pli_vincoli_logici_e_big_m.md` | |
+| vincoli logici avanzati (either-or, K su N) | `10_rag/method_cards/MC_PLI_logica_vincoli_binari.md` | `05_theory/programmazione_lineare_intera/pli_logica_e_variabili_binarie.md` | |
+| rappresentazione binaria di interi / espansione | `10_rag/method_cards/MC_PLI_rappresentazione_binaria_interi.md` | `05_theory/programmazione_lineare_intera/pli_logica_e_variabili_binarie.md` | |
+| assegnamento di costo minimo PLI | `10_rag/method_cards/MC_PLI_assegnamento_costo_minimo.md` | `07_solved_examples/programmazione_lineare_intera/pli_assegnamento_costo_minimo.md` | |
+| cammino minimo PLI | `10_rag/method_cards/MC_PLI_cammino_costo_minimo.md` | `07_solved_examples/programmazione_lineare_intera/pli_cammino_costo_minimo.md` | |
+| flusso di costo minimo PLI | `10_rag/method_cards/MC_PLI_flusso_costo_minimo.md` | `07_solved_examples/programmazione_lineare_intera/pli_flusso_costo_minimo.md` | |
+| produzione e stoccaggio / magazzino | `10_rag/method_cards/MC_PLI_produzione_stoccaggio.md` | `07_solved_examples/programmazione_lineare_intera/pli_produzione_stoccaggio.md` | |
+| facility location / impianti | `10_rag/method_cards/MC_PLI_facility_location.md` | `07_solved_examples/programmazione_lineare_intera/pli_facility_location.md` | |
+| zaino / knapsack / investimento | `10_rag/method_cards/MC_PLI_knapsack.md` | `07_solved_examples/programmazione_lineare_intera/pli_investimento_zaino.md` | |
+| totale unimodularità / TUM / vertici interi | `10_rag/method_cards/MC_PL_totale_unimodularita_rilassamento.md` | `05_theory/programmazione_lineare_intera/rilassamento_continuo_e_totale_unimodularita.md` | |
+| condizioni KKT | `04_methods/programmazione_non_lineare/pnl_vincolata_condizioni_KKT.md` | `10_rag/method_cards/MC_PNL_KKT_vincoli_disuguaglianza.md` | |
+| stazionarietà / Hessiana / sella / convessità | `04_methods/programmazione_non_lineare/pnl_non_vincolata_punti_stazionari_hessiana.md` | `10_rag/method_cards/MC_PNL_studio_funzione_due_variabili.md`, `10_rag/method_cards/MC_PNL_classificazione_hessiana.md` | |
+| discesa del gradiente (steepest descent) | `04_methods/programmazione_non_lineare/pnl_metodo_gradiente_line_search_esatta.md` | `10_rag/method_cards/MC_PNL_gradiente_line_search_esatta.md` | |
+| metodo di Newton PNL | `04_methods/programmazione_non_lineare/pnl_metodo_newton_non_vincolata.md` | `10_rag/method_cards/MC_PNL_newton_non_vincolata.md` | |
+| vincoli attivi / combinatoria KKT | `04_methods/programmazione_non_lineare/pnl_combinatoria_vincoli_attivi.md` | `07_solved_examples/programmazione_non_lineare/pnl_vincolata_kkt_esempi.md` | |
+| moltiplicatori di Lagrange (uguaglianza) | `04_methods/programmazione_non_lineare/pnl_vincolata_condizioni_KKT.md` | `10_rag/method_cards/MC_PNL_KKT_vincoli_uguaglianza.md` | |
 | flusso a costo minimo | `10_rag/method_cards/PL_minimum_cost_flow.md` | `07_solved_examples/programmazione_lineare/distribution_network_min_cost_flow.md` | |
 | soluzione grafica di PL (RAG) | `10_rag/method_cards/PL_soluzione_grafica.md` | `05_theory/programmazione_lineare/03_soluzione_grafica_pl.md` | |
 | gestione variabili libere o negative | `04_methods/programmazione_lineare/pl_variabili_libere_e_segno.md` | `07_solved_examples/programmazione_lineare/pl_due_fasi_problema_illimitato.md` | |
@@ -300,4 +526,24 @@ Concetti:
 | trovare / verificare adiacenza vertici | `04_methods/programmazione_lineare/pl_vertici_adiacenti_e_ottimalita.md` | `05_theory/programmazione_lineare/18_vertici_adiacenti_cammino_simplesso.md` | |
 | spiegare degenerazione (teoria) | `05_theory/programmazione_lineare/19_degenerazione_simplesso.md` | | |
 | proprietà degli ottimi nei vertici | `05_theory/programmazione_lineare/20_proprieta_vertici_ammissibili.md` | | |
+| metodo di bisezione 1D / dicotomico | `10_rag/method_cards/MC_PNL_metodo_bisezione_1d.md` | `04_methods/programmazione_non_lineare/pnl_metodo_bisezione.md` | |
+| metodo di Newton 1D | `10_rag/method_cards/MC_PNL_metodo_newton_1d.md` | `04_methods/programmazione_non_lineare/pnl_metodo_newton_1d.md` | |
+| ottimizzazione 1D analitica / ottimalità 1D | `10_rag/method_cards/MC_PNL_ottimizzazione_1d_condizioni_ottimalita.md` | `05_theory/programmazione_non_lineare/pnl_ottimizzazione_unidimensionale.md` | |
+| confronto bisezione Newton 1D | `10_rag/topic_cards/TC_PNL_bisezione_newton.md` | `04_methods/programmazione_non_lineare/pnl_confronto_bisezione_newton.md` | |
+| KKT con vincoli attivi / enumerazione vincoli attivi | `10_rag/method_cards/MC_PNL_KKT_vincoli_disuguaglianza.md` | `04_methods/programmazione_non_lineare/pnl_vincolata_kkt_vincoli_attivi.md` | |
+| KKT esempio quadratico 3 vincoli | `10_rag/topic_cards/TC_PNL_vincolata_esempi.md` | `07_solved_examples/programmazione_non_lineare/pnl_kkt_esempio_quadratico_3_vincoli.md` | |
+| scarto candidati KKT / complementarità vincoli | `10_rag/topic_cards/TC_PNL_kkt_vincoli_attivi.md` | `04_methods/programmazione_non_lineare/pnl_vincolata_kkt_vincoli_attivi.md` | |
+| ridurre il numero di variabili libere / riduzione variabili | `10_rag/method_cards/MC_PNL_riduzione_variabili_libere.md` | `04_methods/programmazione_non_lineare/pnl_riduzione_variabili_libere.md` | |
+| moltiplicatori di Lagrange con vincoli di uguaglianza | `10_rag/method_cards/MC_PNL_Lagrange_vincoli_uguaglianza.md` | `07_solved_examples/programmazione_non_lineare/pnl_lagrange_cerchio_unitario.md` | |
+| condizioni KKT generali | `10_rag/method_cards/MC_PNL_KKT_generale.md` | `05_theory/programmazione_non_lineare/pnl_ottimizzazione_vincolata.md` | |
+| vincoli attivi e complementarità | `10_rag/method_cards/MC_PNL_vincoli_attivi_complementarita.md` | `04_methods/programmazione_non_lineare/pnl_vincoli_attivi_e_complementarita.md` | |
+| massimi e minimi locali non vincolati / stazionarietà | `10_rag/method_cards/MC_PNL_classificazione_hessiana.md` | `07_solved_examples/programmazione_non_lineare/pnl_non_vincolata_esercizi_punti_stazionari.md` | |
+| ottimalità globale vincolata KKT | `10_rag/method_cards/MC_PNL_KKT_generale.md` | `07_solved_examples/programmazione_non_lineare/pnl_vincolata_esercizi_kkt_globali.md` | |
+| zaino binario Branch and Bound in ampiezza | `10_rag/method_cards/MC_PLI_branch_and_bound_zaino.md` | `07_solved_examples/riepilogo_pl_pli_pnl_esercizi_misti.md` | |
+| modello di trasporto PL | `10_rag/method_cards/MC_PL_modello_trasporto.md` | `07_solved_examples/riepilogo_pl_pli_pnl_esercizi_misti.md` | |
+| riepilogo d'esame misto | `10_rag/method_cards/MC_Riepilogo_esame_misto_PL_PLI_PNL.md` | `07_solved_examples/riepilogo_pl_pli_pnl_esercizi_misti.md` | |
+
+
+
+
 

@@ -1,0 +1,12 @@
+front,back,tags
+"Qual è la condizione necessaria del primo ordine per un punto stazionario non vincolato?","$\nabla f(x^*) = 0$","ROPR;PNL;non-vincolata"
+"Come si classifica un punto stazionario $x^*$ se la matrice Hessiana è definita positiva?","Minimo locale","ROPR;PNL;non-vincolata"
+"Come si classifica un punto stazionario $x^*$ se la matrice Hessiana è definita negativa?","Massimo locale","ROPR;PNL;non-vincolata"
+"Come si classifica un punto stazionario $x^*$ se la matrice Hessiana è indefinita?","Punto di sella","ROPR;PNL;non-vincolata"
+"Cosa indica un determinante dell'Hessiana pari a zero in un punto stazionario?","Test del secondo ordine inconclusivo (richiede analisi globale o restrizioni)","ROPR;PNL;non-vincolata"
+"Quali sono le relazioni veloci in 2D per la classificazione Hessiana?","$\det(H) > 0, \text{tr}(H) > 0 \implies$ min; $\det(H) > 0, \text{tr}(H) < 0 \implies$ max; $\det(H) < 0 \implies$ sella","ROPR;PNL;non-vincolata"
+"Qual è la direzione di discesa del gradiente con line search esatta?","$d_k = -\nabla f(x_k)$","ROPR;PNL;non-vincolata"
+"Qual è la direzione di salita del gradiente con line search esatta?","$d_k = \nabla f(x_k)$","ROPR;PNL;non-vincolata"
+"Qual è la relazione geometrica tra due direzioni consecutive nel metodo del gradiente con line search esatta?","Sono sempre ortogonali: $d_k^T d_{k-1} = 0$","ROPR;PNL;non-vincolata"
+"Qual è il sistema lineare da risolvere per il metodo di Newton multivariabile?","$H_f(x_k) d_k = -\nabla f(x_k)$","ROPR;PNL;non-vincolata"
+"Per quale tipo di funzione Newton converge in una sola iterazione?","Forme quadratiche (con Hessiana costante e non singolare)","ROPR;PNL;non-vincolata"
