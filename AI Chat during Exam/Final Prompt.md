@@ -302,4 +302,118 @@ Risposte vere: [A, C, ...]
 
 > **Regola anti-screenshot**: Se il materiale proviene da screenshot non ufficiali (es. AAA - La bibbia di RO), ignorare le crocette già segnate e rifare il controllo matematico da zero.
 
+---
+
+## Domande teoriche aperte — Struttura risposta
+
+Quando la traccia chiede di "spiegare", "descrivere", "enunciare le proprietà" di un concetto:
+
+```
+1. Definizione (1-2 frasi precise)
+2. Formula/modello (LaTeX se utile)
+3. Commento dei termini chiave
+4. Interpretazione operativa
+5. Osservazione finale (limite, caso speciale, errore comune)
+```
+
+Risposte sintetiche pronte: `05_theory/Domande_aperte_risposte_modello.md`
+Pattern: `06_exam_patterns/DOMANDE_APERTE_pattern_esame_riassunto.md`
+
+---
+
+## Domande aperte su Reti
+
+### Trasporto
+```
+Variabili: x_{ij} >= 0  (quantità da sorgente i a destinazione j)
+min Σ c_{ij} x_{ij}
+s.t.  Σ_j x_{ij} = s_i  ∀i     (offerta)
+      Σ_i x_{ij} = d_j  ∀j     (domanda)
+Sbilanciato: aggiungere nodo fittizio con surplus e costo 0.
+```
+
+### Flusso a costo minimo
+```
+min Σ c_{ij} x_{ij}
+s.t.  Σ_{(v,j)} x_{vj} - Σ_{(i,v)} x_{iv} = b_v  ∀v  (bilanciamento)
+      0 <= x_{ij} <= u_{ij}
+b_v > 0: sorgente,  b_v < 0: destinazione,  b_v = 0: transito
+```
+
+### Massimo flusso
+```
+max f
+s.t.  Σ_(s,j) x_{sj} - Σ_(i,s) x_{is} = f      (sorgente s)
+      Σ_(v,j) x_{vj} - Σ_(i,v) x_{iv} = 0      (transito v)
+      Σ_(t,j) x_{tj} - Σ_(i,t) x_{it} = -f     (destinazione t)
+      0 <= x_{ij} <= u_{ij}
+```
+
+### Cammino minimo
+```
+min Σ c_{ij} x_{ij},  x_{ij} ∈ {0,1}
+s.t. bilanciamento: +1 per sorgente, -1 per destinazione, 0 per transito
+```
+
+---
+
+## Domande aperte su Metaeuristiche
+
+### Algoritmi Genetici
+```
+Metaeuristica ispirata all'evoluzione. Funzionamento:
+1. Popolazione N individui → valutazione fitness
+2. Selezione genitori (fitness proporzionale / tournament)
+3. Crossover: combina 2 genitori → figli (intensificazione)
+4. Mutazione: modifica casuale (diversificazione, prob. bassa)
+5. Nuova generazione → ripetere
+Criteri di arresto: max generazioni, fitness target, no miglioramento k gen.
+Non garantisce l'ottimo globale.
+```
+
+### Simulated Annealing (minimizzazione)
+```
+Ispirato al raffreddamento dei metalli.
+- Mossa migliorativa (Δf < 0): accetta sempre.
+- Mossa peggiorativa (Δf ≥ 0): accetta con p = exp(-Δf/T).
+T alta → exploration (quasi tutto accettato).
+T bassa → exploitation (solo miglioramenti).
+Raffreddamento: T ← α·T  (0 < α < 1).
+Criteri di arresto: T < T_min, max iter, max iter senza miglioramento best.
+
+[Per massimizzazione: p = exp(Δf/T) con Δf < 0]
+```
+
+### Tabu Search
+```
+Ricerca locale con memoria (tabu list).
+- Sceglie la miglior mossa NON TABU (anche se peggiora f).
+- Tabu list vieta mosse recenti → evita cycling.
+- Criterio di aspirazione: accetta mossa tabu se migliora best globale x*.
+- Aggiorna x* ogni volta che la soluzione corrente è migliore di x*.
+Criteri di arresto: max iter, max iter senza miglioramento di x*.
+```
+
+---
+
+## Stato della Repo
+
+Questa repo è in **prima fase stabile**. Le seguenti aree sono coperte:
+
+| Area | Stato |
+|---|---|
+| Programmazione Lineare | ✅ Fonti ufficiali |
+| Programmazione Lineare Intera | ✅ Fonti ufficiali |
+| Programmazione Non Lineare | ✅ Fonti ufficiali |
+| Reti e flussi | ✅ Integrato (PL/PLI + domande aperte) |
+| Metaeuristiche | ✅ Integrato (domande aperte + bibbia RO) |
+| Domande teoriche aperte | ✅ Riscritte e validate |
+| Quiz a risposta multipla | ✅ Anti-allucinazione attivata |
+| **Esami storici** | ❌ **Non ancora analizzati** |
+
+**Gli appelli storici nella cartella `Esami/` non sono stati integrati nel RAG.**
+Se la domanda sembra da un appello: risolvere con method card e teoria validate, senza affermare che l'appello sia nel RAG.
+
+
+
 

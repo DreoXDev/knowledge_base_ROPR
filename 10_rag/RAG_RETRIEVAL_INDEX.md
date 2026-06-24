@@ -51,6 +51,13 @@ Indice semi-automatico dei file utili al retrieval.
 - `04_methods/programmazione_non_lineare/pnl_vincolata_kkt_vincoli_attivi.md`
 - `04_methods/programmazione_non_lineare/pnl_vincoli_attivi_e_complementarita.md`
 - `05_theory/00_index.md`
+- `05_theory/DOMANDE_APERTE_index.md`
+- `05_theory/Domande_aperte_risposte_modello.md`
+- `05_theory/Domande_aperte_RO_catalogo.md`
+- `05_theory/Metaeuristiche_domande_aperte.md`
+- `05_theory/METAEURISTICHE_index.md`
+- `05_theory/PL_domande_aperte_vertici_basi_dualita.md`
+- `05_theory/PNL_domande_aperte_KKT.md`
 - `05_theory/programmazione_lineare/01_introduzione_programmazione_lineare.md`
 - `05_theory/programmazione_lineare/02_formulazione_generale_pl.md`
 - `05_theory/programmazione_lineare/03_soluzione_grafica_pl.md`
@@ -91,6 +98,9 @@ Indice semi-automatico dei file utili al retrieval.
 - `05_theory/programmazione_non_lineare/pnl_ottimizzazione_non_vincolata_multivariabile.md`
 - `05_theory/programmazione_non_lineare/pnl_ottimizzazione_unidimensionale.md`
 - `05_theory/programmazione_non_lineare/pnl_ottimizzazione_vincolata.md`
+- `05_theory/Reti_domande_aperte_trasporto_flussi.md`
+- `05_theory/RETI_index.md`
+- `05_theory/ROPR_mappa_generale.md`
 - `07_solved_examples/AAA_bibbia_RO_catalogo_visuale.md`
 - `07_solved_examples/programmazione_lineare/distribution_network_min_cost_flow.md`
 - `07_solved_examples/programmazione_lineare/miscelazione_benzine.md`
@@ -143,12 +153,21 @@ Indice semi-automatico dei file utili al retrieval.
 - `07_solved_examples/programmazione_non_lineare/pnl_vincolata_kkt_esempi.md`
 - `07_solved_examples/riepilogo_pl_pli_pnl_esercizi_misti.md`
 - `06_exam_patterns/common_mistakes.md`
+- `06_exam_patterns/Domande_aperte_dualita_simplesso.md`
+- `06_exam_patterns/Domande_aperte_metaeuristiche.md`
+- `06_exam_patterns/Domande_aperte_modellazione_reti.md`
+- `06_exam_patterns/DOMANDE_APERTE_pattern_esame_riassunto.md`
+- `06_exam_patterns/Domande_aperte_teoria_template_risposta.md`
+- `06_exam_patterns/METAEURISTICHE_pattern_esame_riassunto.md`
 - `06_exam_patterns/pattern_branch_and_bound_binario.md`
 - `06_exam_patterns/pattern_branch_and_bound_plim.md`
 - `06_exam_patterns/PATTERN_INDEX.md`
 - `06_exam_patterns/pattern_interpretazione_albero_branch_and_bound.md`
 - `06_exam_patterns/PATTERN_MAP.md`
+- `06_exam_patterns/PL_pattern_esame_riassunto.md`
+- `06_exam_patterns/PLI_pattern_esame_riassunto.md`
 - `06_exam_patterns/pnl_non_vincolata_classificazione_hessiana.md`
+- `06_exam_patterns/PNL_pattern_esame_riassunto.md`
 - `06_exam_patterns/pnl_pattern_gradiente_newton.md`
 - `06_exam_patterns/pnl_pattern_kkt.md`
 - `06_exam_patterns/pnl_pattern_kkt_enumerazione_vincoli_attivi.md`
@@ -162,6 +181,7 @@ Indice semi-automatico dei file utili al retrieval.
 - `06_exam_patterns/Quiz_PLI_Branch_and_Bound.md`
 - `06_exam_patterns/Quiz_PNL_bisezione_gradiente_newton_KKT.md`
 - `06_exam_patterns/Quiz_simplesso_casi_particolari.md`
+- `06_exam_patterns/RETI_pattern_esame_riassunto.md`
 - `06_exam_patterns/riepilogo_esame_pl_pli_pnl.md`
 
 ## Programmazione Lineare — Introduzione
@@ -542,6 +562,117 @@ Quando recuperare:
 | zaino binario Branch and Bound in ampiezza | `10_rag/method_cards/MC_PLI_branch_and_bound_zaino.md` | `07_solved_examples/riepilogo_pl_pli_pnl_esercizi_misti.md` | |
 | modello di trasporto PL | `10_rag/method_cards/MC_PL_modello_trasporto.md` | `07_solved_examples/riepilogo_pl_pli_pnl_esercizi_misti.md` | |
 | riepilogo d'esame misto | `10_rag/method_cards/MC_Riepilogo_esame_misto_PL_PLI_PNL.md` | `07_solved_examples/riepilogo_pl_pli_pnl_esercizi_misti.md` | |
+| trasporto — formulazione domanda aperta | `10_rag/method_cards/MC_RETI_trasporto_transhipment.md` | `05_theory/Reti_domande_aperte_trasporto_flussi.md` | |
+| transhipment — nodi di transito | `10_rag/method_cards/MC_RETI_trasporto_transhipment.md` | `05_theory/Reti_domande_aperte_trasporto_flussi.md` | |
+| flusso costo minimo — domanda teorica | `10_rag/method_cards/MC_RETI_flusso_costo_minimo.md` | `05_theory/Reti_domande_aperte_trasporto_flussi.md` | |
+| massimo flusso — formulazione | `10_rag/method_cards/MC_RETI_massimo_flusso.md` | `05_theory/Reti_domande_aperte_trasporto_flussi.md` | |
+| cammino minimo — domanda teorica | `10_rag/method_cards/MC_RETI_cammino_minimo.md` | `05_theory/Reti_domande_aperte_trasporto_flussi.md` | |
+| algoritmi genetici — crossover mutazione fitness | `10_rag/method_cards/MC_METAEURISTICHE_algoritmi_genetici.md` | `05_theory/Metaeuristiche_domande_aperte.md` | |
+| simulated annealing — temperatura exploration exploitation | `10_rag/method_cards/MC_METAEURISTICHE_simulated_annealing.md` | `05_theory/Metaeuristiche_domande_aperte.md` | |
+| tabu search — tabu list criterio aspirazione | `10_rag/method_cards/MC_METAEURISTICHE_tabu_search.md` | `05_theory/Metaeuristiche_domande_aperte.md` | |
+| domanda aperta PL — vertici basi soluzioni base | `10_rag/method_cards/MC_PL_vertici_soluzioni_base.md` | `05_theory/PL_domande_aperte_vertici_basi_dualita.md` | |
+| domanda aperta PL — dualità forte debole | `10_rag/method_cards/MC_PL_dualita_forte_debole.md` | `05_theory/PL_domande_aperte_vertici_basi_dualita.md` | |
+| domanda aperta PL — complementary slackness | `10_rag/method_cards/PL_complementary_slackness.md` | `05_theory/PL_domande_aperte_vertici_basi_dualita.md` | |
+| domanda aperta PL — simplesso direzione incremento | `10_rag/method_cards/MC_PL_simplesso_direzione_incremento.md` | `05_theory/PL_domande_aperte_vertici_basi_dualita.md` | |
+| domanda aperta PNL — KKT condizioni necessarie sufficienti | `10_rag/method_cards/MC_PNL_KKT_generale.md` | `05_theory/PNL_domande_aperte_KKT.md` | |
+| risposta aperta — struttura generale | `10_rag/method_cards/MC_TEORIA_risposta_aperta.md` | `06_exam_patterns/Domande_aperte_teoria_template_risposta.md` | |
+| risposte modello sintetiche | `05_theory/Domande_aperte_risposte_modello.md` | `05_theory/Domande_aperte_RO_catalogo.md` | |
+
+## Reti e Flussi
+
+Fonti:
+- `raw_assets/Programmazione Lineare/lec_w4_completa.pdf` (cammino minimo, flusso)
+- `raw_assets/Domande aperte RO.pdf` (non ufficiale — domande teoriche)
+
+File principali:
+- `05_theory/Reti_domande_aperte_trasporto_flussi.md`
+- `10_rag/method_cards/MC_RETI_trasporto_transhipment.md`
+- `10_rag/method_cards/MC_RETI_flusso_costo_minimo.md`
+- `10_rag/method_cards/MC_RETI_massimo_flusso.md`
+- `10_rag/method_cards/MC_RETI_cammino_minimo.md`
+- `10_rag/method_cards/MC_PL_modello_trasporto.md`
+- `10_rag/method_cards/PL_minimum_cost_flow.md`
+- `10_rag/method_cards/METHOD_PL_CAMMINO_MINIMO.md`
+- `10_rag/method_cards/MC_PLI_flusso_costo_minimo.md`
+- `10_rag/method_cards/MC_PLI_cammino_costo_minimo.md`
+- `10_rag/method_cards/MC_PLI_assegnamento_costo_minimo.md`
+- `06_exam_patterns/RETI_pattern_esame_riassunto.md`
+- `06_exam_patterns/Domande_aperte_modellazione_reti.md`
+
+Concetti:
+- problema di trasporto; offerta/domanda; bilanciamento
+- transhipment; nodi di transito
+- flusso a costo minimo; vincoli di bilanciamento; capacità archi
+- massimo flusso; max-flow min-cut
+- cammino minimo; variabili binarie sugli archi
+- TUM; totale unimodularità; rilassamento continuo intero
+
+Quando recuperare:
+- Esercizi con grafo, nodi sorgente/destinazione, archi con costi/capacità.
+- Domande teoriche sulla formulazione di modelli su reti.
+
+## Metaeuristiche
+
+Fonti:
+- `raw_assets/Domande aperte RO.pdf` (non ufficiale — riscritto e validato)
+- `raw_assets/AAA - La bibbia di RO.pdf` (non ufficiale — solo pattern quiz)
+
+File principali:
+- `05_theory/Metaeuristiche_domande_aperte.md`
+- `10_rag/method_cards/MC_METAEURISTICHE_algoritmi_genetici.md`
+- `10_rag/method_cards/MC_METAEURISTICHE_simulated_annealing.md`
+- `10_rag/method_cards/MC_METAEURISTICHE_tabu_search.md`
+- `10_rag/method_cards/MC_Metaeuristiche_quiz.md`
+- `06_exam_patterns/METAEURISTICHE_pattern_esame_riassunto.md`
+- `06_exam_patterns/Domande_aperte_metaeuristiche.md`
+- `06_exam_patterns/Quiz_metaeuristiche.md`
+
+Concetti:
+- algoritmi genetici; crossover; mutazione; fitness; selezione
+- simulated annealing; temperatura; raffreddamento; exploration/exploitation
+- tabu search; tabu list; criterio di aspirazione; best globale
+- criteri di arresto; ottimo locale; garanzia ottimo globale
+
+Quando recuperare:
+- Qualsiasi domanda su metaeuristiche (sia teorica che quiz).
+
+> **Warning**: Usare solo fonti validate della repo. Non basarsi su crocette di screenshot non ufficiali.
+
+## Domande Aperte
+
+Fonti:
+- `raw_assets/Domande aperte RO.pdf` (non ufficiale — riscritto)
+
+File principali:
+- `05_theory/Domande_aperte_RO_catalogo.md`
+- `05_theory/PL_domande_aperte_vertici_basi_dualita.md`
+- `05_theory/Reti_domande_aperte_trasporto_flussi.md`
+- `05_theory/PNL_domande_aperte_KKT.md`
+- `05_theory/Metaeuristiche_domande_aperte.md`
+- `05_theory/Domande_aperte_risposte_modello.md`
+- `10_rag/method_cards/MC_TEORIA_risposta_aperta.md`
+- `06_exam_patterns/DOMANDE_APERTE_pattern_esame_riassunto.md`
+- `06_exam_patterns/Domande_aperte_teoria_template_risposta.md`
+- `06_exam_patterns/Domande_aperte_dualita_simplesso.md`
+- `06_exam_patterns/Domande_aperte_modellazione_reti.md`
+- `06_exam_patterns/Domande_aperte_metaeuristiche.md`
+
+Quando recuperare:
+- La traccia chiede di "spiegare", "descrivere", "enunciare le proprietà" di un concetto teorico.
+- Domanda con risposta discorsiva, non un esercizio computazionale.
+
+## Esami Storici — TODO
+
+> ⚠️ La cartella `Esami/` non è ancora stata analizzata.
+
+Stato: **non integrati nel RAG**.
+
+Non usare file da `Esami/` come fonti affidabili nella risposta.
+Per esercizi da appello: risolvere con method card e teoria già validate.
+
+Vedere: `09_ingestion_reports/TODO_fase_esami.md`
+
+
 
 
 
